@@ -88,16 +88,137 @@ a {
 
 .editor textarea {
   width: 100%;
-  min-height: 10rem;
+  height: 10rem;
+  resize: vertical;
+}
+
+/* Stack the read-only, syntax-highlighted <pre> and the real (transparent)
+   textarea in the same grid cell so they always line up. The textarea's
+   size is the source of truth (it's user-resizable); app.js keeps the
+   <pre>'s height and scroll position matching it. */
+.code-editor {
+  display: grid;
+}
+
+.code-editor > * {
+  grid-area: 1 / 1;
+}
+
+.code-editor pre.code-highlight,
+.code-editor textarea {
+  margin: 0;
   padding: 0.75rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 1rem;
-  background: var(--code-bg);
-  color: var(--fg);
+  line-height: 1.5;
   border: 1px solid var(--border);
   border-radius: 6px;
-  resize: vertical;
   tab-size: 2;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.code-editor pre.code-highlight {
+  background: var(--code-bg);
+  color: var(--fg);
+  overflow: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.code-editor pre.code-highlight code {
+  font: inherit;
+  white-space: inherit;
+  word-wrap: inherit;
+}
+
+.code-editor textarea {
+  background: transparent;
+  color: transparent;
+  caret-color: var(--fg);
+  border-color: transparent;
+}
+
+/* Glyph colors, matching the official Uiua pad (https://www.uiua.org/pad). */
+.module {
+  color: #d7be8c;
+}
+
+.noadic-function {
+  color: #ed5e6a;
+}
+
+.monadic-function {
+  color: #95d16a;
+}
+
+.dyadic-function {
+  color: #54b0fc;
+}
+
+.triadic-function {
+  color: #8078f1;
+}
+
+.tetradic-function {
+  color: #f590c8;
+}
+
+.pentadic-function {
+  color: #f870a0;
+}
+
+.hexadic-function {
+  color: #ff5080;
+}
+
+.monadic-modifier {
+  color: #f0c36f;
+}
+
+.dyadic-modifier {
+  color: #cc6be9;
+}
+
+.triadic-modifier {
+  color: #40f0a0;
+}
+
+.number-literal {
+  color: #f08050;
+}
+
+.comment-span {
+  color: #888;
+}
+
+@media (prefers-color-scheme: dark) {
+  .stack-function {
+    color: #d1daec;
+  }
+
+  .string-literal-span {
+    color: #20f9fc;
+  }
+
+  .strand-span {
+    color: #fff8;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .stack-function {
+    color: #344;
+  }
+
+  .string-literal-span {
+    color: #1c9;
+  }
+
+  .strand-span {
+    color: #0008;
+  }
 }
 
 .actions {

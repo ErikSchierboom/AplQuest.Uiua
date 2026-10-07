@@ -5,6 +5,7 @@
 const statusEl = document.getElementById("status");
 const runButton = document.getElementById("run");
 const codeEl = document.getElementById("code");
+const highlightEl = document.getElementById("code-highlight");
 const resultsEl = document.getElementById("results");
 const testsDataEl = document.getElementById("tests-data");
 
@@ -16,9 +17,37 @@ const saved = localStorage.getItem(storageKey);
 if (saved !== null) {
   codeEl.value = saved;
 }
+
+let highlight;
+
+// Re-render the colored glyphs behind the (transparent) textarea so they
+// stay in sync with what's actually typed.
+function renderHighlight() {
+  if (!highlight) return;
+  // A trailing newline is appended so a final blank line still reserves
+  // a row of height, keeping the overlay's scroll height matching the
+  // textarea's (browsers always render one extra blank line for a
+  // trailing "\n" in a textarea).
+  highlightEl.innerHTML = `${highlight(codeEl.value)}\n`;
+}
+
 codeEl.addEventListener("input", () => {
   localStorage.setItem(storageKey, codeEl.value);
+  renderHighlight();
 });
+codeEl.addEventListener("scroll", () => {
+  highlightEl.parentElement.scrollTop = codeEl.scrollTop;
+  highlightEl.parentElement.scrollLeft = codeEl.scrollLeft;
+});
+
+// The textarea (which the visitor can drag-resize) is the source of
+// truth for the editor's size; keep the highlighted overlay's box the
+// same size so the two stay pixel-aligned.
+if (window.ResizeObserver) {
+  new ResizeObserver(() => {
+    highlightEl.parentElement.style.height = `${codeEl.offsetHeight}px`;
+  }).observe(codeEl);
+}
 
 runButton.disabled = true;
 statusEl.textContent = "Loading Uiua...";
@@ -28,7 +57,9 @@ try {
   const mod = await import("../assets/runner.js");
   await mod.default();
   runTest = mod.run_test;
+  highlight = mod.highlight_html;
   statusEl.textContent = "";
+  renderHighlight();
 } catch (err) {
   console.error(err);
   statusEl.textContent = "Failed to load the Uiua runtime.";

@@ -101,7 +101,10 @@ pub fn render_exercise(exercise: &Exercise) -> String {
 {description}<p class="hint">Define a function named <code>{function_name}</code>; the tests below will call it.</p>
 </header>
 <section class="editor">
-<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off">{stub}</textarea>
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">{stub}</textarea>
+</div>
 <div class="actions">
 <button id="run">Run tests</button>
 <span id="status"></span>
