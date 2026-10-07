@@ -1,38 +1,75 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2013-6: Home On The Range</title>
-<link rel="stylesheet" href="../assets/style.css">
-</head>
-<body>
-<a class="back-link" href="../index.html">&larr; All exercises</a>
-<header>
-<h1>2013-6: Home On The Range</h1>
-<p>Write a function which returns the magnitude of the range (i.e. the difference between the lowest and highest values) of a numeric array.</p>
-<p class="hint">Define a function named <code>Magnitude</code>; the tests below will call it.</p>
-</header>
-<section class="editor">
-<div class="code-editor">
-<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
-<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Magnitude ← 
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2013-6: Home On The Range</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <a class="back-link" href="../index.html">&larr; All exercises</a>
+    <header>
+      <h1>2013-6: Home On The Range</h1>
+      <p>
+        Write a function which returns the magnitude of the range (i.e. the
+        difference between the lowest and highest values) of a numeric array.
+      </p>
+      <p class="hint">
+        Define a function named <code>Magnitude</code>; the tests below will
+        call it.
+      </p>
+    </header>
+    <section class="editor">
+      <div class="code-editor">
+        <pre
+          class="code-highlight"
+          aria-hidden="true"
+        ><code id="code-highlight"></code></pre>
+        <textarea
+          id="code"
+          spellcheck="false"
+          autocapitalize="off"
+          autocomplete="off"
+          autocorrect="off"
+        >
+Magnitude ← 
 </textarea>
-</div>
-<div class="actions">
-<button id="run">Run tests</button>
-<span id="status"></span>
-</div>
-</section>
-<section id="results" class="results"></section>
-<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ 25 Magnitude [19 ¯3 7.6 22]"},{"description":"should work with a scalar argument","code":"⍤⤙≍ 101 Magnitude 101"},{"description":"should work with arrays of any number of dimensions","code":"⍤⤙≍ 50 Magnitude [[10 20 30] [40 50 60]]"},{"description":"including empty arrays","code":"⍤⤙≍ 0 Magnitude []"}]</script>
-<script type="module" src="../assets/app.js"></script>
+      </div>
+      <div class="actions">
+        <button id="run">Run tests</button>
+        <span id="status"></span>
+      </div>
+    </section>
+    <section id="results" class="results"></section>
+    <script type="application/json" id="tests-data">
+      [
+        { "description": null, "code": "⍤⤙≍ 25 Magnitude [19 ¯3 7.6 22]" },
+        {
+          "description": "should work with a scalar argument",
+          "code": "⍤⤙≍ 101 Magnitude 101"
+        },
+        {
+          "description": "should work with arrays of any number of dimensions",
+          "code": "⍤⤙≍ 50 Magnitude [[10 20 30] [40 50 60]]"
+        },
+        {
+          "description": "including empty arrays",
+          "code": "⍤⤙≍ 0 Magnitude []"
+        }
+      ]
+    </script>
+    <script type="module" src="../assets/app.js"></script>
 
-<footer class="attribution">
-<p>Problem statements and reference tests are adapted from
-<a href="https://apl.quest">APL Quest</a>
-(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
-</footer>
-</body>
+    <footer class="attribution">
+      <p>
+        Problem statements and reference tests are adapted from
+        <a href="https://apl.quest">APL Quest</a>
+        (<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>),
+        licensed under
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          >CC BY-NC-SA 4.0</a
+        >.
+      </p>
+    </footer>
+  </body>
 </html>

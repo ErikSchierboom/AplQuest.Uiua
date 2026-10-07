@@ -1,40 +1,84 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2014-9: Going Ballistic</title>
-<link rel="stylesheet" href="../assets/style.css">
-</head>
-<body>
-<a class="back-link" href="../index.html">&larr; All exercises</a>
-<header>
-<h1>2014-9: Going Ballistic</h1>
-<p>The following formula gives the horizontal distance a projectile travels:</p>
-<p>Where: v is the initial velocity, θ is the trajectory in degrees, d is the horizontal distance and G is the gravitational constant.</p>
-<p>Write a function which calculates the distance (in meters) a projectile travels given an initial velocity in meters per second and a trajectory in degrees. Use 9.8 meters per second squared as the gravitational constant.</p>
-<p class="hint">Define a function named <code>Distance</code>; the tests below will call it.</p>
-</header>
-<section class="editor">
-<div class="code-editor">
-<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
-<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Distance ← 
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2014-9: Going Ballistic</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <a class="back-link" href="../index.html">&larr; All exercises</a>
+    <header>
+      <h1>2014-9: Going Ballistic</h1>
+      <p>
+        The following formula gives the horizontal distance a projectile
+        travels:
+      </p>
+      <p>
+        Where: v is the initial velocity, θ is the trajectory in degrees, d is
+        the horizontal distance and G is the gravitational constant.
+      </p>
+      <p>
+        Write a function which calculates the distance (in meters) a projectile
+        travels given an initial velocity in meters per second and a trajectory
+        in degrees. Use 9.8 meters per second squared as the gravitational
+        constant.
+      </p>
+      <p class="hint">
+        Define a function named <code>Distance</code>; the tests below will call
+        it.
+      </p>
+    </header>
+    <section class="editor">
+      <div class="code-editor">
+        <pre
+          class="code-highlight"
+          aria-hidden="true"
+        ><code id="code-highlight"></code></pre>
+        <textarea
+          id="code"
+          spellcheck="false"
+          autocapitalize="off"
+          autocomplete="off"
+          autocorrect="off"
+        >
+Distance ← 
 </textarea>
-</div>
-<div class="actions">
-<button id="run">Run tests</button>
-<span id="status"></span>
-</div>
-</section>
-<section id="results" class="results"></section>
-<script type="application/json" id="tests-data">[{"description":"100 meters per second and 45 degree trajectory","code":"⍤⤙≍ 1020.408163 ⁅₆ Distance 100 45"},{"description":"no velocity = no distance","code":"⍤⤙≍ 0 Distance 0 45"},{"description":"shooting straight up = no distance","code":"⍤⤙≍ 1.249639591E¯13 ⁅₂₂ Distance 100 90"}]</script>
-<script type="module" src="../assets/app.js"></script>
+      </div>
+      <div class="actions">
+        <button id="run">Run tests</button>
+        <span id="status"></span>
+      </div>
+    </section>
+    <section id="results" class="results"></section>
+    <script type="application/json" id="tests-data">
+      [
+        {
+          "description": "100 meters per second and 45 degree trajectory",
+          "code": "⍤⤙≍ 1020.408163 ⁅₆ Distance 100 45"
+        },
+        {
+          "description": "no velocity = no distance",
+          "code": "⍤⤙≍ 0 Distance 0 45"
+        },
+        {
+          "description": "shooting straight up = no distance",
+          "code": "⍤⤙≍ 1.249639591E¯13 ⁅₂₂ Distance 100 90"
+        }
+      ]
+    </script>
+    <script type="module" src="../assets/app.js"></script>
 
-<footer class="attribution">
-<p>Problem statements and reference tests are adapted from
-<a href="https://apl.quest">APL Quest</a>
-(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
-</footer>
-</body>
+    <footer class="attribution">
+      <p>
+        Problem statements and reference tests are adapted from
+        <a href="https://apl.quest">APL Quest</a>
+        (<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>),
+        licensed under
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          >CC BY-NC-SA 4.0</a
+        >.
+      </p>
+    </footer>
+  </body>
 </html>
