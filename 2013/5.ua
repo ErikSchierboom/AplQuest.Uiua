@@ -4,16 +4,14 @@
 
 IdentityMatrix ← ˙⊞=⇡
 
-Expected ←
-[ [1 0 0 0 0]
-  [0 1 0 0 0]
-  [0 0 1 0 0]
-  [0 0 0 1 0]
-  [0 0 0 0 1]]
+Expected ← [[1 0 0 0 0]
+            [0 1 0 0 0]
+            [0 0 1 0 0]
+            [0 0 0 1 0]
+            [0 0 0 0 1]]
 ⍤⤙≍ Expected IdentityMatrix 5
 
-Expected ←
-[[1]]
+Expected ← [[1]]
 ⍤⤙≍ Expected IdentityMatrix 1 # should return a 1×1 matrix
 
 Expected ← ↯0_0 0
