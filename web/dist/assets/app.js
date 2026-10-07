@@ -19,6 +19,7 @@ if (saved !== null) {
 }
 
 let highlight;
+let docsUrlAt;
 
 // Re-render the colored glyphs behind the (transparent) textarea so they
 // stay in sync with what's actually typed.
@@ -49,6 +50,24 @@ if (window.ResizeObserver) {
   }).observe(codeEl);
 }
 
+// Hint that Cmd/Ctrl-clicking a glyph opens its docs, like the official
+// Uiua pad, by switching to a pointer cursor while the modifier is held.
+codeEl.addEventListener("mousemove", (event) => {
+  codeEl.classList.toggle("ctrl-held", event.ctrlKey || event.metaKey);
+});
+codeEl.addEventListener("mouseleave", () => {
+  codeEl.classList.remove("ctrl-held");
+});
+codeEl.addEventListener("click", (event) => {
+  if (!docsUrlAt || !(event.ctrlKey || event.metaKey)) return;
+  // The textarea's native click handling already moved the caret to the
+  // clicked position by the time this listener runs.
+  const url = docsUrlAt(codeEl.value, codeEl.selectionStart);
+  if (url) {
+    window.open(url, "_blank", "noopener");
+  }
+});
+
 runButton.disabled = true;
 statusEl.textContent = "Loading Uiua...";
 
@@ -58,6 +77,7 @@ try {
   await mod.default();
   runTest = mod.run_test;
   highlight = mod.highlight_html;
+  docsUrlAt = mod.primitive_docs_url_at;
   statusEl.textContent = "";
   renderHighlight();
 } catch (err) {

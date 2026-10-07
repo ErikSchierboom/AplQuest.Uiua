@@ -73,13 +73,24 @@ fn prim_class(prim: Primitive) -> Option<&'static str> {
     prim.sig().map(sig_class)
 }
 
+/// The primitive a span of code refers to, if any. Used both to pick a
+/// color class and to resolve a documentation link for it.
+fn span_primitive(kind: &SpanKind) -> Option<Primitive> {
+    match kind {
+        SpanKind::Primitive(prim, _) | SpanKind::Subscript(Some(prim), _) => Some(*prim),
+        SpanKind::Obverse(_) => Some(Primitive::Obverse),
+        _ => None,
+    }
+}
+
 /// The CSS class for a given span of code, or `None` if it should be
 /// rendered in the default text color.
 fn span_class(kind: &SpanKind) -> Option<&'static str> {
+    if let Some(prim) = span_primitive(kind) {
+        return prim_class(prim);
+    }
     match kind {
-        SpanKind::Primitive(prim, _) | SpanKind::Subscript(Some(prim), _) => prim_class(*prim),
         SpanKind::PrimArgs(_) => Some("module"),
-        SpanKind::Obverse(_) => prim_class(Primitive::Obverse),
         SpanKind::Number => Some("number-literal"),
         SpanKind::String | SpanKind::ImportSrc(_) => Some("string-literal-span"),
         SpanKind::Comment | SpanKind::OutputComment | SpanKind::TypeSigComment => {
@@ -137,4 +148,23 @@ pub fn highlight_html(code: &str) -> String {
         out.push_str(&escape_html(&code[pos..]));
     }
     out
+}
+
+/// The documentation URL for the glyph at `char_index` (a UTF-16 code
+/// unit offset, i.e. a JS string index/`selectionStart`), or an empty
+/// string if there's no glyph there. Used to let visitors Cmd/Ctrl-click
+/// a glyph to open its docs, like the official Uiua pad does.
+#[wasm_bindgen]
+pub fn primitive_docs_url_at(code: &str, char_index: u32) -> String {
+    let spans = Spans::from_input(code).spans;
+    let Some(sp) = spans
+        .iter()
+        .find(|sp| (sp.span.start.char_pos..sp.span.end.char_pos).contains(&char_index))
+    else {
+        return String::new();
+    };
+    match span_primitive(&sp.value) {
+        Some(prim) => format!("https://www.uiua.org/docs/{}", prim.name()),
+        None => String::new(),
+    }
 }

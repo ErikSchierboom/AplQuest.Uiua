@@ -109,7 +109,7 @@ a {
   margin: 0;
   padding: 0.75rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.5;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -138,6 +138,11 @@ a {
   color: transparent;
   caret-color: var(--fg);
   border-color: transparent;
+}
+
+/* Hint that Cmd/Ctrl-click opens a glyph's docs, as on the official pad. */
+.code-editor textarea.ctrl-held {
+  cursor: pointer;
 }
 
 /* Glyph colors, matching the official Uiua pad (https://www.uiua.org/pad). */

@@ -26,6 +26,34 @@ export function highlight_html(code) {
 }
 
 /**
+ * The documentation URL for the glyph at `char_index` (a UTF-16 code
+ * unit offset, i.e. a JS string index/`selectionStart`), or an empty
+ * string if there's no glyph there. Used to let visitors Cmd/Ctrl-click
+ * a glyph to open its docs, like the official Uiua pad does.
+ * @param {string} code
+ * @param {number} char_index
+ * @returns {string}
+ */
+export function primitive_docs_url_at(code, char_index) {
+    let deferred2_0;
+    let deferred2_1;
+    try {
+        const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+        const ptr0 = passStringToWasm0(code, wasm.__wbindgen_export, wasm.__wbindgen_export2);
+        const len0 = WASM_VECTOR_LEN;
+        wasm.primitive_docs_url_at(retptr, ptr0, len0, char_index);
+        var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+        var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+        deferred2_0 = r0;
+        deferred2_1 = r1;
+        return getStringFromWasm0(r0, r1);
+    } finally {
+        wasm.__wbindgen_add_to_stack_pointer(16);
+        wasm.__wbindgen_export4(deferred2_0, deferred2_1, 1);
+    }
+}
+
+/**
  * Run `user_code` followed by `test_code` in a fresh interpreter.
  *
  * Returns `"PASS"` if the program ran to completion without error
