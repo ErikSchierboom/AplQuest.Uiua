@@ -9,6 +9,9 @@ set -euo pipefail
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
+rustup target add wasm32-unknown-unknown
+cargo install wasm-bindgen-cli --version 0.2.108 --locked
+
 echo "==> Building runner for wasm32-unknown-unknown"
 cargo build -p runner --target wasm32-unknown-unknown --release
 
