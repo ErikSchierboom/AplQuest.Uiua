@@ -1,5 +1,5 @@
 # 2013-4: Keeping Things In Balance
-# Write a function which returns a 1 if the opening and closing parentheses in a character vector are balanced, or a zero otherwise.
+# Write a function which returns a 1 if the opening and closing parentheses in a character array are balanced, or a zero otherwise.
 
 Balanced ← ≍"" ⍥(▽¬⊸(⦷"()") ▽⊸∊"()")∞
 

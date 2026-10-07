@@ -1,5 +1,5 @@
 # 2014-6: Roll The Dice
-# Write a function that takes an integer vector representing the sides of a number of dice and returns a 2 column matrix of the number of ways each possible total of the dice can be rolled.
+# Write a function that takes an integer array representing the sides of a number of dice and returns a 2 column matrix of the number of ways each possible total of the dice can be rolled.
 
 DiceCombinations ← ⊕(⊟⊃⊢⧻)⊸⊛≡/+♭₂+1⇡
 

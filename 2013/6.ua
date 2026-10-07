@@ -3,6 +3,6 @@
 
 Magnitude ← ⨬(0|∘|⌵-⊃⊢⊣⍆♭)⊸(↧2⧻)
 ⍤⤙≍ 25 Magnitude [19 ¯3 7.6 22]
-⍤⤙≍ 101 Magnitude 101
-⍤⤙≍ 50 Magnitude [[10 20 30] [40 50 60]]
-⍤⤙≍ 0 Magnitude []
+⍤⤙≍ 101 Magnitude 101                    # should work with a scalar argument
+⍤⤙≍ 50 Magnitude [[10 20 30] [40 50 60]] # should work with arrays of any number of dimensions
+⍤⤙≍ 0 Magnitude []                       # including empty arrays

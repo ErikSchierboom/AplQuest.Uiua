@@ -12,6 +12,6 @@ Expected ←
 ⍤⤙≍ Expected MultiplicationTable 5
 
 Expected ← [[1]]
-⍤⤙≍ Expected MultiplicationTable 1
+⍤⤙≍ Expected MultiplicationTable 1 # should return a 1×1 matrix
 
-⍤⤙≍ 0_0△ MultiplicationTable 0
+⍤⤙≍ 0_0△ MultiplicationTable 0 # should return a 0×0 matrix

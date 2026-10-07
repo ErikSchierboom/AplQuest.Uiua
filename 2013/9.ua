@@ -4,6 +4,6 @@
 MovingAverage ← ⧈(÷⊸⊃⧻/+)
 
 Sales ← [200 300 2700 3400 100 2000 400 2100 3500 3000 4700 4300]
-⍤⤙≍ [250 1500 3050 1750 1050 1200 1250 2800 3250 3850 4500] MovingAverage 2 Sales
-⍤⤙≍ [1770 2220 2620] MovingAverage 10 Sales
-⍤⤙≍ [200 300 2700 3400 100 2000 400 2100 3500 3000 4700 4300] Sales MovingAverage 1 Sales
+⍤⤙≍ [250 1500 3050 1750 1050 1200 1250 2800 3250 3850 4500] MovingAverage 2 Sales         # produces 2 month moving averages
+⍤⤙≍ [1770 2220 2620] MovingAverage 10 Sales                                               # 10 month moving average
+⍤⤙≍ [200 300 2700 3400 100 2000 400 2100 3500 3000 4700 4300] Sales MovingAverage 1 Sales # 1 month moving average is the same as sales
