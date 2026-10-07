@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2013-9: It Is a Moving Experience</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2013-9: It Is a Moving Experience</h1>
+<p>Write a function which produces n month moving averages for a year's worth of data.</p>
+<p class="hint">Define a function named <code>MovingAverage</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off">MovingAverage ← 
+</textarea>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":"produces 2 month moving averages","code":"Sales ← [200 300 2700 3400 100 2000 400 2100 3500 3000 4700 4300]\n⍤⤙≍ [250 1500 3050 1750 1050 1200 1250 2800 3250 3850 4500] MovingAverage 2 Sales"},{"description":"10 month moving average","code":"Sales ← [200 300 2700 3400 100 2000 400 2100 3500 3000 4700 4300]\n⍤⤙≍ [1770 2220 2620] MovingAverage 10 Sales"},{"description":"1 month moving average is the same as sales","code":"Sales ← [200 300 2700 3400 100 2000 400 2100 3500 3000 4700 4300]\n⍤⤙≍ [200 300 2700 3400 100 2000 400 2100 3500 3000 4700 4300] Sales MovingAverage 1 Sales"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

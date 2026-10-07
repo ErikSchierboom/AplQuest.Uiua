@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2014-6: Roll The Dice</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2014-6: Roll The Dice</h1>
+<p>Write a function that takes an integer array representing the sides of a number of dice and returns a 2 column matrix of the number of ways each possible total of the dice can be rolled.</p>
+<p class="hint">Define a function named <code>DiceCombinations</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off">DiceCombinations ← 
+</textarea>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":"2 six-sided dice","code":"Expected ← [2_1\n3_2\n4_3\n5_4\n6_5\n7_6\n8_5\n9_4\n10_3\n11_2\n12_1]\n⍤⤙≍ Expected DiceCombinations [6 6]"},{"description":"a six-sided and a four-sided die","code":"Expected ← [2_1\n3_2\n4_3\n5_4\n6_5\n7_6\n8_5\n9_4\n10_3\n11_2\n12_1]\nExpected ← [2_1\n3_2\n4_3\n5_4\n6_4\n7_4\n8_3\n9_2\n10_1\n]\n⍤⤙≍ Expected DiceCombinations [6 4]"},{"description":"a single 3-sided die","code":"Expected ← [2_1\n3_2\n4_3\n5_4\n6_5\n7_6\n8_5\n9_4\n10_3\n11_2\n12_1]\nExpected ← [2_1\n3_2\n4_3\n5_4\n6_4\n7_4\n8_3\n9_2\n10_1\n]\nExpected ← [1_1\n2_1\n3_1]\n⍤⤙≍ Expected DiceCombinations [3]"},{"description":"no dice","code":"Expected ← [2_1\n3_2\n4_3\n5_4\n6_5\n7_6\n8_5\n9_4\n10_3\n11_2\n12_1]\nExpected ← [2_1\n3_2\n4_3\n5_4\n6_4\n7_4\n8_3\n9_2\n10_1\n]\nExpected ← [1_1\n2_1\n3_1]\nExpected ← [0_1]\n⍤⤙≍ Expected DiceCombinations []"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
