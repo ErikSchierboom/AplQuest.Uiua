@@ -1,7 +1,7 @@
 # 2016-1: Statistics - Mean
 # Write a function that takes a numeric array as its right argument and returns the mean (average) of the array.
 
-Mean ← 0
+Mean ← ÷↥1⊃⧻/+
 
 ⍤⤙≍ 3.5 Mean [1 2 3 4 5 6]
 ⍤⤙≍ 0 Mean []               # the average of an empty vector is 0 
