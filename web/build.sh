@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
-# Builds the static website in web/dist: the Uiua-in-the-browser WASM
-# runner, the generated per-exercise HTML pages, and the shared CSS/JS.
 #
-# Requirements (all plain cargo/rustup, no Node.js):
-#   rustup target add wasm32-unknown-unknown
-#   cargo install wasm-bindgen-cli --version 0.2.108 --locked
+# Build the website
+
 set -euo pipefail
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
+echo "==> Installing dependencies"
 rustup target add wasm32-unknown-unknown
 cargo install wasm-bindgen-cli --version 0.2.108 --locked
 
