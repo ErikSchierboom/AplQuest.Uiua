@@ -1,7 +1,8 @@
 # 2016-4: Just Meshing Around
 # Write a function that takes vectors as its left and right arguments and returns them “meshed” into a single vector formed by alternately taking successive elements from each argument. The arguments do not have to be the same length.
 
-Mesh ← ♭≡⊂
+# Experimental!
+Mesh ← ⊏⊙◌˜⍏°⊏⊃(⊂⊙⋅∘|⊂⋅⊙⋅∘)∩°⊏
 
 ⍤⤙≍ "MEEKNESS" Mesh "MENS" "EKES"
 ⍤⤙≍ "DAyPaLlog" Mesh "Dyalog" "APL"
