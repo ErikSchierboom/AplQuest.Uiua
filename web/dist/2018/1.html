@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2018-1: Oh Say Can You See?</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2018-1: Oh Say Can You See?</h1>
+<p>Imagine standing in front of a line of skyscrapers of varying heights. Assume that you can always see a skyscraper that is taller than a closer skyscraper. For example, a person on the left of the diagram below can see 3 skyscrapers – the first, fourth, and sixth from left to right. In contrast, a person on the right can see 2 skyscrapers – the seventh and sixth.</p>
+<p></p>
+<p>┌───┐</p>
+<p>│   │</p>
+<p>│   │</p>
+<p>│   │</p>
+<p>│   │</p>
+<p>┌───┐         │   │  ┌───┐</p>
+<p>│   │         │   │  │   │</p>
+<p>│   │         │   │  │   │</p>
+<p>│   │         │   │  │   │</p>
+<p>│   │         │   │  │   │</p>
+<p>┌───┐  ┌───┐         │   │         │   │  │   │</p>
+<p>│   │  │   │         │   │         │   │  │   │</p>
+<p>│   │  │   │         │   │  ┌───┐  │   │  │   │</p>
+<p>│   │  │   │  ┌───┐  │   │  │   │  │   │  │   │</p>
+<p>│   │  │   │  │   │  │   │  │   │  │   │  │   │</p>
+<p>│ 5 │  │ 5 │  │ 2 │  │ 10 │  │ 3 │  │ 15 │  │ 10 │</p>
+<p>─┘   └──┘   └──┘   └──┘   └──┘   └──┘   └──┘   └─</p>
+<p>Write a function that, given a scalar or vector of skyscraper heights from closest to furthest, will return an integer representing the number of skyscrapers that can be seen.</p>
+<p class="hint">Define a function named <code>NumberOfSkyscrapers</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">NumberOfSkyscrapers ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":"from the left person's view","code":"⍤⤙≍ 3 NumberOfSkyscrapers [5 5 2 10 3 15 10]"},{"description":"from the right person's view","code":"⍤⤙≍ 2 NumberOfSkyscrapers ⇌ [5 5 2 10 3 15 10]"},{"description":"no skyscrapers here!","code":"⍤⤙≍ 0 NumberOfSkyscrapers []"},{"description":"single skyscraper","code":"⍤⤙≍ 1 NumberOfSkyscrapers [10]"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

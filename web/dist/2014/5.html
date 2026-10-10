@@ -1,71 +1,38 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>2014-5: Mirror Mirror</title>
-    <link rel="stylesheet" href="../assets/style.css" />
-  </head>
-  <body>
-    <a class="back-link" href="../index.html">&larr; All exercises</a>
-    <header>
-      <h1>2014-5: Mirror Mirror</h1>
-      <p>
-        A palindrome is a word or phrase whose letters read the same forwards
-        and backwards. Write a function which returns a 1 if its character array
-        argument is a palindrome, 0 otherwise. For simplicity&quot;s sake, you
-        may assume that the array is all one case.
-      </p>
-      <p class="hint">
-        Define a function named <code>IsPalindrome</code>; the tests below will
-        call it.
-      </p>
-    </header>
-    <section class="editor">
-      <div class="code-editor">
-        <pre
-          class="code-highlight"
-          aria-hidden="true"
-        ><code id="code-highlight"></code></pre>
-        <textarea
-          id="code"
-          spellcheck="false"
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-        >
-IsPalindrome ← 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2014-5: Mirror Mirror</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2014-5: Mirror Mirror</h1>
+<p>A palindrome is a word or phrase whose letters read the same forwards and backwards. Write a function which returns a 1 if its character array argument is a palindrome, 0 otherwise. For simplicity&quot;s sake, you may assume that the array is all one case.</p>
+<p class="hint">Define a function named <code>IsPalindrome</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">IsPalindrome ← 
 </textarea>
-      </div>
-      <div class="actions">
-        <button id="run">Run tests</button>
-        <span id="status"></span>
-      </div>
-    </section>
-    <section id="results" class="results"></section>
-    <script type="application/json" id="tests-data">
-      [
-        {
-          "description": null,
-          "code": "⍤⤙≍ 1 IsPalindrome \"a man, a plan, a canal, panama!\""
-        },
-        { "description": null, "code": "⍤⤙≍ 1 IsPalindrome \"\"" },
-        { "description": null, "code": "⍤⤙≍ 1 IsPalindrome \"a\"" },
-        { "description": null, "code": "⍤⤙≍ 0 IsPalindrome \"APL\"" }
-      ]
-    </script>
-    <script type="module" src="../assets/app.js"></script>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ 1 IsPalindrome \"a man, a plan, a canal, panama!\""},{"description":null,"code":"⍤⤙≍ 1 IsPalindrome \"\""},{"description":null,"code":"⍤⤙≍ 1 IsPalindrome \"a\""},{"description":null,"code":"⍤⤙≍ 0 IsPalindrome \"APL\""}]</script>
+<script type="module" src="../assets/app.js"></script>
 
-    <footer class="attribution">
-      <p>
-        Problem statements and reference tests are adapted from
-        <a href="https://apl.quest">APL Quest</a>
-        (<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>),
-        licensed under
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-          >CC BY-NC-SA 4.0</a
-        >.
-      </p>
-    </footer>
-  </body>
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
 </html>

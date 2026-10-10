@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2022-1: Counting DNA Nucleotides?</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2022-1: Counting DNA Nucleotides?</h1>
+<p>This problem was inspired by Counting DNA Nucleotides found on the excellent bioinformatics website rosalind.info.</p>
+<p>Write a function that:</p>
+<p>- takes a right argument that is a character vector or scalar representing a DNA string (whose alphabet contains the symbols &quot;A&quot;, &quot;C&quot;, &quot;G&quot;, and &quot;T&quot;).</p>
+<p>- returns a 4-element numeric vector containing the counts of each symbol &quot;A&quot;, &quot;C&quot;, &quot;G&quot;, and &quot;T&quot; respectively.</p>
+<p class="hint">Define a function named <code>NucleotideCount</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">NucleotideCount ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ map \"ACGT\" [20 12 17 21] NucleotideCount \"AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC\""},{"description":null,"code":"⍤⤙≍ map \"ACGT\" [0 0 0 0] NucleotideCount \"\""},{"description":null,"code":"⍤⤙≍ map \"ACGT\" [0 0 1 0] NucleotideCount \"G\""}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

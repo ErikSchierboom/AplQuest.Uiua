@@ -1,75 +1,39 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>2013-5: Identity Crisis</title>
-    <link rel="stylesheet" href="../assets/style.css" />
-  </head>
-  <body>
-    <a class="back-link" href="../index.html">&larr; All exercises</a>
-    <header>
-      <h1>2013-5: Identity Crisis</h1>
-      <p>
-        An identity matrix is a square matrix (table) of 0 with 1's in the main
-        diagonal.
-      </p>
-      <p>Write a function which produces an n×n identity matrix.</p>
-      <p class="hint">
-        Define a function named <code>IdentityMatrix</code>; the tests below
-        will call it.
-      </p>
-    </header>
-    <section class="editor">
-      <div class="code-editor">
-        <pre
-          class="code-highlight"
-          aria-hidden="true"
-        ><code id="code-highlight"></code></pre>
-        <textarea
-          id="code"
-          spellcheck="false"
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-        >
-IdentityMatrix ← 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2013-5: Identity Crisis</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2013-5: Identity Crisis</h1>
+<p>An identity matrix is a square matrix (table) of 0 with 1's in the main diagonal.</p>
+<p>Write a function which produces an n×n identity matrix.</p>
+<p class="hint">Define a function named <code>IdentityMatrix</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">IdentityMatrix ← 
 </textarea>
-      </div>
-      <div class="actions">
-        <button id="run">Run tests</button>
-        <span id="status"></span>
-      </div>
-    </section>
-    <section id="results" class="results"></section>
-    <script type="application/json" id="tests-data">
-      [
-        {
-          "description": null,
-          "code": "Expected ← [[1 0 0 0 0]\n[0 1 0 0 0]\n[0 0 1 0 0]\n[0 0 0 1 0]\n[0 0 0 0 1]]\n⍤⤙≍ Expected IdentityMatrix 5"
-        },
-        {
-          "description": "should return a 1×1 matrix",
-          "code": "Expected ← [[1 0 0 0 0]\n[0 1 0 0 0]\n[0 0 1 0 0]\n[0 0 0 1 0]\n[0 0 0 0 1]]\nExpected ← [[1]]\n⍤⤙≍ Expected IdentityMatrix 1"
-        },
-        {
-          "description": "should return a 0×0 matrix",
-          "code": "Expected ← [[1 0 0 0 0]\n[0 1 0 0 0]\n[0 0 1 0 0]\n[0 0 0 1 0]\n[0 0 0 0 1]]\nExpected ← [[1]]\nExpected ← ↯0_0 0\n⍤⤙≍ Expected IdentityMatrix 0"
-        }
-      ]
-    </script>
-    <script type="module" src="../assets/app.js"></script>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"Expected ← [[1 0 0 0 0]\n[0 1 0 0 0]\n[0 0 1 0 0]\n[0 0 0 1 0]\n[0 0 0 0 1]]\n⍤⤙≍ Expected IdentityMatrix 5"},{"description":"should return a 1×1 matrix","code":"Expected ← [[1 0 0 0 0]\n[0 1 0 0 0]\n[0 0 1 0 0]\n[0 0 0 1 0]\n[0 0 0 0 1]]\nExpected ← [[1]]\n⍤⤙≍ Expected IdentityMatrix 1"},{"description":"should return a 0×0 matrix","code":"Expected ← [[1 0 0 0 0]\n[0 1 0 0 0]\n[0 0 1 0 0]\n[0 0 0 1 0]\n[0 0 0 0 1]]\nExpected ← [[1]]\nExpected ← ↯0_0 0\n⍤⤙≍ Expected IdentityMatrix 0"}]</script>
+<script type="module" src="../assets/app.js"></script>
 
-    <footer class="attribution">
-      <p>
-        Problem statements and reference tests are adapted from
-        <a href="https://apl.quest">APL Quest</a>
-        (<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>),
-        licensed under
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-          >CC BY-NC-SA 4.0</a
-        >.
-      </p>
-    </footer>
-  </body>
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
 </html>

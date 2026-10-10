@@ -1,78 +1,38 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>2014-4: Space The Final Frontier</title>
-    <link rel="stylesheet" href="../assets/style.css" />
-  </head>
-  <body>
-    <a class="back-link" href="../index.html">&larr; All exercises</a>
-    <header>
-      <h1>2014-4: Space The Final Frontier</h1>
-      <p>
-        Write a function that removes extraneous (leading, trailing, and
-        multiple) spaces from a character array.
-      </p>
-      <p class="hint">
-        Define a function named <code>Space</code>; the tests below will call
-        it.
-      </p>
-    </header>
-    <section class="editor">
-      <div class="code-editor">
-        <pre
-          class="code-highlight"
-          aria-hidden="true"
-        ><code id="code-highlight"></code></pre>
-        <textarea
-          id="code"
-          spellcheck="false"
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-        >
-Space ← 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2014-4: Space The Final Frontier</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2014-4: Space The Final Frontier</h1>
+<p>Write a function that removes extraneous (leading, trailing, and multiple) spaces from a character array.</p>
+<p class="hint">Define a function named <code>Space</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Space ← 
 </textarea>
-      </div>
-      <div class="actions">
-        <button id="run">Run tests</button>
-        <span id="status"></span>
-      </div>
-    </section>
-    <section id="results" class="results"></section>
-    <script type="application/json" id="tests-data">
-      [
-        {
-          "description": null,
-          "code": "⍤⤙≍ \"this is a test\" Space \"  this  is a   test  \""
-        },
-        {
-          "description": "should return an empty array",
-          "code": "⍤⤙≍ \"\" Space \"\""
-        },
-        {
-          "description": null,
-          "code": "⍤⤙≍ \"hello world!\" Space \"hello world!\""
-        },
-        {
-          "description": "array of only spaces should return empty array",
-          "code": "⍤⤙≍ \"\" Space \"  \""
-        }
-      ]
-    </script>
-    <script type="module" src="../assets/app.js"></script>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ \"this is a test\" Space \"  this  is a   test  \""},{"description":"should return an empty array","code":"⍤⤙≍ \"\" Space \"\""},{"description":null,"code":"⍤⤙≍ \"hello world!\" Space \"hello world!\""},{"description":"array of only spaces should return empty array","code":"⍤⤙≍ \"\" Space \"  \""}]</script>
+<script type="module" src="../assets/app.js"></script>
 
-    <footer class="attribution">
-      <p>
-        Problem statements and reference tests are adapted from
-        <a href="https://apl.quest">APL Quest</a>
-        (<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>),
-        licensed under
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-          >CC BY-NC-SA 4.0</a
-        >.
-      </p>
-    </footer>
-  </body>
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
 </html>

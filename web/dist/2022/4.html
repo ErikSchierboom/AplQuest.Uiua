@@ -3,20 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2014-10: Sales Are Up</title>
+<title>2022-4: In the Long One...</title>
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 <a class="back-link" href="../index.html">&larr; All exercises</a>
 <header>
-<h1>2014-10: Sales Are Up</h1>
-<p>Given a vector representing monthly sales figures, write a function that returns the greatest percent month to month increase.</p>
-<p class="hint">Define a function named <code>GreatestPercentIncrease</code>; the tests below will call it.</p>
+<h1>2022-4: In the Long One...</h1>
+<p>Write a function that:</p>
+<p>- takes a right argument that is a Boolean scalar or vector.</p>
+<p>- returns the length of the longest sequence of consecutive 1s.</p>
+<p class="hint">Define a function named <code>ConsecutiveOnes</code>; the tests below will call it.</p>
 </header>
 <section class="editor">
 <div class="code-editor">
 <pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
-<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">GreatestPercentIncrease ← 
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">ConsecutiveOnes ← 
 </textarea>
 </div>
 <div class="actions">
@@ -25,7 +27,7 @@
 </div>
 </section>
 <section id="results" class="results"></section>
-<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ 25 GreatestPercentIncrease [80 100 120 140]"},{"description":null,"code":"⍤⤙≍ 0 GreatestPercentIncrease [123 123 123]"},{"description":null,"code":"⍤⤙≍ 11.76470588 ⁅₈ GreatestPercentIncrease [101 102 114 117 101 110 102 111 118 115 124 122]"},{"description":null,"code":"⍤⤙≍ ¯10 GreatestPercentIncrease [200 180 160 140 120]"}]</script>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ 4 ConsecutiveOnes [1 1 1 0 1 1 0 0 1 1 1 1 0]"},{"description":null,"code":"⍤⤙≍ 0 ConsecutiveOnes []"},{"description":null,"code":"⍤⤙≍ 1 ConsecutiveOnes [1]"},{"description":null,"code":"⍤⤙≍ 0 ConsecutiveOnes [0]"},{"description":null,"code":"⍤⤙≍ 12 ConsecutiveOnes ▽ 12 [0 1 0 1]"}]</script>
 <script type="module" src="../assets/app.js"></script>
 
 <footer class="attribution">

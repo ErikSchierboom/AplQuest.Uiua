@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2022-5: Stairway to Heaven</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2022-5: Stairway to Heaven</h1>
+<p>(with apologies to Led Zeppelin)</p>
+<p>Write a function that:</p>
+<p>- takes a scalar integer argument, n, in the range 0-100.</p>
+<p>- returns a character matrix comprised of spaces and ⎕ that resembles an n-level left-to-right ascending stairway.</p>
+<p class="hint">Define a function named <code>Stairway</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Stairway ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"Expected ← [\"         ⎕\"\n\"        ⎕⎕\"\n\"       ⎕⎕⎕\"\n\"      ⎕⎕⎕⎕\"\n\"     ⎕⎕⎕⎕⎕\"\n\"    ⎕⎕⎕⎕⎕⎕\"\n\"   ⎕⎕⎕⎕⎕⎕⎕\"\n\"  ⎕⎕⎕⎕⎕⎕⎕⎕\"\n\" ⎕⎕⎕⎕⎕⎕⎕⎕⎕\"\n\"⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕\"]\n⍤⤙≍ Expected Stairway 10"},{"description":"returns a 0×0 matrix","code":"Expected ← [\"         ⎕\"\n\"        ⎕⎕\"\n\"       ⎕⎕⎕\"\n\"      ⎕⎕⎕⎕\"\n\"     ⎕⎕⎕⎕⎕\"\n\"    ⎕⎕⎕⎕⎕⎕\"\n\"   ⎕⎕⎕⎕⎕⎕⎕\"\n\"  ⎕⎕⎕⎕⎕⎕⎕⎕\"\n\" ⎕⎕⎕⎕⎕⎕⎕⎕⎕\"\n\"⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕\"]\n⍤⤙≍ [] Stairway 0"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

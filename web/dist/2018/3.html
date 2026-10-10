@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2018-3: Rolling Along</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2018-3: Rolling Along</h1>
+<p>Write a function that, given an integer scalar or vector representing the number of sides on each of a set of dice, will return a histogram showing the distribution curve for the possible totals that can be rolled using those dice.</p>
+<p>The histogram is a 2-column matrix where the left column contains the possible totals for the dice, and the right column has vectors containing asterisks representing the number of occurrences of the corresponding totals.</p>
+<p class="hint">Define a function named <code>Histogram</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Histogram ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":"2 6-sided dice","code":"Expected ← [\n\" 2  *      \"\n\" 3  **     \"\n\" 4  ***    \"\n\" 5  ****   \"\n\" 6  *****  \"\n\" 7  ****** \"\n\" 8  *****  \"\n\" 9  ****   \"\n\"10  ***    \"\n\"11  **     \"\n\"12  *      \"\n]\n⍤⤙≍ Expected Histogram [6 6]"},{"description":"1 6-sided die (flat distribution)","code":"Expected ← [\n\" 2  *      \"\n\" 3  **     \"\n\" 4  ***    \"\n\" 5  ****   \"\n\" 6  *****  \"\n\" 7  ****** \"\n\" 8  *****  \"\n\" 9  ****   \"\n\"10  ***    \"\n\"11  **     \"\n\"12  *      \"\n]\nExpected ← [\n\"1  *      \"\n\"2  *      \"\n\"3  *      \"\n\"4  *      \"\n\"5  *      \"\n\"6  *      \"\n]\n⍤⤙≍ Expected Histogram [6]"},{"description":"5, 3, and 4-sided dice","code":"Expected ← [\n\" 2  *      \"\n\" 3  **     \"\n\" 4  ***    \"\n\" 5  ****   \"\n\" 6  *****  \"\n\" 7  ****** \"\n\" 8  *****  \"\n\" 9  ****   \"\n\"10  ***    \"\n\"11  **     \"\n\"12  *      \"\n]\nExpected ← [\n\"1  *      \"\n\"2  *      \"\n\"3  *      \"\n\"4  *      \"\n\"5  *      \"\n\"6  *      \"\n]\nExpected ← [\n\" 3  *            \"\n\" 4  ***          \"\n\" 5  ******       \"\n\" 6  *********    \"\n\" 7  ***********  \"\n\" 8  ***********  \"\n\" 9  *********    \"\n\"10  ******       \"\n\"11  ***          \"\n\"12  *            \"\n]\n⍤⤙≍ Expected Histogram [5 3 4]"},{"description":"no dice","code":"Expected ← [\n\" 2  *      \"\n\" 3  **     \"\n\" 4  ***    \"\n\" 5  ****   \"\n\" 6  *****  \"\n\" 7  ****** \"\n\" 8  *****  \"\n\" 9  ****   \"\n\"10  ***    \"\n\"11  **     \"\n\"12  *      \"\n]\nExpected ← [\n\"1  *      \"\n\"2  *      \"\n\"3  *      \"\n\"4  *      \"\n\"5  *      \"\n\"6  *      \"\n]\nExpected ← [\n\" 3  *            \"\n\" 4  ***          \"\n\" 5  ******       \"\n\" 6  *********    \"\n\" 7  ***********  \"\n\" 8  ***********  \"\n\" 9  *********    \"\n\"10  ******       \"\n\"11  ***          \"\n\"12  *            \"\n]\n⍤⤙≍ [] Histogram []"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

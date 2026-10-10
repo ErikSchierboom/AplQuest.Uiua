@@ -1,75 +1,39 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>2013-3: What Is In a Word</title>
-    <link rel="stylesheet" href="../assets/style.css" />
-  </head>
-  <body>
-    <a class="back-link" href="../index.html">&larr; All exercises</a>
-    <header>
-      <h1>2013-3: What Is In a Word</h1>
-      <p>
-        Write a function which returns the number of words in the given
-        character scalar or array.
-      </p>
-      <p>
-        For simplicity's sake, you can consider the space character ' ' to be
-        the only word separator.
-      </p>
-      <p class="hint">
-        Define a function named <code>WordCount</code>; the tests below will
-        call it.
-      </p>
-    </header>
-    <section class="editor">
-      <div class="code-editor">
-        <pre
-          class="code-highlight"
-          aria-hidden="true"
-        ><code id="code-highlight"></code></pre>
-        <textarea
-          id="code"
-          spellcheck="false"
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-        >
-WordCount ← 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2013-3: What Is In a Word</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2013-3: What Is In a Word</h1>
+<p>Write a function which returns the number of words in the given character scalar or array.</p>
+<p>For simplicity's sake, you can consider the space character ' ' to be the only word separator.</p>
+<p class="hint">Define a function named <code>WordCount</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">WordCount ← 
 </textarea>
-      </div>
-      <div class="actions">
-        <button id="run">Run tests</button>
-        <span id="status"></span>
-      </div>
-    </section>
-    <section id="results" class="results"></section>
-    <script type="application/json" id="tests-data">
-      [
-        {
-          "description": null,
-          "code": "⍤⤙≍ 4 WordCount \"Testing one, two, three\""
-        },
-        { "description": null, "code": "⍤⤙≍ 0 WordCount \"\"" },
-        {
-          "description": "just counting the blanks won't work",
-          "code": "⍤⤙≍ 5 WordCount \" this array has extra blanks \""
-        }
-      ]
-    </script>
-    <script type="module" src="../assets/app.js"></script>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ 4 WordCount \"Testing one, two, three\""},{"description":null,"code":"⍤⤙≍ 0 WordCount \"\""},{"description":"just counting the blanks won't work","code":"⍤⤙≍ 5 WordCount \" this array has extra blanks \""}]</script>
+<script type="module" src="../assets/app.js"></script>
 
-    <footer class="attribution">
-      <p>
-        Problem statements and reference tests are adapted from
-        <a href="https://apl.quest">APL Quest</a>
-        (<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>),
-        licensed under
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-          >CC BY-NC-SA 4.0</a
-        >.
-      </p>
-    </footer>
-  </body>
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
 </html>

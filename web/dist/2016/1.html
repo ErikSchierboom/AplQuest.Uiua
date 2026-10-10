@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2014-10: Sales Are Up</title>
+<title>2016-1: Statistics - Mean</title>
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 <a class="back-link" href="../index.html">&larr; All exercises</a>
 <header>
-<h1>2014-10: Sales Are Up</h1>
-<p>Given a vector representing monthly sales figures, write a function that returns the greatest percent month to month increase.</p>
-<p class="hint">Define a function named <code>GreatestPercentIncrease</code>; the tests below will call it.</p>
+<h1>2016-1: Statistics - Mean</h1>
+<p>Write a function that takes a numeric array as its right argument and returns the mean (average) of the array.</p>
+<p class="hint">Define a function named <code>Mean</code>; the tests below will call it.</p>
 </header>
 <section class="editor">
 <div class="code-editor">
 <pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
-<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">GreatestPercentIncrease ← 
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Mean ← 
 </textarea>
 </div>
 <div class="actions">
@@ -25,7 +25,7 @@
 </div>
 </section>
 <section id="results" class="results"></section>
-<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ 25 GreatestPercentIncrease [80 100 120 140]"},{"description":null,"code":"⍤⤙≍ 0 GreatestPercentIncrease [123 123 123]"},{"description":null,"code":"⍤⤙≍ 11.76470588 ⁅₈ GreatestPercentIncrease [101 102 114 117 101 110 102 111 118 115 124 122]"},{"description":null,"code":"⍤⤙≍ ¯10 GreatestPercentIncrease [200 180 160 140 120]"}]</script>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ 3.5 Mean [1 2 3 4 5 6]"},{"description":"the average of an empty vector is 0","code":"⍤⤙≍ 0 Mean []"},{"description":"your solution should work with a scalar argument","code":"⍤⤙≍ 17 Mean 17"},{"description":"and average the columns of a matrix","code":"⍤⤙≍ [7 8 9] Mean ↯5_3 +1⇡15"},{"description":"or the matrices of a 3D array etc.","code":"Expected ← [\n[5 6 7]\n[8 9 10]\n[6 7 8]\n]\n⍤⤙≍ Expected Mean ↯[3 3 3] +1⇡15"}]</script>
 <script type="module" src="../assets/app.js"></script>
 
 <footer class="attribution">

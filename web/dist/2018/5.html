@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2018-5: What's Your Sign? Revisited</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2018-5: What's Your Sign? Revisited</h1>
+<p>In Western astrology, the Zodiac is based on twelve 30° sectors of the ecliptic. Although the exact dates in a given year may shift by a day, the general dates for each sign are:</p>
+<p></p>
+<p>Aries   March 21–April 19        Libra September 23–October 22</p>
+<p>Taurus  April 20–May 20          Scorpio October 23–November 21</p>
+<p>Gemini  May 21–June 20           Sagittarius November 22–December 21</p>
+<p>Cancer  June 21–July 22          Capricorn December 22–January 19</p>
+<p>Leo     July 23–August 22        Aquarius January 20–February 18</p>
+<p>Virgo   August 23–September 22   Pisces February 19–March 20</p>
+<p></p>
+<p>Write a function that, given a 2-element integer vector representing month and day, returns a character vector (string) of the corresponding Western zodiac sign.</p>
+<p class="hint">Define a function named <code>Zodiac</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Zodiac ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤\"Invalid month\""},{"description":"February 23","code":"| ⨬(\"Capricorn\"|\"Aquarius\")>19    # January\n| ⨬(\"Aquarius\"|\"Pisces\")>18       # February\n| ⨬(\"Pisces\"|\"Aries\")>20          # March\n| ⨬(\"Aries\"|\"Taurus\")>19          # April\n| ⨬(\"Taurus\"|\"Gemini\")>20         # May\n| ⨬(\"Gemini\"|\"Cancer\")>20         # June\n| ⨬(\"Cancel\"|\"Leo\")>22            # July\n| ⨬(\"Leo\"|\"Virgo\")>22             # August\n| ⨬(\"Virgo\"|\"Libra\")>22           # September\n| ⨬(\"Libra\"|\"Scorpio\")>22         # October\n| ⨬(\"Scorpio\"|\"Sagittarius\")>21   # November\n| ⨬(\"Sagittarius\"|\"Capricorn\")>21 # December\n| )\n⍤⤙≍ \"Pisces\" Zodiac 2 23"},{"description":"October 31","code":"| ⨬(\"Capricorn\"|\"Aquarius\")>19    # January\n| ⨬(\"Aquarius\"|\"Pisces\")>18       # February\n| ⨬(\"Pisces\"|\"Aries\")>20          # March\n| ⨬(\"Aries\"|\"Taurus\")>19          # April\n| ⨬(\"Taurus\"|\"Gemini\")>20         # May\n| ⨬(\"Gemini\"|\"Cancer\")>20         # June\n| ⨬(\"Cancel\"|\"Leo\")>22            # July\n| ⨬(\"Leo\"|\"Virgo\")>22             # August\n| ⨬(\"Virgo\"|\"Libra\")>22           # September\n| ⨬(\"Libra\"|\"Scorpio\")>22         # October\n| ⨬(\"Scorpio\"|\"Sagittarius\")>21   # November\n| ⨬(\"Sagittarius\"|\"Capricorn\")>21 # December\n| )\n⍤⤙≍ \"Scorpio\" Zodiac 10 31"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
