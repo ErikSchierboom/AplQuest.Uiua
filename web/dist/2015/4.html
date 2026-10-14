@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2015-4: PDI - Progressive Dyadic Iota</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2015-4: PDI - Progressive Dyadic Iota</h1>
+<p>The indexin function returns a simple integer vector that identifies where the major cells of Y are first found in X.</p>
+<p>If a major cell of Y cannot be found in X, then the corresponding item of the returned array will be 1+≢X.</p>
+<p></p>
+<p>Progressive dyadic iota is similar to indexin except that it returns the index of subsequent matches in the left argument until they are exhausted.</p>
+<p>Write a function that implements progressive dyadic iota.</p>
+<p class="hint">Define a function named <code>ProgressiveIndexin</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">ProgressiveIndexin ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ [2 7 10 3 9 10 10] ProgressiveIndexin \"DYALOG APL\" \"AAALLLB\""},{"description":"should work with empty left argument","code":"⍤⤙≍ [0 0 0 0] ProgressiveIndexin \"\" \"test\""},{"description":"should work with empty right argument","code":"⍤⤙≍ [] ProgressiveIndexin \"test\" \"\""}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

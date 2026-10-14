@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2023-4: Like a Version</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2023-4: Like a Version</h1>
+<p>One common software version numbering scheme is known as &quot;semantic versioning&quot;. Typically, semantic versioning uses three numbers representing a major version number, a minor version number, and a build number.</p>
+<p></p>
+<p>The major version is incremented when a new version of the software introduces changes that would make existing applications using the software fail or behave differently.</p>
+<p>The minor version is incremented when new features are added that didn't previously exist — no pre-existing use of the software will fail in this case.</p>
+<p>The build number is incremented for bug fixes and similar changes.</p>
+<p>Write a function that:</p>
+<p></p>
+<p>Takes 3-element integer vector left and right arguments each representing a major version, minor version, and build number.</p>
+<p>Returns</p>
+<p>¯1 if the left argument represents a version number older than the right argument</p>
+<p>0 if the left argument represents a version number equal to the right argument</p>
+<p>1 if the left argument represents a version number newer than the right argument</p>
+<p class="hint">Define a function named <code>Compare</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Compare ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ 0 Compare [1 2 3] [1 2 3]"},{"description":null,"code":"⍤⤙≍ 1 Compare [1 2 3] [1 0 9]"},{"description":null,"code":"⍤⤙≍ ¯1 Compare [14 2 11] [14 2 12]"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

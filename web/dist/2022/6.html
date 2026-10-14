@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2022-6: Pyramid Scheme</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2022-6: Pyramid Scheme</h1>
+<p>Write a monadic function that:</p>
+<p>- takes an argument n that is an integer scalar in the range 0-100.</p>
+<p>- returns a square matrix &quot;pyramid&quot; with 0⌈¯1+2×n rows and columns of n increasing concentric levels.</p>
+<p>- By this we mean that the center element of the matrix will be n, surrounded on all sides by n-1.</p>
+<p class="hint">Define a function named <code>Pyramid</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Pyramid ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"Expected ← [[1 1 1 1 1]\n[1 2 2 2 1]\n[1 2 3 2 1]\n[1 2 2 2 1]\n[1 1 1 1 1]]\n⍤⤙≍ Expected Pyramid 3"},{"description":null,"code":"Expected ← [[1 1 1 1 1]\n[1 2 2 2 1]\n[1 2 3 2 1]\n[1 2 2 2 1]\n[1 1 1 1 1]]\nExpected ← [[1 1 1 1 1 1 1 1 1]\n[1 2 2 2 2 2 2 2 1]\n[1 2 3 3 3 3 3 2 1]\n[1 2 3 4 4 4 3 2 1]\n[1 2 3 4 5 4 3 2 1]\n[1 2 3 4 4 4 3 2 1]\n[1 2 3 3 3 3 3 2 1]\n[1 2 2 2 2 2 2 2 1]\n[1 1 1 1 1 1 1 1 1]]\n⍤⤙≍ Expected Pyramid 5"},{"description":"⍝ should return 1 1⍴1","code":"Expected ← [[1 1 1 1 1]\n[1 2 2 2 1]\n[1 2 3 2 1]\n[1 2 2 2 1]\n[1 1 1 1 1]]\nExpected ← [[1 1 1 1 1 1 1 1 1]\n[1 2 2 2 2 2 2 2 1]\n[1 2 3 3 3 3 3 2 1]\n[1 2 3 4 4 4 3 2 1]\n[1 2 3 4 5 4 3 2 1]\n[1 2 3 4 4 4 3 2 1]\n[1 2 3 3 3 3 3 2 1]\n[1 2 2 2 2 2 2 2 1]\n[1 1 1 1 1 1 1 1 1]]\n⍤⤙≍ [[1]] Pyramid 1"},{"description":"should return 0 0⍴0","code":"Expected ← [[1 1 1 1 1]\n[1 2 2 2 1]\n[1 2 3 2 1]\n[1 2 2 2 1]\n[1 1 1 1 1]]\nExpected ← [[1 1 1 1 1 1 1 1 1]\n[1 2 2 2 2 2 2 2 1]\n[1 2 3 3 3 3 3 2 1]\n[1 2 3 4 4 4 3 2 1]\n[1 2 3 4 5 4 3 2 1]\n[1 2 3 4 4 4 3 2 1]\n[1 2 3 3 3 3 3 2 1]\n[1 2 2 2 2 2 2 2 1]\n[1 1 1 1 1 1 1 1 1]]\n⍤⤙≍ 0_0△ Pyramid 0"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

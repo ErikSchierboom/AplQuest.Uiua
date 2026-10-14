@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2023-3: Caesar Salad</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2023-3: Caesar Salad</h1>
+<p>A Caesar cipher, also known as a shift cipher, is one of the simplest encryption techniques.</p>
+<p>In a Caesar cipher, each letter in the plaintext is replaced by a letter some fixed number of positions away in the alphabet, effectively &quot;shifting&quot; the alphabet.</p>
+<p></p>
+<p>Write a function that:</p>
+<p></p>
+<p>- takes a character vector right argument representing the plaintext message</p>
+<p>- takes a single integer left argument representing the size of the shift</p>
+<p>- returns a result with the same shape as the right argument representing the encrypted message</p>
+<p></p>
+<p>The input will be uppercase letters and spaces.</p>
+<p class="hint">Define a function named <code>CaesarCipher</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">CaesarCipher ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ \"LIPPSD SVPHW\" CaesarCipher 4 \"HELLO WORLDS\""},{"description":"negative shifts are okay","code":"⍤⤙≍ \"DAHHKWSKNH O\" CaesarCipher ¯4 \"HELLO WORLDS\""},{"description":"no shift is okay","code":"⍤⤙≍ \"HELLO WORLDS\" CaesarCipher 0 \"HELLO WORLDS\""},{"description":null,"code":"⍤⤙≍ \"HELLO WORLDS\" CaesarCipher 27 \"HELLO WORLDS\""},{"description":"returns an empty vector","code":"⍤⤙≍ \"\" CaesarCipher ¯10 \"\""}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

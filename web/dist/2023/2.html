@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2023-2: Put It In Reverse</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2023-2: Put It In Reverse</h1>
+<p>In this problem, you&quot;re asked to return a result that identifies the endings of occurrences of array X in array Y. To keep things simple, X and Y will be at most rank 1, meaning they&quot;ll either be vectors or scalars.</p>
+<p></p>
+<p>Write a function that:</p>
+<p>- takes a scalar or vector left argument</p>
+<p>- takes a scalar or vector right argument</p>
+<p>- returns a Boolean result that is the same shape as the right argument where 1&quot;s mark the ends of occurrences of the left argument in the right argument</p>
+<p class="hint">Define a function named <code>OccurenceEnds</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">OccurenceEnds ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ [0 0 0 1 0 0 0 0 0 0 1] OccurenceEnds \"abra\" \"abracadabra\""},{"description":null,"code":"⍤⤙≍ [0 0 0 0 1 0 0 1 0 0 0] OccurenceEnds \"issi\" \"Mississippi\""},{"description":null,"code":"⍤⤙≍ [0 1 1 0 0 1 1] OccurenceEnds \"bb\" \"bbb bbb\""},{"description":null,"code":"⍤⤙≍ 0 OccurenceEnds [42 42] 42"},{"description":null,"code":"⍤⤙≍ 1 OccurenceEnds 42 42"},{"description":null,"code":"⍤⤙≍ [1] OccurenceEnds [42 42] [42 42]"},{"description":null,"code":"⍤⤙≍ [0 0 1 0] OccurenceEnds {\"are\" \"aquatic\"} {\"ducks\" \"are\" \"aquatic\" \"avians\"}"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

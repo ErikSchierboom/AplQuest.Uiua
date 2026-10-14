@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2022-9: An Average Window (or a Windowed Average)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2022-9: An Average Window (or a Windowed Average)</h1>
+<p>Write a function that:</p>
+<p></p>
+<p>- takes a right argument Y that is a numeric scalar or non-empty vector.</p>
+<p>- takes a left argument X that represents the number of neighboring elements on either side of each element in Y.</p>
+<p>- returns a numeric vector or scalar where each element is the average (mean) of the corresponding element in Y and its X neighbors on either side. If an element has fewer than X neighbors on either side, replicate the first and last values as necessary to make X neighbors.</p>
+<p class="hint">Define a function named <code>AverageWindow</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">AverageWindow ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":"0 neighbors on each side","code":"⊙⊃(+₁|+₁×₂)\n⊸⍜(⊢|˜↯⊙[∘])\n⍜(⊣|˜↯⊙[∘])\n˜⧈(÷⊃(⧻|/+))\n)\n⍤⤙≍ [1 2 3 4 5 6] AverageWindow [1 2 3 4 5 6] 0"},{"description":"1 neighbors on each side","code":"⊙⊃(+₁|+₁×₂)\n⊸⍜(⊢|˜↯⊙[∘])\n⍜(⊣|˜↯⊙[∘])\n˜⧈(÷⊃(⧻|/+))\n)\n⍤⤙≍ [1.333333333 2 3 4 5 5.666666667] ⁅₉ AverageWindow [1 2 3 4 5 6] 1"},{"description":"2 neighbors on each side","code":"⊙⊃(+₁|+₁×₂)\n⊸⍜(⊢|˜↯⊙[∘])\n⍜(⊣|˜↯⊙[∘])\n˜⧈(÷⊃(⧻|/+))\n)\n⍤⤙≍ [1.6 2.2 3 4 4.8 5.4] AverageWindow [1 2 3 4 5 6] 2"},{"description":null,"code":"⊙⊃(+₁|+₁×₂)\n⊸⍜(⊢|˜↯⊙[∘])\n⍜(⊣|˜↯⊙[∘])\n˜⧈(÷⊃(⧻|/+))\n)\n⍤⤙≍ [2.538461538 2.923076923 3.307692308 3.692307692 4.076923077 4.461538462] ⁅₉ AverageWindow [1 2 3 4 5 6] 6"},{"description":null,"code":"⊙⊃(+₁|+₁×₂)\n⊸⍜(⊢|˜↯⊙[∘])\n⍜(⊣|˜↯⊙[∘])\n˜⧈(÷⊃(⧻|/+))\n)\n⍤⤙≍ [42] AverageWindow [42] 10"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

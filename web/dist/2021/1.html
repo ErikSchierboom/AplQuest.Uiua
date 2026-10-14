@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2021-1: Are You a Bacteria?</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2021-1: Are You a Bacteria?</h1>
+<p>A DNA string is composed of the letters 'A','C','G' and 'T'. The GC-content of a DNA string is given by the percentage of the symbols in the string that are either 'C' or 'G'. Very small discrepancies in GC-content can be used to distinguish species; for instance, most bacteria have a GC-content significantly higher than 50%.</p>
+<p></p>
+<p>Write a function that:</p>
+<p>- has a right argument that is a non-empty character vector representing a DNA string.</p>
+<p>-returns the percentage of GC-content in the string.</p>
+<p class="hint">Define a function named <code>IsBacteria</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">IsBacteria ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ 100 IsBacteria \"GCGCGCGCCCGGGGCCG\""},{"description":null,"code":"⍤⤙≍ 50 IsBacteria \"ACGTACGTACGTACGT\""},{"description":null,"code":"⍤⤙≍ 58.33333333 ⁅₈ IsBacteria ▽ [10 12 16 10] \"ACGT\""}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

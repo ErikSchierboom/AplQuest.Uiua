@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2019-2: Making the Grade</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2019-2: Making the Grade</h1>
+<p>Write a function that, given an array of integer test scores in the inclusive range 0–100, returns an identically-shaped array of the corresponding letter grades according to the below table.</p>
+<p></p>
+<p>| Score Range |	Letter Grade |</p>
+<p>| ----------- | ------------ |</p>
+<p>| 0–64        | F            |</p>
+<p>| 65–69       | D            |</p>
+<p>| 70–79       | C            |</p>
+<p>| 80–89       | B            |</p>
+<p>| 90–100      | A            |</p>
+<p class="hint">Define a function named <code>Grade</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Grade ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ \"FFDDCCBBAA\" Grade [0 64 65 69 70 79 80 89 90 100]"},{"description":"returns an empty vector","code":"⍤⤙≍ △ 0 Grade []"},{"description":null,"code":"Expected ← [\"CBB\"\n\"BBF\"]\n⍤⤙≍ Expected Grade ↯2_3 [71 82 81 82 84 59]"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

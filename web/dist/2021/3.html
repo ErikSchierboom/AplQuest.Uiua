@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2021-3: Multiplicity</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2021-3: Multiplicity</h1>
+<p>Write a function that:</p>
+<p>- has a right argument Y which is an integer vector or scalar</p>
+<p>- has a left argument X which is also an integer vector or scalar</p>
+<p>- finds which elements of Y are multiples of each element of X and returns them as a vector (in the order of X) of vectors (in the order of Y).</p>
+<p class="hint">Define a function named <code>Multiples</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Multiples ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍ Expected Multiples [2 4 7 3 9] [5 7 8 1 12 10 20 16 11 4 2 15 3 18 14 19 13 9 17 6]"},{"description":null,"code":"Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍{[3 6 9]} Multiples 3 +1 ⇡10"},{"description":null,"code":"Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍{[42] [42]} Multiples [6 7] 42"},{"description":"returns a vector of 3 empty vectors","code":"Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍{} Multiples [2 3 5] []"},{"description":"returns an empty vector","code":"Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍ {} Multiples [] +1⇡10"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
