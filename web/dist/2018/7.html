@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2018-7: Unconditionally Shifty</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2018-7: Unconditionally Shifty</h1>
+<p>Logical bitwise shifting is a common operation where bits in a fixed width field are moved to the left or right by a specified amount, N, causing N bits to be &quot;shifted out&quot; at one end and N 0's to be filled in at the other end.</p>
+<p></p>
+<p>For example, shifting the following vector by 3</p>
+<p>1 0 1 1 1 0 1 1</p>
+<p>would result in</p>
+<p>0 0 0 1 0 1 1 1</p>
+<p>and shifting by ¯3 would result in</p>
+<p>1 1 0 1 1 0 0 0</p>
+<p>Write a function that given a right argument of a Boolean scalar or vector, and left argument scalar integer of the shift amount, returns an appropriately shifted transformation of the right argument.</p>
+<p class="hint">Define a function named <code>Shift</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Shift ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ [0 0 0 1 0 1 1 1] Shift 3 [1 0 1 1 1 0 1 1]"},{"description":null,"code":"⍤⤙≍ [1 1 0 1 1 0 0 0] Shift ¯3 [1 0 1 1 1 0 1 1]"},{"description":"result is an empty vector","code":"⍤⤙≍ [] Shift 5 []"},{"description":null,"code":"⍤⤙≍ [1 0 1 1 1 0 1 1] Shift 0 [1 0 1 1 1 0 1 1]"},{"description":null,"code":"⍤⤙≍ [0] Shift 3 [1]"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2018-6: What's Your Angle?</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2018-6: What's Your Angle?</h1>
+<p>XML elements are denoted with content enclosed in beginning and ending tags. The tags themselves are enclosed in left and right angle brackets &lt; and &gt;. The only valid occurrences of angle brackets are as a part of beginning or ending tags.</p>
+<p></p>
+<p>For example, the following is valid</p>
+<p></p>
+<p>&lt;name&gt;&lt;first&gt;Drake&lt;/first&gt;&lt;last&gt;Mallard&lt;/last&gt;&lt;/name&gt;</p>
+<p>Whereas the following is not valid XML</p>
+<p></p>
+<p>&lt;math&gt;&lt;relation&gt;2&lt;3&lt;/relation&gt;&lt;/math&gt;</p>
+<p>One easy validation is to check that the angle brackets are properly balanced – all left angle brackets &lt; must be &quot;closed&quot; with right angle brackets &gt; before another occurrence of a left angle bracket.</p>
+<p></p>
+<p>Write a function that, given a character scalar or vector representing some XML, returns 1 if the angle brackets are properly balanced and 0 if not.</p>
+<p class="hint">Define a function named <code>IsValid</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">IsValid ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ 1 IsValid \"<name><first>Drake<\/first><last>Mallard<\/last><\/name>\""},{"description":null,"code":"⍤⤙≍ 0 IsValid \"<math><relation>2<3<\/relation><\/math>\""},{"description":"an empty vector is balanced","code":"⍤⤙≍ 1 IsValid \"\""},{"description":null,"code":"⍤⤙≍ 0 IsValid \">stuff<>/stuff<\""},{"description":null,"code":"⍤⤙≍ 0 IsValid \"<\""}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
