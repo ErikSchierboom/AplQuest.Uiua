@@ -8,7 +8,9 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 echo "==> Installing dependencies"
 rustup target add wasm32-unknown-unknown
-cargo install wasm-bindgen-cli --version 0.2.108 --locked
+if ! command -v wasm-bindgen >/dev/null || [[ "$(wasm-bindgen --version)" != *"0.2.108"* ]]; then
+  cargo install wasm-bindgen-cli --version 0.2.108 --locked
+fi
 
 echo "==> Building runner for wasm32-unknown-unknown"
 cargo build -p runner --target wasm32-unknown-unknown --release
