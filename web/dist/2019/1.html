@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2019-1: Chunky Monkey</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2019-1: Chunky Monkey</h1>
+<p>Write a function that, given a scalar or vector as the right argument and a positive (&gt;0) integer chunk size n as the left argument, breaks the array&quot;s items up into chunks of size n.</p>
+<p>If the number of elements in the array is not evenly divisible by n, then the last chunk will have fewer than n elements.</p>
+<p class="hint">Define a function named <code>Chunk</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Chunk ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ {[1 2 3] [4 5 6] [7 8 9]} Chunk 3 +1⇡9"},{"description":null,"code":"⍤⤙≍ {[1 2 3] [4 5 6] [7 8 9] [10 11]} Chunk 3 +1⇡11"},{"description":null,"code":"⍤⤙≍ {{\"The\" \"cat\"} {\"in\" \"the\"} {\"hat\" \"sat\"} {\"pat\"}} Chunk 2 {\"The\" \"cat\" \"in\" \"the\" \"hat\" \"sat\" \"pat\"}"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
