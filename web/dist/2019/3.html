@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2019-3: Grade Distribution</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2019-3: Grade Distribution</h1>
+<p>The school's administrative department wants to publish some simple statistics.</p>
+<p>Given a non-empty character vector of single-letter grades, produce a 3-column, 5-row, alphabetically-sorted matrix of each grade, the number of occurrences of that grade, and the percentage (rounded to 1 decimal position) of the total number of occurrences of that grade.</p>
+<p>The table should have a row for each grade even if there are no occurrences of a grade.</p>
+<p></p>
+<p>Note: due to rounding the last column might not total 100%.</p>
+<p class="hint">Define a function named <code>StatsTable</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">StatsTable ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"\"ABCDF\"\n⟜(\n≡/+⊞=\n⟜(\n°⋕⁅₁×100÷⊸/+\n⍜(⊏|⍚$\"_  \")⊚≡≠⊸(⊸/↥/◇⊂⍚(/↥⦷@.))\n⍚(⬚@ ˜↙)⟜(¯/↥/◇⊂⍚⧻)\n)\n)\n≡$\"_ _ _\"\n)\nExpected ← [\"A 3  9.7\"\n\"B 8 25.8\"\n\"C 7 22.6\"\n\"D 9 29  \"\n\"F 4 12.9\"]\n⍤⤙≍ Expected StatsTable ▽[9 3 8 4 7]\"DABFC\""},{"description":null,"code":"\"ABCDF\"\n⟜(\n≡/+⊞=\n⟜(\n°⋕⁅₁×100÷⊸/+\n⍜(⊏|⍚$\"_  \")⊚≡≠⊸(⊸/↥/◇⊂⍚(/↥⦷@.))\n⍚(⬚@ ˜↙)⟜(¯/↥/◇⊂⍚⧻)\n)\n)\n≡$\"_ _ _\"\n)\nExpected ← [\"A 3  9.7\"\n\"B 8 25.8\"\n\"C 7 22.6\"\n\"D 9 29  \"\n\"F 4 12.9\"]\nExpected ← [\"A 7 35\"\n\"B 7 35\"\n\"C 6 30\"\n\"D 0  0\"\n\"F 0  0\"]\n⍤⤙≍ Expected StatsTable ↯[20]\"ABC\""},{"description":null,"code":"\"ABCDF\"\n⟜(\n≡/+⊞=\n⟜(\n°⋕⁅₁×100÷⊸/+\n⍜(⊏|⍚$\"_  \")⊚≡≠⊸(⊸/↥/◇⊂⍚(/↥⦷@.))\n⍚(⬚@ ˜↙)⟜(¯/↥/◇⊂⍚⧻)\n)\n)\n≡$\"_ _ _\"\n)\nExpected ← [\"A 3  9.7\"\n\"B 8 25.8\"\n\"C 7 22.6\"\n\"D 9 29  \"\n\"F 4 12.9\"]\nExpected ← [\"A 7 35\"\n\"B 7 35\"\n\"C 6 30\"\n\"D 0  0\"\n\"F 0  0\"]\nExpected ← [\"A 0   0\"\n\"B 1 100\"\n\"C 0   0\"\n\"D 0   0\"\n\"F 0   0\"]\n⍤⤙≍ Expected StatsTable \"B\""}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
