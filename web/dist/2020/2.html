@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2020-2: Character Building</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2020-2: Character Building</h1>
+<p>UTF-8 encodes Unicode characters using 1-4 integers for each character.</p>
+<p>Uiua includes a system function, utf₈, that can convert characters into integers and integers into characters.</p>
+<p>The expression utf₈ &quot;UTF-8&quot; converts between characters and UTF-8 and °utf₈ does the reverse.</p>
+<p></p>
+<p>Consider the following:</p>
+<p>utf₈ &quot;D¥⍺⌊○9&quot;</p>
+<p>[68 194 165 226 141 186 226 140 138 226 151 139 57]</p>
+<p>°utf₈ [68 194 165 226 141 186 226 140 138 226 151 139 57]</p>
+<p>&quot;D¥⍺⌊○9&quot;</p>
+<p>How many integers does each character use?</p>
+<p></p>
+<p>≡(□utf₈) graphemes &quot;D¥⍺⌊○9&quot;</p>
+<p>{[68] [194 165] [226 141 186] [226 140 138] [226 151 139] [57]}</p>
+<p>The rule is that an integer in the range 128 to 191 (inclusive) continues the character of the previous integer (which may itself be a continuation).</p>
+<p>With that in mind, write a function that, given a right argument which is a simple integer vector representing valid UTF-8 text, encloses each sequence of integers that represent a single character, like the result of 'UTF-8'∘⎕UCS¨'UTF-8'∘⎕UCS but does not use any system functions (names beginning with ⎕).</p>
+<p class="hint">Define a function named <code>Encoding</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Encoding ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":"D¥⍺⌊🔲9","code":"⍤⤙≍ {[68] [194 165] [226 141 186] [226 140 138] [240 159 148 178] [57]} Encoding [68 194 165 226 141 186 226 140 138 240 159 148 178 57]"},{"description":"'Dyalog'","code":"⍤⤙≍ {[68] [121] [97] [108] [111] [103]} Encoding [68 121 97 108 111 103]"},{"description":"''","code":"⍤⤙≍ {} Encoding []"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
