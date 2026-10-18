@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2019-9: Area Code à la Gauss</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2019-9: Area Code à la Gauss</h1>
+<p>Gauss's area formula, also known as the shoelace formula, is an algorithm to calculate the area of a simple polygon (a polygon that does not intersect itself). It's called the shoelace formula because of a common method using matrices to evaluate it. For example, the area of the triangle described by the vertices (2 4)(3 ¯8)(1 2) can be calculated by “walking around” the perimeter back to the first vertex, then drawing diagonals between the columns as shown below. The pattern created by the intersecting diagonals resembles shoelaces, hence the name “shoelace formula”</p>
+<p></p>
+<p>First place the vertices in order above each other:</p>
+<p>2		4</p>
+<p>3		¯8</p>
+<p>1		2</p>
+<p>2		4</p>
+<p></p>
+<p>Sum the products of the numbers connected by the diagonal lines going down and to the right:</p>
+<p>(2×¯8)+(3×2)+(1×4)</p>
+<p>¯6</p>
+<p></p>
+<p>2	│	4</p>
+<p>3	│	¯8</p>
+<p>1	│	2</p>
+<p>2		4</p>
+<p>Next sum the products of the numbers connected by the diagonal lines going down and to the left:</p>
+<p>(4×3)+(¯8×1)+(2×2)</p>
+<p>8</p>
+<p></p>
+<p>2	│	4</p>
+<p>3	│	¯8</p>
+<p>1	│	2</p>
+<p>2		4</p>
+<p>Finally, halve the absolute value of the difference between the two sums:</p>
+<p>0.5 × | ¯6 - 8</p>
+<p>7</p>
+<p></p>
+<p>2	│	│	4</p>
+<p>3	│	│	¯8</p>
+<p>1	│	│	2</p>
+<p>2			4</p>
+<p>Given a vector of (X Y) points, or a single X Y point, return a number indicating the area circumscribed by the points.</p>
+<p class="hint">Define a function named <code>Shoelace</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Shoelace ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⊂⟜⊢\n⊃(/+⧈₂(×⊓⊢⊣°⊟)|/+⧈₂(×⊓⊣⊢°⊟))\n÷₂⌵-\n)\n⍤⤙≍ 7 Shoelace [[2 4] [3 ¯8] [1 2]]"},{"description":"a point has no area","code":"⊂⟜⊢\n⊃(/+⧈₂(×⊓⊢⊣°⊟)|/+⧈₂(×⊓⊣⊢°⊟))\n÷₂⌵-\n)\n⍤⤙≍ 0 Shoelace [[1 1]]"},{"description":"neither does a line segment","code":"⊂⟜⊢\n⊃(/+⧈₂(×⊓⊢⊣°⊟)|/+⧈₂(×⊓⊣⊢°⊟))\n÷₂⌵-\n)\n⍤⤙≍ 0 Shoelace [[1 1] [2 2]]"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
