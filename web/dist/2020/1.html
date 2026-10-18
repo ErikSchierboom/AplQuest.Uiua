@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2020-1: Let"s Split!</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2020-1: Let&quot;s Split!</h1>
+<p>Write a function that, given a right argument Y which is a scalar or a non-empty vector and a left argument X which is a single non-zero integer so that its absolute value is less or equal to ≢Y, splits Y into a vector of two vectors according to X, as follows: - If X&gt;0, the first vector contains the first X elements of Y and the second vector contains the remaining elements. - If X&lt;0, the second vector contains the last |X elements of Y and the first vector contains the remaining elements.</p>
+<p class="hint">Define a function named <code>Split</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Split ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ {\"Splitting\" \"Hairs\"} Split 9 \"SplittingHairs\""},{"description":null,"code":"⍤⤙≍ {\"Dyalog\" \"APL\"} Split ¯3 \"DyalogAPL\""},{"description":null,"code":"⍤⤙≍ {[1 2 3 4 5 6 7 8 9 10] []} Split 10 +1⇡10"},{"description":null,"code":"⍤⤙≍ {{\"works\"} {\"with\" \"words\" \"also\"}} Split 1 {\"works\" \"with\" \"words\" \"also\"}"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
