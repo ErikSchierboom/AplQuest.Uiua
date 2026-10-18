@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2019-4: Knight Moves</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2019-4: Knight Moves</h1>
+<p>1_1	1_2	1_3	1_4	1_5	1_6	1_7	1_8</p>
+<p>2_1	2_2	2_3	2_4	2_5	2_6	2_7	2_8</p>
+<p>3_1	3_2	3_3	3_4	3_5	3_6	3_7	3_8</p>
+<p>4_1	4_2	4_3	4_4	4_5	4_6	4_7	4_8</p>
+<p>5_1	5_2	5_3	5_4	5_5	5_6	5_7	5_8</p>
+<p>6_1	6_2	6_3	6_4	6_5	6_6	6_7	6_8</p>
+<p>7_1	7_2	7_3	7_4	7_5	7_6	7_7	7_8</p>
+<p>8_1	8_2	8_3	8_4	8_5	8_6	8_7	8_8</p>
+<p>Consider a chess board as an 8×8 matrix with square (1_1) in the upper left corner and square (8_8) in the lower right corner.</p>
+<p>For those not familiar with the game of chess, the knight, generally depicted as a horse (♞), can move 2 spaces right or left and then 1 space up or down, or 2 spaces up or down and then 1 space right or left.</p>
+<p>This means that a knight on square (5_4) can move to any of the indicated squares.</p>
+<p>Given a 2-element vector representing the current square for a knight, return a vector of 2-element vectors representing (in any order) all the squares that the knight can move to.</p>
+<p class="hint">Define a function named <code>Moves</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Moves ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ [[3 3] [3 5] [4 2] [4 6] [6 2] [6 6] [7 3] [7 5]] Moves [5 4]"},{"description":null,"code":"⍤⤙≍ [[2 3] [3 2]] Moves [1 1]"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
