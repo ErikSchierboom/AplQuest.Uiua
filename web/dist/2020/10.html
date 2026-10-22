@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2020-10: Stacking It Up</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2020-10: Stacking It Up</h1>
+<p>Write a function that takes as its right argument a vector of simple arrays of rank 2 or less (scalar, vector, or matrix).</p>
+<p>Each simple array will consist of either non-negative integers or printable ASCII characters.</p>
+<p>The function must return a simple character array that displays identically to what {⎕←⍵}¨ displays when applied to the right argument.</p>
+<p class="hint">Define a function named <code>StackUp</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">StackUp ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":null,"code":"Expected ← {\n\"\\\"Hi\\\"\"\n\"\\\"Earth\\\"\"\n}\n⍤⤙≍ Expected StackUp {\"Hi\" \"Earth\"}"},{"description":null,"code":"Expected ← {\n\"\\\"Hi\\\"\"\n\"\\\"Earth\\\"\"\n}\nExpected ← {\n\"1\"\n\"2\"\n\"3\"\n\"4\"\n}\n⍤⤙≍ Expected StackUp +1⇡4"},{"description":null,"code":"Expected ← {\n\"\\\"Hi\\\"\"\n\"\\\"Earth\\\"\"\n}\nExpected ← {\n\"1\"\n\"2\"\n\"3\"\n\"4\"\n}\nExpected ← {\n\"@A\"\n}\n⍤⤙≍ Expected StackUp \"A\""}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
