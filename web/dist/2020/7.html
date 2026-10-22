@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2020-7: See You in a Bit</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2020-7: See You in a Bit</h1>
+<p>A common technique for encoding a set of on/off states is to use a value of 2n for the state in position n (origin 0), 1 if the state is &quot;on&quot; or 0 for &quot;off&quot; and then add the values.</p>
+<p>Dyalog APL's component file permission codes are an example of this.</p>
+<p>For example, if you wanted to grant permissions for read (access code 1), append (access code 8) and rename (access code 128) then the resulting code would be 137 because that's 1 + 8 + 128.</p>
+<p></p>
+<p>Write a function that, given a non-negative right argument which is an integer scalar representing the encoded state and a left argument which is an integer scalar representing the encoded state settings that you want to query, returns 1 if all of the codes in the left argument are found in the right argument (0 otherwise).</p>
+<p class="hint">Define a function named <code>Encoded</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Encoded ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":"is 2 in 7 (1+2+4)?","code":"⍤⤙≍ 1 Encoded 2 7"},{"description":"is 4 in 11 (1+2+8)?","code":"⍤⤙≍ 0 Encoded 4 11"},{"description":"is 3 (1+2) in 11 (1+2+8)?","code":"⍤⤙≍ 1 Encoded 3 11"},{"description":"is 4 in 0?","code":"⍤⤙≍ 0 Encoded 4 0"}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
