@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2021-6: Fischer Random Chess</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="back-link" href="../index.html">&larr; All exercises</a>
+<header>
+<h1>2021-6: Fischer Random Chess</h1>
+<p></p>
+<p>According to Wikipedia, Fischer random chess is a variation of the game of chess invented by former world chess champion Bobby Fischer. Fischer random chess employs the same board and pieces as standard chess, but the starting position of the non-pawn pieces on the players&quot; home ranks is randomized, following certain rules. White&quot;s non-pawn pieces are placed on the first rank according to the following rules:</p>
+<p></p>
+<p>The Bishops must be placed on opposite-color squares.</p>
+<p>The King must be placed on a square between the rooks.</p>
+<p>The good news is that you don&quot;t actually need to know anything about chess to solve this problem! We&quot;ll use strings whose elements are &quot;KQRRBBNN&quot; for the King (♔), Queen (♕), 2 Rooks (♖), 2 Bishops (♗), and 2 kNights (♘) respectively.</p>
+<p></p>
+<p>Write a function that:</p>
+<p>has a character vector right argument that is a permutation of &quot;KQRRBBNN&quot;</p>
+<p>returns 1 if the following are true:</p>
+<p>- the K is between the two Rs</p>
+<p>- the Bs occupy one odd and one even position</p>
+<p>- otherwise a 0 is returned.</p>
+<p class="hint">Define a function named <code>IsValidFischerRandomChessBoard</code>; the tests below will call it.</p>
+</header>
+<section class="editor">
+<div class="code-editor">
+<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">IsValidFischerRandomChessBoard ← 
+</textarea>
+</div>
+<div class="actions">
+<button id="run">Run tests</button>
+<span id="status"></span>
+</div>
+</section>
+<section id="results" class="results"></section>
+<script type="application/json" id="tests-data">[{"description":"standard chess layout","code":"⍤⤙≍ 1 IsValidFischerRandomChessBoard \"RNBQKBNR\""},{"description":"layout in diagram above","code":"⍤⤙≍ 1 IsValidFischerRandomChessBoard \"BBNRKNRQ\""},{"description":"K not between Rs","code":"⍤⤙≍ 0 IsValidFischerRandomChessBoard \"RBBNQNRK\""},{"description":"Bs both in odd positions","code":"⍤⤙≍ 0 IsValidFischerRandomChessBoard \"BRBKRNQN\""}]</script>
+<script type="module" src="../assets/app.js"></script>
+
+<footer class="attribution">
+<p>Problem statements and reference tests are adapted from
+<a href="https://apl.quest">APL Quest</a>
+(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+</footer>
+</body>
+</html>
