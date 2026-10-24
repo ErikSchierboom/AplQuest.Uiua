@@ -13,5 +13,4 @@ Solution ← ⍜∩⇌⌕
 ⍤⤙≍ [0 1 1 0 0 1 1] Solution "bb" "bbb bbb"
 ⍤⤙≍ 0 Solution [42 42] 42
 ⍤⤙≍ 1 Solution 42 42
-⍤⤙≍ [1] Solution [42 42] [42 42]
 ⍤⤙≍ [0 0 1 0] Solution {"are" "aquatic"} {"ducks" "are" "aquatic" "avians"}
