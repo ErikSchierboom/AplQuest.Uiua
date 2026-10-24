@@ -178,12 +178,13 @@
 <p>- takes a right argument that is a character vector or scalar representing a valid non-negative integer.</p>
 <p>- takes a left argument that is a character scalar &quot;separator&quot; character.</p>
 <p>- returns a character vector that is a representation of the right argument formatted such that the separator character is found between trailing groups of 3 digits.</p>
-<p class="hint">Define a function named <code>- # Note that the number of digits in the character representation might exceed the number of digits that can be represented as a 32-bit integer.</code>; the tests below will call it.</p>
+<p>- Note that the number of digits in the character representation might exceed the number of digits that can be represented as a 32-bit integer.</p>
+<p class="hint">Define a function named <code>Solution</code>; the tests below will call it.</p>
 </header>
 <section class="editor">
 <div class="code-editor">
 <pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
-<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">- # Note that the number of digits in the character representation might exceed the number of digits that can be represented as a 32-bit integer. ← 
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Solution ← 
 </textarea>
 </div>
 <div class="actions">
@@ -192,7 +193,7 @@
 </div>
 </section>
 <section id="results" class="results"></section>
-<script type="application/json" id="tests-data">[{"description":null,"code":"Solution ← ⍚(/◇⊂₃ ⊙(⊜□⌊+₁÷₃⇌°⊏))\n⍤⤙≍ {\"1\" \"10\" \"100\" \"1,000\" \"10,000\" \"100,000\" \"1,000,000\" \"10,000,000\" \"100,000,000\" \"1,000,000,000\" \"10,000,000,000\"} Solution @, {\"1\" \"10\" \"100\" \"1000\" \"10000\" \"100000\" \"1000000\" \"10000000\" \"100000000\" \"1000000000\" \"10000000000\"}"},{"description":null,"code":"Solution ← ⍚(/◇⊂₃ ⊙(⊜□⌊+₁÷₃⇌°⊏))\n⍤⤙≍ {\"987.654.321.098.765.432.109.876.543.210.987.654.321.098.765.432.109.876.543.210\"} Solution @. {↯[60]⇌+@0⇡10}"},{"description":"scalars and 1-element character vectors are equivalent","code":"Solution ← ⍚(/◇⊂₃ ⊙(⊜□⌊+₁÷₃⇌°⊏))\n⍤⤙≍ {\"9\"} Solution @/ {\"9\"}"}]</script>
+<script type="application/json" id="tests-data">[{"description":null,"code":"¤\n⍚(\n⊙(⊜□⇌\\+ ⊸(˜↯ 1_0_0 [⧻]))\n↘₁/◇⊂⍚⊂\n)\n)\n⍤⤙≍ {\"1\" \"10\" \"100\" \"1,000\" \"10,000\" \"100,000\" \"1,000,000\" \"10,000,000\" \"100,000,000\" \"1,000,000,000\" \"10,000,000,000\"} Solution @, {\"1\" \"10\" \"100\" \"1000\" \"10000\" \"100000\" \"1000000\" \"10000000\" \"100000000\" \"1000000000\" \"10000000000\"}"},{"description":null,"code":"¤\n⍚(\n⊙(⊜□⇌\\+ ⊸(˜↯ 1_0_0 [⧻]))\n↘₁/◇⊂⍚⊂\n)\n)\n⍤⤙≍ {\"987.654.321.098.765.432.109.876.543.210.987.654.321.098.765.432.109.876.543.210\"} Solution @. {↯[60]⇌+@0⇡10}"},{"description":"scalars and 1-element character vectors are equivalent","code":"¤\n⍚(\n⊙(⊜□⇌\\+ ⊸(˜↯ 1_0_0 [⧻]))\n↘₁/◇⊂⍚⊂\n)\n)\n⍤⤙≍ {\"9\"} Solution @/ {\"9\"}"}]</script>
 <script type="module" src="../assets/app.js"></script>
 
 <footer class="attribution">
