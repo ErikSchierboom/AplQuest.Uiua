@@ -1,41 +1,76 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2021-9: In the Long Run</title>
-<link rel="stylesheet" href="../assets/style.css">
-</head>
-<body>
-<a class="back-link" href="../index.html">&larr; All exercises</a>
-<header>
-<h1>2021-9: In the Long Run</h1>
-<p>Write a function that:</p>
-<p></p>
-<p>has a right argument that is a numeric vector of 2 or more elements representing daily prices of a stock.</p>
-<p>returns an integer singleton that represents the highest number of consecutive days where the price increased, decreased, or remained the same, relative to the previous day.</p>
-<p class="hint">Define a function named <code>LongestRun</code>; the tests below will call it.</p>
-</header>
-<section class="editor">
-<div class="code-editor">
-<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
-<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">LongestRun ← 
-</textarea>
-</div>
-<div class="actions">
-<button id="run">Run tests</button>
-<span id="status"></span>
-</div>
-</section>
-<section id="results" class="results"></section>
-<script type="application/json" id="tests-data">[{"description":null,"code":"⍤⤙≍ 3 LongestRun [1 2 3 5 5 5 6 4 3]"},{"description":null,"code":"⍤⤙≍ 4 LongestRun [1 2 3 4 4 4 4 4 5 4 3]"},{"description":null,"code":"⍤⤙≍ 1 LongestRun [1 2]"}]</script>
-<script type="module" src="../assets/app.js"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2021-9: In the Long Run</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <a class="back-link" href="../index.html">&larr; All exercises</a>
+    <header>
+      <h1>2021-9: In the Long Run</h1>
+      <p>Write a function that:</p>
+      <p></p>
+      <p>
+        has a right argument that is a numeric vector of 2 or more elements
+        representing daily prices of a stock.
+      </p>
+      <p>
+        returns an integer singleton that represents the highest number of
+        consecutive days where the price increased, decreased, or remained the
+        same, relative to the previous day.
+      </p>
+      <p class="hint">
+        Define a function named <code>LongestRun</code>; the tests below will
+        call it.
+      </p>
+    </header>
+    <section class="editor">
+      <div class="code-editor">
+        <pre
+          class="code-highlight"
+          aria-hidden="true"
+        ><code id="code-highlight"></code></pre>
+        <textarea
+          id="code"
+          spellcheck="false"
+          autocapitalize="off"
+          autocomplete="off"
+          autocorrect="off"
+        >
+LongestRun ← 
+</textarea
+        >
+      </div>
+      <div class="actions">
+        <button id="run">Run tests</button>
+        <span id="status"></span>
+      </div>
+    </section>
+    <section id="results" class="results"></section>
+    <script type="application/json" id="tests-data">
+      [
+        { "description": null, "code": "⍤⤙≍ 3 LongestRun [1 2 3 5 5 5 6 4 3]" },
+        {
+          "description": null,
+          "code": "⍤⤙≍ 4 LongestRun [1 2 3 4 4 4 4 4 5 4 3]"
+        },
+        { "description": null, "code": "⍤⤙≍ 1 LongestRun [1 2]" }
+      ]
+    </script>
+    <script type="module" src="../assets/app.js"></script>
 
-<footer class="attribution">
-<p>Problem statements and reference tests are adapted from
-<a href="https://apl.quest">APL Quest</a>
-(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
-</footer>
-</body>
+    <footer class="attribution">
+      <p>
+        Problem statements and reference tests are adapted from
+        <a href="https://apl.quest">APL Quest</a>
+        (<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>),
+        licensed under
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          >CC BY-NC-SA 4.0</a
+        >.
+      </p>
+    </footer>
+  </body>
 </html>

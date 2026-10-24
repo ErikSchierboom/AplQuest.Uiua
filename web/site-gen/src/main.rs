@@ -89,7 +89,7 @@ fn write_site(
 
     for (category, exercises) in by_category {
         for (num, exercise) in exercises {
-            let page = template::render_exercise(exercise);
+            let page = template::render_exercise(by_category, category, num, exercise);
             fs::write(dist_dir.join(category).join(format!("{num}.html")), page)
                 .expect("write exercise page");
         }

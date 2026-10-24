@@ -10,13 +10,24 @@ struct TestCaseJson<'a> {
     code: &'a str,
 }
 
-/// Common page chrome shared by every generated page.
+type Categories = [(String, Vec<(String, Exercise)>)];
+
+/// Common page chrome shared by every generated page: a left-hand accordion
+/// menu (one `<details>` per category) next to the page content.
 ///
-/// `asset_prefix` is the relative path back to the `assets/` directory
-/// (e.g. `"."` for the top-level index, `".."` for exercise pages one
-/// directory deep), so the generated site works from any static host or
-/// `file://` root without hardcoded absolute paths.
-fn page_shell(title: &str, asset_prefix: &str, body: &str) -> String {
+/// `asset_prefix` is the relative path back to the site root (e.g. `"."` for
+/// the top-level index, `".."` for exercise pages one directory deep), so the
+/// generated site works from any static host or `file://` root without
+/// hardcoded absolute paths. `current` is the `(category, number)` of the page
+/// being rendered, if any; its category starts expanded.
+fn page_shell(
+    title: &str,
+    asset_prefix: &str,
+    categories: &Categories,
+    current: Option<(&str, &str)>,
+    body: &str,
+) -> String {
+    let menu = render_menu(categories, asset_prefix, current);
     format!(
         r#"<!doctype html>
 <html lang="en">
@@ -27,6 +38,8 @@ fn page_shell(title: &str, asset_prefix: &str, body: &str) -> String {
 <link rel="stylesheet" href="{asset_prefix}/assets/style.css">
 </head>
 <body>
+<div class="layout">
+{menu}<main class="content">
 {body}
 <footer class="attribution">
 <p>Problem statements and reference tests are adapted from
@@ -34,39 +47,62 @@ fn page_shell(title: &str, asset_prefix: &str, body: &str) -> String {
 (<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
 </footer>
+</main>
+</div>
 </body>
 </html>
 "#
     )
 }
 
-/// Render the top-level index page listing every exercise, grouped by category.
-pub fn render_index(categories: &[(String, Vec<(String, Exercise)>)]) -> String {
-    let mut body = String::new();
-    body.push_str("<header class=\"site-header\">\n");
-    body.push_str("<h1>APL Quest in Uiua</h1>\n");
-    body.push_str(
-        "<p>Solve each exercise by writing <a href=\"https://www.uiua.org/\">Uiua</a> code \
-         in the browser, then check it against the exercise's own tests.</p>\n",
+/// Render the side menu: one accordion section per category. Sections share a
+/// `name`, so browsers keep at most one open at a time.
+fn render_menu(categories: &Categories, prefix: &str, current: Option<(&str, &str)>) -> String {
+    let mut menu = format!(
+        "<nav class=\"sidebar\" aria-label=\"Exercises\">\n<a class=\"site-title\" href=\"{prefix}/index.html\">APL Quest in Uiua</a>\n"
     );
-    body.push_str("</header>\n");
-
     for (category, exercises) in categories {
-        body.push_str(&format!("<section class=\"category\">\n<h2>{category}</h2>\n<ul class=\"exercise-list\">\n"));
+        let is_current = current.is_some_and(|(c, _)| c == category);
+        let open = if is_current { " open" } else { "" };
+        menu.push_str(&format!(
+            "<details class=\"accordion\" name=\"years\"{open}>\n<summary>{category}</summary>\n<ul>\n"
+        ));
         for (num, exercise) in exercises {
-            body.push_str(&format!(
-                "<li><a href=\"{category}/{num}.html\">{}</a></li>\n",
+            let aria = if current == Some((category.as_str(), num.as_str())) {
+                " aria-current=\"page\""
+            } else {
+                ""
+            };
+            menu.push_str(&format!(
+                "<li><a href=\"{prefix}/{category}/{num}.html\"{aria}>{}</a></li>\n",
                 html_escape(&exercise.title)
             ));
         }
-        body.push_str("</ul>\n</section>\n");
+        menu.push_str("</ul>\n</details>\n");
     }
+    menu.push_str("</nav>\n");
+    menu
+}
 
-    page_shell("APL Quest in Uiua", ".", &body)
+/// Render the top-level index page.
+pub fn render_index(categories: &Categories) -> String {
+    let body = "<header class=\"site-header\">\n\
+<h1>APL Quest in Uiua</h1>\n\
+<p>Solve each exercise by writing <a href=\"https://www.uiua.org/\">Uiua</a> code \
+in the browser, then check it against the exercise's own tests.</p>\n\
+<p>Pick a year from the menu to see its exercises.</p>\n\
+</header>\n";
+
+    page_shell("APL Quest in Uiua", ".", categories, None, body)
 }
 
 /// Render a single exercise page.
-pub fn render_exercise(exercise: &Exercise) -> String {
+pub fn render_exercise(
+    categories: &Categories,
+    category: &str,
+    num: &str,
+    exercise: &Exercise,
+) -> String {
     let description = exercise
         .description
         .iter()
@@ -95,8 +131,7 @@ pub fn render_exercise(exercise: &Exercise) -> String {
     };
 
     let body = format!(
-        r#"<a class="back-link" href="../index.html">&larr; All exercises</a>
-<header>
+        r#"<header>
 <h1>{title}</h1>
 {description}<p class="hint">Define a function named <code>{function_name}</code>; the tests below will call it.</p>
 </header>
@@ -118,7 +153,7 @@ pub fn render_exercise(exercise: &Exercise) -> String {
         function_name = html_escape(&exercise.function_name),
     );
 
-    page_shell(&exercise.title, "..", &body)
+    page_shell(&exercise.title, "..", categories, Some((category, num)), &body)
 }
 
 fn html_escape(s: &str) -> String {

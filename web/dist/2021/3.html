@@ -1,41 +1,305 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2021-3: Multiplicity</title>
-<link rel="stylesheet" href="../assets/style.css">
-</head>
-<body>
-<a class="back-link" href="../index.html">&larr; All exercises</a>
-<header>
-<h1>2021-3: Multiplicity</h1>
-<p>Write a function that:</p>
-<p>- has a right argument Y which is an integer vector or scalar</p>
-<p>- has a left argument X which is also an integer vector or scalar</p>
-<p>- finds which elements of Y are multiples of each element of X and returns them as a vector (in the order of X) of vectors (in the order of Y).</p>
-<p class="hint">Define a function named <code>Multiples</code>; the tests below will call it.</p>
-</header>
-<section class="editor">
-<div class="code-editor">
-<pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
-<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">Multiples ← 
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2021-3: Multiplicity</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <nav class="sidebar" aria-label="Exercises">
+        <a class="site-title" href="../index.html">APL Quest in Uiua</a>
+        <details class="accordion" name="years">
+          <summary>2013</summary>
+          <ul>
+            <li><a href="../2013/1.html">2013-1: Seems a Bit Odd To Me</a></li>
+            <li><a href="../2013/2.html">2013-2: Making The Grade</a></li>
+            <li><a href="../2013/3.html">2013-3: What Is In a Word</a></li>
+            <li>
+              <a href="../2013/4.html">2013-4: Keeping Things In Balance</a>
+            </li>
+            <li><a href="../2013/5.html">2013-5: Identity Crisis</a></li>
+            <li><a href="../2013/6.html">2013-6: Home On The Range</a></li>
+            <li><a href="../2013/7.html">2013-7: Float Your Boat</a></li>
+            <li><a href="../2013/8.html">2013-8: Go Forth And Multiply</a></li>
+            <li>
+              <a href="../2013/9.html">2013-9: It Is a Moving Experience</a>
+            </li>
+            <li><a href="../2013/10.html">2013-10: Solution Salvation</a></li>
+          </ul>
+        </details>
+        <details class="accordion" name="years">
+          <summary>2014</summary>
+          <ul>
+            <li><a href="../2014/1.html">2014-1: It Is All Right</a></li>
+            <li><a href="../2014/2.html">2014-2: How Tweet It Is</a></li>
+            <li><a href="../2014/3.html">2014-3: Tell a Fib</a></li>
+            <li>
+              <a href="../2014/4.html">2014-4: Space The Final Frontier</a>
+            </li>
+            <li><a href="../2014/5.html">2014-5: Mirror Mirror</a></li>
+            <li><a href="../2014/6.html">2014-6: Roll The Dice</a></li>
+            <li><a href="../2014/7.html">2014-7: Revolutionary Thinking</a></li>
+            <li><a href="../2014/8.html">2014-8: Go The Distance</a></li>
+            <li><a href="../2014/9.html">2014-9: Going Ballistic</a></li>
+            <li><a href="../2014/10.html">2014-10: Sales Are Up</a></li>
+          </ul>
+        </details>
+        <details class="accordion" name="years">
+          <summary>2015</summary>
+          <ul>
+            <li><a href="../2015/1.html">2015-1: Nag A Ram</a></li>
+            <li><a href="../2015/2.html">2015-2: Longest Streak</a></li>
+            <li><a href="../2015/3.html">2015-3: Farey Tale</a></li>
+            <li>
+              <a href="../2015/4.html">2015-4: PDI - Progressive Dyadic Iota</a>
+            </li>
+            <li>
+              <a href="../2015/5.html"
+                >2015-5: He's so mean, he has no standard deviation</a
+              >
+            </li>
+            <li><a href="../2015/6.html">2015-6: Hey! This is My Space</a></li>
+            <li><a href="../2015/7.html">2015-7: Just in (Upper) Case</a></li>
+            <li><a href="../2015/8.html">2015-8: Unlucky 13</a></li>
+            <li>
+              <a href="../2015/9.html"
+                >2015-9: I'd Like Mine Scrambled Please</a
+              >
+            </li>
+            <li><a href="../2015/10.html">2015-10: Blaise'ing a Trail</a></li>
+          </ul>
+        </details>
+        <details class="accordion" name="years">
+          <summary>2016</summary>
+          <ul>
+            <li><a href="../2016/1.html">2016-1: Statistics - Mean</a></li>
+            <li><a href="../2016/2.html">2016-2: Statistics - Median</a></li>
+            <li><a href="../2016/3.html">2016-3: Statistics - Mode</a></li>
+            <li><a href="../2016/4.html">2016-4: Just Meshing Around</a></li>
+            <li>
+              <a href="../2016/5.html"
+                >2016-5: You're Unique, Just Like Everyone Else</a
+              >
+            </li>
+            <li>
+              <a href="../2016/6.html">2016-6: Shorter Ones to the Front</a>
+            </li>
+            <li><a href="../2016/7.html">2016-7: 3s and 5s</a></li>
+            <li>
+              <a href="../2016/8.html">2016-8: Separating Out the Negative</a>
+            </li>
+            <li><a href="../2016/9.html">2016-9: Delimited Text</a></li>
+            <li><a href="../2016/10.html">2016-10: Order Total</a></li>
+          </ul>
+        </details>
+        <details class="accordion" name="years">
+          <summary>2017</summary>
+          <ul>
+            <li><a href="../2017/1.html">2017-1: What an Odd Bunch</a></li>
+            <li><a href="../2017/2.html">2017-2: Good Evening</a></li>
+            <li><a href="../2017/3.html">2017-3: Miss Quoted</a></li>
+            <li><a href="../2017/4.html">2017-4: Slice(s) of Pie(s)</a></li>
+            <li><a href="../2017/5.html">2017-5: DNA?</a></li>
+            <li><a href="../2017/6.html">2017-6: k-mers</a></li>
+            <li>
+              <a href="../2017/7.html">2017-7: Counting DNA Nucleotides</a>
+            </li>
+            <li><a href="../2017/8.html">2017-8: Be the First 1</a></li>
+            <li><a href="../2017/9.html">2017-9: Double Trouble</a></li>
+            <li><a href="../2017/10.html">2017-10: Squaring Off</a></li>
+          </ul>
+        </details>
+        <details class="accordion" name="years">
+          <summary>2018</summary>
+          <ul>
+            <li><a href="../2018/1.html">2018-1: Oh Say Can You See?</a></li>
+            <li><a href="../2018/2.html">2018-2: Number Splitting</a></li>
+            <li><a href="../2018/3.html">2018-3: Rolling Along</a></li>
+            <li><a href="../2018/4.html">2018-4: What's Your Sign?</a></li>
+            <li>
+              <a href="../2018/5.html">2018-5: What's Your Sign? Revisited</a>
+            </li>
+            <li><a href="../2018/6.html">2018-6: What's Your Angle?</a></li>
+            <li><a href="../2018/7.html">2018-7: Unconditionally Shifty</a></li>
+            <li>
+              <a href="../2018/9.html">2018-9: Earlier, Later, or the Same?</a>
+            </li>
+            <li>
+              <a href="../2018/10.html">2018-10: Anagrammatically Correct</a>
+            </li>
+          </ul>
+        </details>
+        <details class="accordion" name="years">
+          <summary>2019</summary>
+          <ul>
+            <li><a href="../2019/1.html">2019-1: Chunky Monkey</a></li>
+            <li><a href="../2019/2.html">2019-2: Making the Grade</a></li>
+            <li><a href="../2019/3.html">2019-3: Grade Distribution</a></li>
+            <li><a href="../2019/4.html">2019-4: Knight Moves</a></li>
+            <li><a href="../2019/5.html">2019-5: Doubling Up</a></li>
+            <li><a href="../2019/6.html">2019-6: Telephone Names</a></li>
+            <li>
+              <a href="../2019/7.html">2019-7: In the Center of It All</a>
+            </li>
+            <li><a href="../2019/8.html">2019-8: Going the Distance</a></li>
+            <li><a href="../2019/9.html">2019-9: Area Code à la Gauss</a></li>
+            <li><a href="../2019/10.html">2019-10: Odds &amp; Evens</a></li>
+          </ul>
+        </details>
+        <details class="accordion" name="years">
+          <summary>2020</summary>
+          <ul>
+            <li><a href="../2020/1.html">2020-1: Let&quot;s Split!</a></li>
+            <li><a href="../2020/2.html">2020-2: Character Building</a></li>
+            <li><a href="../2020/3.html">2020-3: Excel-lent Columns</a></li>
+            <li><a href="../2020/4.html">2020-4: Take a Leap</a></li>
+            <li>
+              <a href="../2020/5.html"
+                >2020-5: Stepping in the Proper Direction</a
+              >
+            </li>
+            <li><a href="../2020/6.html">2020-6: Move to the Front</a></li>
+            <li><a href="../2020/7.html">2020-7: See You in a Bit</a></li>
+            <li><a href="../2020/8.html">2020-8: Zigzag Numbers</a></li>
+            <li><a href="../2020/9.html">2020-9: Rise and Fall</a></li>
+            <li><a href="../2020/10.html">2020-10: Stacking It Up</a></li>
+          </ul>
+        </details>
+        <details class="accordion" name="years" open>
+          <summary>2021</summary>
+          <ul>
+            <li><a href="../2021/1.html">2021-1: Are You a Bacteria?</a></li>
+            <li><a href="../2021/2.html">2021-2: Index-Of Modified</a></li>
+            <li>
+              <a href="../2021/3.html" aria-current="page"
+                >2021-3: Multiplicity</a
+              >
+            </li>
+            <li><a href="../2021/4.html">2021-4: Square Peg, Round Hole</a></li>
+            <li><a href="../2021/5.html">2021-5: Rect-ify</a></li>
+            <li><a href="../2021/6.html">2021-6: Fischer Random Chess</a></li>
+            <li>
+              <a href="../2021/7.html">2021-7: Can You Feel the Magic?</a>
+            </li>
+            <li>
+              <a href="../2021/8.html">2021-8: Time to Make a Difference</a>
+            </li>
+            <li><a href="../2021/9.html">2021-9: In the Long Run</a></li>
+          </ul>
+        </details>
+        <details class="accordion" name="years">
+          <summary>2022</summary>
+          <ul>
+            <li>
+              <a href="../2022/1.html">2022-1: Counting DNA Nucleotides?</a>
+            </li>
+            <li>
+              <a href="../2022/2.html">2022-2: Attack of the Mutations!</a>
+            </li>
+            <li><a href="../2022/3.html">2022-3: Uniquely Qualified</a></li>
+            <li><a href="../2022/4.html">2022-4: In the Long One...</a></li>
+            <li><a href="../2022/5.html">2022-5: Stairway to Heaven</a></li>
+            <li><a href="../2022/6.html">2022-6: Pyramid Scheme</a></li>
+            <li><a href="../2022/7.html">2022-7: Just Golfing Around</a></li>
+            <li><a href="../2022/8.html">2022-8: Let&quot;s Split!</a></li>
+            <li>
+              <a href="../2022/9.html"
+                >2022-9: An Average Window (or a Windowed Average)</a
+              >
+            </li>
+            <li><a href="../2022/10.html">2022-10: Separation Anxiety</a></li>
+          </ul>
+        </details>
+        <details class="accordion" name="years">
+          <summary>2023</summary>
+          <ul>
+            <li><a href="../2023/2.html">2023-2: Put It In Reverse</a></li>
+            <li><a href="../2023/3.html">2023-3: Caesar Salad</a></li>
+            <li><a href="../2023/4.html">2023-4: Like a Version</a></li>
+            <li><a href="../2023/5.html">2023-5: Risky Business</a></li>
+          </ul>
+        </details>
+      </nav>
+      <main class="content">
+        <header>
+          <h1>2021-3: Multiplicity</h1>
+          <p>Write a function that:</p>
+          <p>- has a right argument Y which is an integer vector or scalar</p>
+          <p>
+            - has a left argument X which is also an integer vector or scalar
+          </p>
+          <p>
+            - finds which elements of Y are multiples of each element of X and
+            returns them as a vector (in the order of X) of vectors (in the
+            order of Y).
+          </p>
+          <p class="hint">
+            Define a function named <code>Multiples</code>; the tests below will
+            call it.
+          </p>
+        </header>
+        <section class="editor">
+          <div class="code-editor">
+            <pre
+              class="code-highlight"
+              aria-hidden="true"
+            ><code id="code-highlight"></code></pre>
+            <textarea
+              id="code"
+              spellcheck="false"
+              autocapitalize="off"
+              autocomplete="off"
+              autocorrect="off"
+            >
+Multiples ← 
 </textarea>
-</div>
-<div class="actions">
-<button id="run">Run tests</button>
-<span id="status"></span>
-</div>
-</section>
-<section id="results" class="results"></section>
-<script type="application/json" id="tests-data">[{"description":null,"code":"Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍ Expected Multiples [2 4 7 3 9] [5 7 8 1 12 10 20 16 11 4 2 15 3 18 14 19 13 9 17 6]"},{"description":null,"code":"Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍{[3 6 9]} Multiples 3 +1 ⇡10"},{"description":null,"code":"Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍{[42] [42]} Multiples [6 7] 42"},{"description":"returns a vector of 3 empty vectors","code":"Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍{} Multiples [2 3 5] []"},{"description":"returns an empty vector","code":"Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍ {} Multiples [] +1⇡10"}]</script>
-<script type="module" src="../assets/app.js"></script>
+          </div>
+          <div class="actions">
+            <button id="run">Run tests</button>
+            <span id="status"></span>
+          </div>
+        </section>
+        <section id="results" class="results"></section>
+        <script type="application/json" id="tests-data">
+          [
+            {
+              "description": null,
+              "code": "Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍ Expected Multiples [2 4 7 3 9] [5 7 8 1 12 10 20 16 11 4 2 15 3 18 14 19 13 9 17 6]"
+            },
+            {
+              "description": null,
+              "code": "Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍{[3 6 9]} Multiples 3 +1 ⇡10"
+            },
+            {
+              "description": null,
+              "code": "Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍{[42] [42]} Multiples [6 7] 42"
+            },
+            {
+              "description": "returns a vector of 3 empty vectors",
+              "code": "Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍{} Multiples [2 3 5] []"
+            },
+            {
+              "description": "returns an empty vector",
+              "code": "Expected ← {[8 12 10 20 16 4 2 18 14 6] [8 12 20 16 4] [7 14] [12 15 3 18 9 6] [18 9]}\n⍤⤙≍ {} Multiples [] +1⇡10"
+            }
+          ]
+        </script>
+        <script type="module" src="../assets/app.js"></script>
 
-<footer class="attribution">
-<p>Problem statements and reference tests are adapted from
-<a href="https://apl.quest">APL Quest</a>
-(<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
-</footer>
-</body>
+        <footer class="attribution">
+          <p>
+            Problem statements and reference tests are adapted from
+            <a href="https://apl.quest">APL Quest</a>
+            (<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a
+            >), licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+              >CC BY-NC-SA 4.0</a
+            >.
+          </p>
+        </footer>
+      </main>
+    </div>
+  </body>
 </html>
