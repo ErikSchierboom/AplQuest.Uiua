@@ -37,4 +37,7 @@ wasm-bindgen \
 echo "==> Generating exercise pages"
 cargo run -p site-gen --release
 
+echo "==> Formatting the website"
+./format.sh
+
 echo "==> Done. Static site is in web/dist/"
