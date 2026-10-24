@@ -3,6 +3,7 @@
 # Verify the solutions
 
 for exercise in */*.ua; do
-  echo "Testing $exercise"
-  uiua "$exercise"
+  if ! uiua "$exercise" &>/dev/null; then
+    echo "$exercise: has failing tests"
+  fi
 done
