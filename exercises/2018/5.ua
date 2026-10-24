@@ -10,7 +10,7 @@
 #
 # Write a function that, given a 2-element integer vector representing month and day, returns a character vector (string) of the corresponding Western zodiac sign.
 
-Zodiac ← ⨬(
+Solution ← ⨬(
   ⍤"Invalid month"
 | ⨬("Capricorn"|"Aquarius")>19    # January
 | ⨬("Aquarius"|"Pisces")>18       # February
@@ -26,5 +26,5 @@ Zodiac ← ⨬(
 | ⨬("Sagittarius"|"Capricorn")>21 # December
 | )
 
-⍤⤙≍ "Pisces" Zodiac 2 23   # February 23
-⍤⤙≍ "Scorpio" Zodiac 10 31 # October 31
+⍤⤙≍ "Pisces" Solution 2 23   # February 23
+⍤⤙≍ "Scorpio" Solution 10 31 # October 31

@@ -3,10 +3,10 @@
 # The elements increase or stay the same until the "apex" (highest value) is reached
 # After the apex, any remaining values decrease or remain the same
 
-RiseAndFall ← ×∩/× ⊃(⧈≥↙|⧈≤↘) ⊸˜⊗⊸/↥
+Solution ← ×∩/× ⊃(⧈≥↙|⧈≤↘) ⊸˜⊗⊸/↥
 
-⍤⤙≍ 1 RiseAndFall [1 3 3 4 5 2 1]
-⍤⤙≍ 1 RiseAndFall [42]
-⍤⤙≍ 0 RiseAndFall [1 3 2 4]
-⍤⤙≍ 1 RiseAndFall [23 23 23]
-⍤⤙≍ 1 RiseAndFall []
+⍤⤙≍ 1 Solution [1 3 3 4 5 2 1]
+⍤⤙≍ 1 Solution [42]
+⍤⤙≍ 0 Solution [1 3 2 4]
+⍤⤙≍ 1 Solution [23 23 23]
+⍤⤙≍ 1 Solution []

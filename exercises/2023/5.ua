@@ -8,7 +8,7 @@
 # - returns a 2-element vector where the first element represents the number of armies the attacker lost and the second element represents the number of armies the defender lost.
 # Note: The left and right arguments do not need to be the same length.
 
-Casualties ← [∩/+]⊃≥<↙◡(↧∩⧻)
+Solution ← [∩/+]⊃≥<↙◡(↧∩⧻)
 
-⍤⤙≍ [0 1] Casualties [6] [5]
-⍤⤙≍ [2 1] Casualties [6 6 4 2 1] [6 5 5] # attacker loses 2 armies, defender loses 1 army
+⍤⤙≍ [0 1] Solution [6] [5]
+⍤⤙≍ [2 1] Solution [6 6 4 2 1] [6 5 5] # attacker loses 2 armies, defender loses 1 army

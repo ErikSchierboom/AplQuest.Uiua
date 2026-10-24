@@ -2,8 +2,8 @@
 # Write a function which returns the number of words in the given character scalar or array.
 # For simplicity's sake, you can consider the space character ' ' to be the only word separator.
 
-WordCount ← ⧻⊜□⌵⊸±
+Solution ← ⧻⊜□⌵⊸±
 
-⍤⤙≍ 4 WordCount "Testing one, two, three"
-⍤⤙≍ 0 WordCount ""
-⍤⤙≍ 5 WordCount " this array has extra blanks " # just counting the blanks won't work
+⍤⤙≍ 4 Solution "Testing one, two, three"
+⍤⤙≍ 0 Solution ""
+⍤⤙≍ 5 Solution " this array has extra blanks " # just counting the blanks won't work

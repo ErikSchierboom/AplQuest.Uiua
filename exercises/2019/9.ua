@@ -33,12 +33,12 @@
 # 2			4
 # Given a vector of (X Y) points, or a single X Y point, return a number indicating the area circumscribed by the points.
 
-Shoelace ← (
+Solution ← (
   ⊂⟜⊢
   ⊃(/+⧈₂(×⊓⊢⊣°⊟)|/+⧈₂(×⊓⊣⊢°⊟))
   ÷₂⌵-
 )
 
-⍤⤙≍ 7 Shoelace [[2 4] [3 ¯8] [1 2]]
-⍤⤙≍ 0 Shoelace [[1 1]]       # a point has no area
-⍤⤙≍ 0 Shoelace [[1 1] [2 2]] # neither does a line segment
+⍤⤙≍ 7 Solution [[2 4] [3 ¯8] [1 2]]
+⍤⤙≍ 0 Solution [[1 1]]       # a point has no area
+⍤⤙≍ 0 Solution [[1 1] [2 2]] # neither does a line segment

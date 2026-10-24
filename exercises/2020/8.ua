@@ -3,9 +3,9 @@
 # 
 # Write a function that takes a single integer greater than or equal to 100 and less than 1015 as its right argument and returns a 1 if the integer is a zigzag number, 0 otherwise.
 
-Zigzag ← /× ⧈(=2⌵-) ⧈(±-) ⊥₁₀
+Solution ← /× ⧈(=2⌵-) ⧈(±-) ⊥₁₀
 
-⍤⤙≍ 0 Zigzag 123
-⍤⤙≍ 1 Zigzag 132
-⍤⤙≍ 0 Zigzag 31115
-⍤⤙≍ 1 Zigzag 3141514131415
+⍤⤙≍ 0 Solution 123
+⍤⤙≍ 1 Solution 132
+⍤⤙≍ 0 Solution 31115
+⍤⤙≍ 1 Solution 3141514131415

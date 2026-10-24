@@ -3,7 +3,7 @@
 # 
 # Write a function that, given a right argument which is a character scalar or non-empty vector representing a valid character Excel column identifier between A and XFD, returns the corresponding column number.
 
-Column ← /+×˜ⁿ26⇌⇡⊸⧻+1-@A
+Solution ← /+×˜ⁿ26⇌⇡⊸⧻+1-@A
 
-⍤⤙≍ 1 Column "A"
-⍤⤙≍ 1104 Column "APL"
+⍤⤙≍ 1 Solution "A"
+⍤⤙≍ 1104 Solution "APL"

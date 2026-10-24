@@ -8,6 +8,6 @@
 
 # Write a function that takes a character vector word as its argument and returns the word's letters juxtaposed as described above.
 
-Scramble ← ⍚(⍜(⇌↘₁⇌↘₁|⊂⊃(/⊂⧈⇌[¤2]↙|↘)⊸(-⊸◿₂⧻)))
+Solution ← ⍚(⍜(⇌↘₁⇌↘₁|⊂⊃(/⊂⧈⇌[¤2]↙|↘)⊸(-⊸◿₂⧻)))
 
-⍤⤙≍ {"tihs" "is" "aewosme"} Scramble {"this" "is" "awesome"}
+⍤⤙≍ {"tihs" "is" "aewosme"} Solution {"this" "is" "awesome"}

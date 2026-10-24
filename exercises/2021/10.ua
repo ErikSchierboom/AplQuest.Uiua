@@ -10,20 +10,20 @@
 
 # Experimental!
 
-Padded ← ˜◇≡(⍜(⇌|˜⬚@ ↙)°□)
+Solution ← ˜◇≡(⍜(⇌|˜⬚@ ↙)°□)
 
 Expected ← ["     ⍒"]
-⍤⤙≍ ? Expected Padded 6 {"⍒"}
+⍤⤙≍ ? Expected Solution 6 {"⍒"}
 
 Expected ← ["       K"
             "       E"
             " Iverson"]
-⍤⤙≍ Expected Padded 8 {"K" "E" "Iverson"}
+⍤⤙≍ Expected Solution 8 {"K" "E" "Iverson"}
 
 Expected ← ["    Parade"]
-⍤⤙≍ Expected Padded 10 {"Parade"}
+⍤⤙≍ Expected Solution 10 {"Parade"}
 
 Expected ← ["r Phrase"
             "     APL"
             "  Parade"]
-⍤⤙≍ Expected Padded 8 {"Longer Phrase" "APL" "Parade"}
+⍤⤙≍ Expected Solution 8 {"Longer Phrase" "APL" "Parade"}

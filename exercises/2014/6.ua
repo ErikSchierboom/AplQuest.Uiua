@@ -1,7 +1,7 @@
 # 2014-6: Roll The Dice
 # Write a function that takes an integer array representing the sides of a number of dice and returns a 2 column matrix of the number of ways each possible total of the dice can be rolled.
 
-DiceCombinations ← ⊕(⊟⊃⊢⧻)⊸⊛≡/+♭₂+1⇡
+Solution ← ⊕(⊟⊃⊢⧻)⊸⊛≡/+♭₂+1⇡
 
 Expected ← [2_1
             3_2
@@ -14,7 +14,7 @@ Expected ← [2_1
             10_3
             11_2
             12_1]
-⍤⤙≍ Expected DiceCombinations [6 6] # 2 six-sided dice
+⍤⤙≍ Expected Solution [6 6] # 2 six-sided dice
 
 Expected ← [2_1
             3_2
@@ -26,12 +26,12 @@ Expected ← [2_1
             9_2
             10_1
 ]
-⍤⤙≍ Expected DiceCombinations [6 4] # a six-sided and a four-sided die
+⍤⤙≍ Expected Solution [6 4] # a six-sided and a four-sided die
 
 Expected ← [1_1
             2_1
             3_1]
-⍤⤙≍ Expected DiceCombinations [3] # a single 3-sided die
+⍤⤙≍ Expected Solution [3] # a single 3-sided die
 
 Expected ← [0_1]
-⍤⤙≍ Expected DiceCombinations [] # no dice
+⍤⤙≍ Expected Solution [] # no dice

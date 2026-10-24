@@ -3,7 +3,7 @@
 #
 # Write a function that returns the population standard deviation of its numeric array right argument.
 
-StandardDeviation ← √÷⊃(⋅⧻|/+ⁿ₂-) ⊸(÷⊃⧻/+)♭
+Solution ← √÷⊃(⋅⧻|/+ⁿ₂-) ⊸(÷⊃⧻/+)♭
 
-⍤⤙≍ 1.414213562 ⁅₉ StandardDeviation [1 2 3 4 5]
-⍤⤙≍ 28.86607005 ⁅₈ StandardDeviation ↯10_10 +1⇡100 # and higher dimensions as well
+⍤⤙≍ 1.414213562 ⁅₉ Solution [1 2 3 4 5]
+⍤⤙≍ 28.86607005 ⁅₈ Solution ↯10_10 +1⇡100 # and higher dimensions as well

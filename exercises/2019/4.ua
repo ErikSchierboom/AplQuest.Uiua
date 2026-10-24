@@ -12,7 +12,7 @@
 # This means that a knight on square (5_4) can move to any of the indicated squares. 
 # Given a 2-element vector representing the current square for a knight, return a vector of 2-element vectors representing (in any order) all the squares that the knight can move to.
 
-Moves ← ▽⊸≡(↧∩(↧⊃≥₁≤₈)°⊟)⍆+♭₂⊞×⧅₂≠1_2♭₂˙⊞⊂1_¯1¤
+Solution ← ▽⊸≡(↧∩(↧⊃≥₁≤₈)°⊟)⍆+♭₂⊞×⧅₂≠1_2♭₂˙⊞⊂1_¯1¤
 
-⍤⤙≍ [[3 3] [3 5] [4 2] [4 6] [6 2] [6 6] [7 3] [7 5]] Moves [5 4]
-⍤⤙≍ [[2 3] [3 2]] Moves [1 1]
+⍤⤙≍ [[3 3] [3 5] [4 2] [4 6] [6 2] [6 6] [7 3] [7 5]] Solution [5 4]
+⍤⤙≍ [[2 3] [3 2]] Solution [1 1]

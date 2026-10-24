@@ -5,10 +5,10 @@
 # 
 # Write a function that takes left and right arguments of character scalars or vectors returns a 1 if the arguments are anagrams of one another, 0 otherwise. You may assume that both arguments are both either upper-case or lower-case.
 
-AreAnagrams ← ≍∩(⍆▽⊸±⌵)
+Solution ← ≍∩(⍆▽⊸±⌵)
 
-⍤⤙≍ 1 AreAnagrams "ALBERT EINSTEIN" "TEN ELITE BRAINS"
-⍤⤙≍ 1 AreAnagrams "" ""
-⍤⤙≍ 1 AreAnagrams "d" "d"
-⍤⤙≍ 0 AreAnagrams "mesas" "seam"
-⍤⤙≍ 0 AreAnagrams "apple" "lapel"
+⍤⤙≍ 1 Solution "ALBERT EINSTEIN" "TEN ELITE BRAINS"
+⍤⤙≍ 1 Solution "" ""
+⍤⤙≍ 1 Solution "d" "d"
+⍤⤙≍ 0 Solution "mesas" "seam"
+⍤⤙≍ 0 Solution "apple" "lapel"

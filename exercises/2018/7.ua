@@ -10,10 +10,10 @@
 
 # Write a function that given a right argument of a Boolean scalar or vector, and left argument scalar integer of the shift amount, returns an appropriately shifted transformation of the right argument.
 
-Shift ← ⬚0↻¯
+Solution ← ⬚0↻¯
 
-⍤⤙≍ [0 0 0 1 0 1 1 1] Shift 3 [1 0 1 1 1 0 1 1]
-⍤⤙≍ [1 1 0 1 1 0 0 0] Shift ¯3 [1 0 1 1 1 0 1 1]
-⍤⤙≍ [] Shift 5 [] # result is an empty vector      
-⍤⤙≍ [1 0 1 1 1 0 1 1] Shift 0 [1 0 1 1 1 0 1 1]
-⍤⤙≍ [0] Shift 3 [1]
+⍤⤙≍ [0 0 0 1 0 1 1 1] Solution 3 [1 0 1 1 1 0 1 1]
+⍤⤙≍ [1 1 0 1 1 0 0 0] Solution ¯3 [1 0 1 1 1 0 1 1]
+⍤⤙≍ [] Solution 5 [] # result is an empty vector      
+⍤⤙≍ [1 0 1 1 1 0 1 1] Solution 0 [1 0 1 1 1 0 1 1]
+⍤⤙≍ [0] Solution 3 [1]

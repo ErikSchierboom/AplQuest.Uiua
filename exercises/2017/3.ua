@@ -1,9 +1,9 @@
 # 2017-3: Miss Quoted
 # Write a function that will remove text found between pairs of double quotes (").
 
-Unquote ← ▽⊸(↥⊸(¬\≠)=@")
+Solution ← ▽⊸(↥⊸(¬\≠)=@")
 
-⍤⤙≍ "this \"\" a test" Unquote "this \"is\" a test"
-⍤⤙≍ "this is a test" Unquote "this is a test"
-⍤⤙≍ "this \"\" a \"\"" Unquote "this \"is\" a \"test\""
-⍤⤙≍ "" Unquote ""
+⍤⤙≍ "this \"\" a test" Solution "this \"is\" a test"
+⍤⤙≍ "this is a test" Solution "this is a test"
+⍤⤙≍ "this \"\" a \"\"" Solution "this \"is\" a \"test\""
+⍤⤙≍ "" Solution ""

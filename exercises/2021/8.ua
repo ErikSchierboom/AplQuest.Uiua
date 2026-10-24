@@ -5,11 +5,11 @@
 # has a similar left argument, although not necessarily the same length as the right argument.
 # returns a single number representing the magnitude of the difference in minutes between the arguments.
 
-TimeDifference ← ⌵-∩(/+⬚0×1_60_1440↯[∞]⇌)
+Solution ← ⌵-∩(/+⬚0×1_60_1440↯[∞]⇌)
 
-⍤⤙≍ 165 TimeDifference [2 30] [5 15]
-⍤⤙≍ 165 TimeDifference [5 15] [2 30]
-⍤⤙≍ 1440 TimeDifference [1 0 0] 0  # number of minutes in a day
-⍤⤙≍ 1440 TimeDifference [1 0 0] [] # don't forget to handle empty arguments!
-⍤⤙≍ 120 TimeDifference [1 0] [¯1 0]
-⍤⤙≍ 0 TimeDifference [1.5 0] 90
+⍤⤙≍ 165 Solution [2 30] [5 15]
+⍤⤙≍ 165 Solution [5 15] [2 30]
+⍤⤙≍ 1440 Solution [1 0 0] 0  # number of minutes in a day
+⍤⤙≍ 1440 Solution [1 0 0] [] # don't forget to handle empty arguments!
+⍤⤙≍ 120 Solution [1 0] [¯1 0]
+⍤⤙≍ 0 Solution [1.5 0] 90

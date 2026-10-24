@@ -3,7 +3,7 @@
 # 
 # In many instances, it is desirable to perform case-insensitive comparisons and operations. Write a function to perform case-insensitive membership between two arrays.
 
-CaseInsensitiveEqual ← ˜∊∩⌵
+Solution ← ˜∊∩⌵
 
-⍤⤙≍ [0 0 1 1 0 0] CaseInsensitiveEqual "dyalog" "APL"
-⍤⤙≍ [0 1 1 1 0 1 0] CaseInsensitiveEqual "bramley" "HAMPSHIRE"
+⍤⤙≍ [0 0 1 1 0 0] Solution "dyalog" "APL"
+⍤⤙≍ [0 1 1 1 0 1 0] Solution "bramley" "HAMPSHIRE"

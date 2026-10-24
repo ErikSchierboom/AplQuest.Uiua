@@ -5,7 +5,7 @@
 # 
 # Note: due to rounding the last column might not total 100%.
 
-StatsTable ← (
+Solution ← (
   "ABCDF"
   ⟜(
     ≡/+⊞=
@@ -23,18 +23,18 @@ Expected ← ["A 3  9.7"
             "C 7 22.6"
             "D 9 29  "
             "F 4 12.9"]
-⍤⤙≍ Expected StatsTable ▽[9 3 8 4 7]"DABFC"
+⍤⤙≍ Expected Solution ▽[9 3 8 4 7]"DABFC"
 
 Expected ← ["A 7 35"
             "B 7 35"
             "C 6 30"
             "D 0  0"
             "F 0  0"]
-⍤⤙≍ Expected StatsTable ↯[20]"ABC"
+⍤⤙≍ Expected Solution ↯[20]"ABC"
 
 Expected ← ["A 0   0"
             "B 1 100"
             "C 0   0"
             "D 0   0"
             "F 0   0"]
-⍤⤙≍ Expected StatsTable "B"
+⍤⤙≍ Expected Solution "B"

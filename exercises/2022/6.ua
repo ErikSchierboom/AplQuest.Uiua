@@ -4,14 +4,14 @@
 # - returns a square matrix "pyramid" with 0⌈¯1+2×n rows and columns of n increasing concentric levels.
 # - By this we mean that the center element of the matrix will be n, surrounded on all sides by n-1.
 
-Pyramid ← ˙⊞↧⊂⟜(↘₁⇌)+₁⇡
+Solution ← ˙⊞↧⊂⟜(↘₁⇌)+₁⇡
 
 Expected ← [[1 1 1 1 1]
             [1 2 2 2 1]
             [1 2 3 2 1]
             [1 2 2 2 1]
             [1 1 1 1 1]]
-⍤⤙≍ Expected Pyramid 3
+⍤⤙≍ Expected Solution 3
 
 Expected ← [[1 1 1 1 1 1 1 1 1]
             [1 2 2 2 2 2 2 2 1]
@@ -22,7 +22,7 @@ Expected ← [[1 1 1 1 1 1 1 1 1]
             [1 2 3 3 3 3 3 2 1]
             [1 2 2 2 2 2 2 2 1]
             [1 1 1 1 1 1 1 1 1]]
-⍤⤙≍ Expected Pyramid 5
+⍤⤙≍ Expected Solution 5
 
-⍤⤙≍ [[1]] Pyramid 1 # ⍝ should return 1 1⍴1
-⍤⤙≍ 0_0△ Pyramid 0  # should return 0 0⍴0
+⍤⤙≍ [[1]] Solution 1 # ⍝ should return 1 1⍴1
+⍤⤙≍ 0_0△ Solution 0  # should return 0 0⍴0

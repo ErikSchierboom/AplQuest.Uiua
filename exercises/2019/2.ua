@@ -9,10 +9,10 @@
 # | 80–89       | B            |
 # | 90–100      | A            |
 
-Grade ← ≡₀(˜⊡ "FDCBA" ˜⊗1 ≤ [64 69 79 89 100])
+Solution ← ≡₀(˜⊡ "FDCBA" ˜⊗1 ≤ [64 69 79 89 100])
 
-⍤⤙≍ "FFDDCCBBAA" Grade [0 64 65 69 70 79 80 89 90 100]
-⍤⤙≍ △ 0 Grade [] # returns an empty vector
+⍤⤙≍ "FFDDCCBBAA" Solution [0 64 65 69 70 79 80 89 90 100]
+⍤⤙≍ △ 0 Solution [] # returns an empty vector
 Expected ← ["CBB"
             "BBF"]
-⍤⤙≍ Expected Grade ↯2_3 [71 82 81 82 84 59]
+⍤⤙≍ Expected Solution ↯2_3 [71 82 81 82 84 59]

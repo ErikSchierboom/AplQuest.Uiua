@@ -14,9 +14,9 @@
 # - the Bs occupy one odd and one even position
 # - otherwise a 0 is returned.
 
-IsValidFischerRandomChessBoard ← ×⊃(×⊃(≥⊙⋅∘|≤⋅∘)⊃(°⊟⊚∊@R|˜⊗@K)|=1/+◿2⊚∊@B)
+Solution ← ×⊃(×⊃(≥⊙⋅∘|≤⋅∘)⊃(°⊟⊚∊@R|˜⊗@K)|=1/+◿2⊚∊@B)
 
-⍤⤙≍ 1 IsValidFischerRandomChessBoard "RNBQKBNR" # standard chess layout
-⍤⤙≍ 1 IsValidFischerRandomChessBoard "BBNRKNRQ" # layout in diagram above
-⍤⤙≍ 0 IsValidFischerRandomChessBoard "RBBNQNRK" # K not between Rs
-⍤⤙≍ 0 IsValidFischerRandomChessBoard "BRBKRNQN" # Bs both in odd positions
+⍤⤙≍ 1 Solution "RNBQKBNR" # standard chess layout
+⍤⤙≍ 1 Solution "BBNRKNRQ" # layout in diagram above
+⍤⤙≍ 0 Solution "RBBNQNRK" # K not between Rs
+⍤⤙≍ 0 Solution "BRBKRNQN" # Bs both in odd positions

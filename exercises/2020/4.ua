@@ -3,10 +3,10 @@
 #
 # A leap year algorithm can be found [here](https://en.wikipedia.org/wiki/Leap_year#Algorithm).
 
-IsLeap ← ≡₀(/≠ =₀ ◿4_100_400)
+Solution ← ≡₀(/≠ =₀ ◿4_100_400)
 
-⍤⤙≍ 1 IsLeap 2020
-⍤⤙≍ [] IsLeap [] # returns an empty vector
+⍤⤙≍ 1 Solution 2020
+⍤⤙≍ [] Solution [] # returns an empty vector
 
 Expected ← [[0 0 0 1 0 0 0 1 0 0]
             [0 1 0 0 0 1 0 0 0 1]
@@ -18,4 +18,4 @@ Expected ← [[0 0 0 1 0 0 0 1 0 0]
             [0 1 0 0 0 1 0 0 0 1]
             [0 0 0 1 0 0 0 1 0 0]
             [0 1 0 0 0 1 0 0 0 1]]
-⍤⤙≍ Expected IsLeap +1900 ↯ 10_10 +1 ⇡100
+⍤⤙≍ Expected Solution +1900 ↯ 10_10 +1 ⇡100

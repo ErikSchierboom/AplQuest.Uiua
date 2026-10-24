@@ -10,10 +10,10 @@
 #
 # The input will be uppercase letters and spaces.
 
-CaesarCipher ← ⊏⊃(⊗⊙◌|˜↻) ⊂@ +@A⇡26
+Solution ← ⊏⊃(⊗⊙◌|˜↻) ⊂@ +@A⇡26
 
-⍤⤙≍ "LIPPSD SVPHW" CaesarCipher 4 "HELLO WORLDS"
-⍤⤙≍ "DAHHKWSKNH O" CaesarCipher ¯4 "HELLO WORLDS" # negative shifts are okay
-⍤⤙≍ "HELLO WORLDS" CaesarCipher 0 "HELLO WORLDS"  # no shift is okay
-⍤⤙≍ "HELLO WORLDS" CaesarCipher 27 "HELLO WORLDS"
-⍤⤙≍ "" CaesarCipher ¯10 "" # returns an empty vector
+⍤⤙≍ "LIPPSD SVPHW" Solution 4 "HELLO WORLDS"
+⍤⤙≍ "DAHHKWSKNH O" Solution ¯4 "HELLO WORLDS" # negative shifts are okay
+⍤⤙≍ "HELLO WORLDS" Solution 0 "HELLO WORLDS"  # no shift is okay
+⍤⤙≍ "HELLO WORLDS" Solution 27 "HELLO WORLDS"
+⍤⤙≍ "" Solution ¯10 "" # returns an empty vector

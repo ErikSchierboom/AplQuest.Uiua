@@ -3,8 +3,8 @@
 # Write a function which takes the diameters of the stationary and mobile circles and returns the number of revolutions the mobile must traverse until the tangent points meet again.
 
 # Experimental!
-Revolutions ← ÷⤙(÷⊃∨×)
+Solution ← ÷⤙(÷⊃∨×)
 
-⍤⤙≍ 1 Revolutions 10 10 # identically sized circles
-⍤⤙≍ 2 Revolutions 10 5  # a mobile circle that's half the size needs to make 2 revolutions
-⍤⤙≍ 5 Revolutions 5 7   # a mobile circle of diameter 7 needs to make 5 revolutions around a stationary circle of diameter 5
+⍤⤙≍ 1 Solution 10 10 # identically sized circles
+⍤⤙≍ 2 Solution 10 5  # a mobile circle that's half the size needs to make 2 revolutions
+⍤⤙≍ 5 Solution 5 7   # a mobile circle of diameter 7 needs to make 5 revolutions around a stationary circle of diameter 5

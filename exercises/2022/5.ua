@@ -4,7 +4,7 @@
 # - takes a scalar integer argument, n, in the range 0-100.
 # - returns a character matrix comprised of spaces and ⎕ that resembles an n-level left-to-right ascending stairway.
 
-Stairway ← ≡($"__"⊓(↯⊙@ [∘]|↯⊙@⎕[∘]))⇌⟜+₁⇡
+Solution ← ≡($"__"⊓(↯⊙@ [∘]|↯⊙@⎕[∘]))⇌⟜+₁⇡
 
 Expected ← ["         ⎕"
             "        ⎕⎕"
@@ -16,6 +16,6 @@ Expected ← ["         ⎕"
             "  ⎕⎕⎕⎕⎕⎕⎕⎕"
             " ⎕⎕⎕⎕⎕⎕⎕⎕⎕"
             "⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕"]
-⍤⤙≍ Expected Stairway 10
+⍤⤙≍ Expected Solution 10
 
-⍤⤙≍ [] Stairway 0 # returns a 0×0 matrix
+⍤⤙≍ [] Solution 0 # returns a 0×0 matrix
