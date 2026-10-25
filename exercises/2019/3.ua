@@ -5,6 +5,7 @@
 # 
 # Note: due to rounding the last column might not total 100%.
 
+# Solution
 Solution ← (
   "ABCDF"
   ⟜(
@@ -18,6 +19,7 @@ Solution ← (
   ≡$"_ _ _"
 )
 
+# Tests
 Expected ← ["A 3  9.7"
             "B 8 25.8"
             "C 7 22.6"

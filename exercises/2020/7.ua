@@ -5,8 +5,10 @@
 #
 # Write code that, given a non-negative right argument which is an integer scalar representing the encoded state and a left argument which is an integer scalar representing the encoded state settings that you want to query, returns 1 if all of the codes in the left argument are found in the right argument (0 otherwise).
 
+# Solution
 Solution ← /×⬚0▽∩⋯₈
 
+# Tests
 ⍤⤙≍ 1 Solution 2 7  # is 2 in 7 (1+2+4)?
 ⍤⤙≍ 0 Solution 4 11 # is 4 in 11 (1+2+8)?
 ⍤⤙≍ 1 Solution 3 11 # is 3 (1+2) in 11 (1+2+8)?

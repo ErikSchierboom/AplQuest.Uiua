@@ -6,8 +6,10 @@
 # - takes a scalar or vector right argument
 # - returns a Boolean result that is the same shape as the right argument where 1"s mark the ends of occurrences of the left argument in the right argument
 
+# Solution
 Solution ← ⍜∩⇌⌕
 
+# Tests
 ⍤⤙≍ [0 0 0 1 0 0 0 0 0 0 1] Solution "abra" "abracadabra"
 ⍤⤙≍ [0 0 0 0 1 0 0 1 0 0 0] Solution "issi" "Mississippi"
 ⍤⤙≍ [0 1 1 0 0 1 1] Solution "bb" "bbb bbb"

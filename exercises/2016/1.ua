@@ -1,8 +1,10 @@
 # 2016-1: Statistics - Mean
 # Write code that takes a numeric array as its right argument and returns the mean (average) of the array.
 
+# Solution
 Solution ← ÷↥1⊃⧻/+
 
+# Tests
 ⍤⤙≍ 3.5 Solution [1 2 3 4 5 6]
 ⍤⤙≍ 0 Solution []               # the average of an empty vector is 0 
 ⍤⤙≍ 17 Solution 17              # your solution should work with a scalar argument

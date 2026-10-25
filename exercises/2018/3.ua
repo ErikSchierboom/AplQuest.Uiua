@@ -2,6 +2,7 @@
 # Write code that, given an integer scalar or vector representing the number of sides on each of a set of dice, will return a histogram showing the distribution curve for the possible totals that can be rolled using those dice.
 # The histogram is a 2-column matrix where the left column contains the possible totals for the dice, and the right column has vectors containing asterisks representing the number of occurrences of the corresponding totals.
 
+# Solution
 Solution ← (
   ⊕(⊟⊃⊢⧻)⊸⊛≡/+♭₂+1⇡
   ⟜⊃(/◇↥⍚⧻°⋕≡⊢|/↥≡⊣)
@@ -12,6 +13,7 @@ Solution ← (
   )
 )
 
+# Tests
 Expected ← [
   " 2  *      "
   " 3  **     "

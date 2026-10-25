@@ -3,8 +3,10 @@
 # 
 # Write code that: - has a right argument N which is a positive integer less than or equal to 1,000,000. - returns a 2-element integer vector R representing the rows and columns of the rectangle such that: - N=×/R meaning N equals the number of rows × the number of columns (you planted all the trees!) - ≤/R meaning the number of rows is less than or equal to the number of columns - |-/R is minimal, meaning the difference between the elements of R is as small as possible
 
+# Solution
 Solution ← ≡(↙₂↘⊃(-1⧻|▽2)+1⊚=0◿⊸(+1⇡))
 
+# Tests
 ⍤⤙≍ [3 4] Solution 12
 ⍤⤙≍ [4 4] Solution 16
 

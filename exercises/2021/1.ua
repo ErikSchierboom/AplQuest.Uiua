@@ -5,8 +5,10 @@
 # - has a right argument that is a non-empty character vector representing a DNA string.
 # -returns the percentage of GC-content in the string.
 
+# Solution
 Solution ← ×100÷⟜(⧻|/+∊"CG")
 
+# Tests
 ⍤⤙≍ 100 Solution "GCGCGCGCCCGGGGCCG"
 ⍤⤙≍ 50 Solution "ACGTACGTACGTACGT"
 ⍤⤙≍ 58.33333333 ⁅₈ Solution ▽ [10 12 16 10] "ACGT"

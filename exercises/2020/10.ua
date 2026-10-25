@@ -3,8 +3,10 @@
 # Each simple array will consist of either non-negative integers or printable ASCII characters.
 # The function must return a simple character array that displays identically to what {⎕←⍵}¨ displays when applied to the right argument.
 
+# Solution
 Solution ← ⍚(°¤pretty)
 
+# Tests
 Expected ← {
   "\"Hi\""
   "\"Earth\""

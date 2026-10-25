@@ -5,8 +5,10 @@
 # has a similar left argument, although not necessarily the same length as the right argument.
 # returns a single number representing the magnitude of the difference in minutes between the arguments.
 
+# Solution
 Solution ← ⌵-∩(/+⬚0×1_60_1440↯[∞]⇌)
 
+# Tests
 ⍤⤙≍ 165 Solution [2 30] [5 15]
 ⍤⤙≍ 165 Solution [5 15] [2 30]
 ⍤⤙≍ 1440 Solution [1 0 0] 0  # number of minutes in a day

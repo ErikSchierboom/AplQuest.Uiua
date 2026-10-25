@@ -4,8 +4,10 @@
 # - returns a square matrix "pyramid" with 0⌈¯1+2×n rows and columns of n increasing concentric levels.
 # - By this we mean that the center element of the matrix will be n, surrounded on all sides by n-1.
 
+# Solution
 Solution ← ˙⊞↧⊂⟜(↘₁⇌)+₁⇡
 
+# Tests
 Expected ← [[1 1 1 1 1]
             [1 2 2 2 1]
             [1 2 3 2 1]

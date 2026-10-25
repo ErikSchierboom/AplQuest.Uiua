@@ -7,8 +7,10 @@
 # - have a right argument that is a square matrix of integers (not necessarily all positive integers)
 # - return 1 if the array represents a magic square, otherwise return 0
 
+# Solution
 Solution ← =1⧻◴⊂₄⊃(≡/+|≡/+⍉|/+⌝⤸0_0|/+⌝⤸0_0⇌)
 
+# Tests
 ⍤⤙≍ 1 Solution ↯1_1 1
 ⍤⤙≍ 1 Solution ↯3_3 [4 9 2 3 5 7 8 1 6]
 ⍤⤙≍ 0 Solution ↯2_2 [1 2 3 4]

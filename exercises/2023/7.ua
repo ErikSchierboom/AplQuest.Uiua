@@ -7,8 +7,11 @@
 # returns a 2-element "integer" result representing the smallest non-zero positive values for p and q respectively
 
 # Experimental!
+
+# Solution
 Solution ← ˜⊟∩(⁅÷⊃∨×)⟜◡(˜÷)1
 
+# Tests
 ⍤⤙≍ [6 5] Solution 1.2
 ⍤⤙≍ [7 2] Solution 3.5
 ⍤⤙≍ [1 3] Solution ÷3 1

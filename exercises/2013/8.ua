@@ -1,8 +1,10 @@
 # 2013-8: Go Forth And Multiply
 # Write code which produces a multiplication table.
 
+# Solution
 Solution ← ˙⊞× +1⇡
 
+# Tests
 Expected ← [[1 2 3 4 5]
             [2 4 6 8 10]
             [3 6 9 12 15]

@@ -6,12 +6,14 @@
 # takes a non-empty non-scalar array right argument
 # returns an array of the same shape as the argument, but with pairs of elements along the last axis "flipped". If the array has an odd number of elements in the last axis, leave the last element unchanged.
 
+# Solution
 Solution ← (
   ↯⊃([∞⊣△]|♭|△)
   ≡(/◇⊂⊜(□⇌)⊸(\+˜↯1_0[⧻]))
   ˜↯
 )
 
+# Tests
 Expected ← [2 1 4 3 6 5 8 7 10 9]
 ⍤⤙≍ Expected Solution +1⇡10
 

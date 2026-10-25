@@ -9,12 +9,14 @@
 # returns a 2-column matrix where the first column contains the character vector keys of the key/value pairs and the second column contains the character vector values.
 # Note: You may assume that there will be no empty names or values in the right argument.
 
+# Solution
 Solution ← (
   °⊟
   ⊃(⊜□⊸(≠⊙⋅)|⋅∘)
   ⍚(⊜□⤚˜≠)
 )
 
+# Tests
 Expected ← {{"language" "APL"}
             {"dialect" "Dyalog"}}
 ⍤⤙≍ Expected Solution " =" "language=APL dialect=Dyalog"

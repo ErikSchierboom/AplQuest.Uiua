@@ -3,7 +3,9 @@
 # 
 # In many instances, it is desirable to perform case-insensitive comparisons and operations. Write code to perform case-insensitive membership between two arrays.
 
+# Solution
 Solution ← ˜∊∩⌵
 
+# Tests
 ⍤⤙≍ [0 0 1 1 0 0] Solution "dyalog" "APL"
 ⍤⤙≍ [0 1 1 1 0 1 0] Solution "bramley" "HAMPSHIRE"

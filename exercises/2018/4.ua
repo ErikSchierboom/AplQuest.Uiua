@@ -12,8 +12,10 @@
 #
 # Write code that, given a scalar integer year, returns a character vector (string) of the Chinese zodiac sign for that year. For the purposes of this problem, assume that each year number corresponds to exactly one Chinese zodiac animal.
 
+# Solution
 Solution ← °□ ⊡⟜{"Monkey" "Rooster" "Dog" "Pig" "Rat" "Ox" "Tiger" "Rabbit" "Dragon" "Snake" "Horse" "Goat"} ◿12 -⊸(↧0±)
 
+# Tests
 ⍤⤙≍ "Dog" Solution 2018 # Newborns in 2018 will be Dogs
 ⍤⤙≍ "Rat" Solution 1564 # William Shakespeare b. 1564
 ⍤⤙≍ "Dog" Solution ¯551 # Confucius b. 551 BC

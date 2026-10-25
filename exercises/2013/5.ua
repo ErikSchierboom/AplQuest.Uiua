@@ -2,8 +2,10 @@
 # An identity matrix is a square matrix (table) of 0 with 1's in the main diagonal.
 # Write code which produces an n×n identity matrix.
 
+# Solution
 Solution ← ˙⊞=⇡
 
+# Tests
 Expected ← [[1 0 0 0 0]
             [0 1 0 0 0]
             [0 0 1 0 0]

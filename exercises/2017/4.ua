@@ -3,8 +3,10 @@
 # The left argument is 0 or more angles (in degrees).
 # The right argument is 0 or more pie diameters.
 
+# Solution
 Solution ← ≡(×⊓(÷360|×πⁿ2))
 
+# Tests
 ⍤⤙≍ 12τ Solution 60 12
 ⍤⤙≍ 0 Solution 0 12                                                  # 0 degree slice
 ⍤⤙≍ 0 Solution 60 0                                                  # 0 diameter pie

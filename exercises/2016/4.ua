@@ -2,8 +2,11 @@
 # Write code that takes vectors as its left and right arguments and returns them “meshed” into a single vector formed by alternately taking successive elements from each argument. The arguments do not have to be the same length.
 
 # Experimental!
+
+# Solution
 Solution ← ⊏⊙◌˜⍏°⊏⊃(⊂⊙⋅∘|⊂⋅⊙⋅∘)∩°⊏
 
+# Tests
 ⍤⤙≍ "MEEKNESS" Solution "MENS" "EKES"
 ⍤⤙≍ "DAyPaLlog" Solution "Dyalog" "APL"
 ⍤⤙≍ "ADPyLalog" Solution "APL" "Dyalog"

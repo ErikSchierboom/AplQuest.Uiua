@@ -9,8 +9,10 @@
 # 
 # Write code that takes a character vector right argument that consists of digits and uppercase letters and returns an integer vector of the corresponding digits on the keypad.
 
+# Solution
 Solution ← -@0⍜(▽|˜⊏▽3_3_3_3_3_4_3_4+@0+2⇡8-@A)⊸±
 
+# Tests
 ⍤⤙≍ [4 2 6 9 9 4 8] Solution "IAMYY4U"
 ⍤⤙≍ [] Solution ""
 ⍤⤙≍ [8 7 2 2 8 8 3] Solution "UR2CUTE"

@@ -16,8 +16,10 @@
 # The rule is that an integer in the range 128 to 191 (inclusive) continues the character of the previous integer (which may itself be a continuation).
 #  With that in mind, Write code that, given a right argument which is a simple integer vector representing valid UTF-8 text, encloses each sequence of integers that represent a single character, like the result of 'UTF-8'∘⎕UCS¨'UTF-8'∘⎕UCS but does not use any system functions (names beginning with ⎕).
 
+# Solution
 Solution ← ⊜□\+¬∩⇌⊸(↧⊃≥₁₂₈≤₁₉₁)⇌
 
+# Tests
 ⍤⤙≍ {[68] [194 165] [226 141 186] [226 140 138] [240 159 148 178] [57]} Solution [68 194 165 226 141 186 226 140 138 240 159 148 178 57] # D¥⍺⌊🔲9
 ⍤⤙≍ {[68] [121] [97] [108] [111] [103]} Solution [68 121 97 108 111 103]                                                                 # 'Dyalog'
 ⍤⤙≍ {} Solution []                                                                                                                       # ''

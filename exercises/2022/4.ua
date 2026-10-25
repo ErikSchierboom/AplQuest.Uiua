@@ -3,8 +3,10 @@
 # - takes a right argument that is a Boolean scalar or vector.
 # - returns the length of the longest sequence of consecutive 1s.
 
+# Solution
 Solution ← ⬚0/↥⊜⧻⊸∘
 
+# Tests
 ⍤⤙≍ 4 Solution [1 1 1 0 1 1 0 0 1 1 1 1 0]
 ⍤⤙≍ 0 Solution []
 ⍤⤙≍ 1 Solution [1]

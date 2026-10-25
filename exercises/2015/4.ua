@@ -5,8 +5,10 @@
 # Progressive dyadic iota is similar to indexin except that it returns the index of subsequent matches in the left argument until they are exhausted.
 # Write code that implements progressive dyadic iota.
 
+# Solution
 Solution ← ⊗∩(⍉⊟∩⍚∘⊸⧆)
 
+# Tests
 ⍤⤙≍ [2 7 10 3 9 10 10] Solution "DYALOG APL" "AAALLLB"
 ⍤⤙≍ [0 0 0 0] Solution "" "test" # should work with empty left argument 
 ⍤⤙≍ [] Solution "test" ""        # should work with empty right argument

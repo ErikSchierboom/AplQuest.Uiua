@@ -1,8 +1,10 @@
 # 2014-8: Go The Distance
 # Write code that returns the distance between two points in a space of any number of dimensions.
 
+# Solution
 Solution ← √/+≡ⁿ₂-
 
+# Tests
 ⍤⤙≍ 3 Solution 2 5                   # one-dimensional space
 ⍤⤙≍ 5 Solution [2 2] [5 6]           # two-dimensional space
 ⍤⤙≍ 0 Solution [] []                 # zero dimension space

@@ -23,6 +23,8 @@
 # Note: All the dates in this specification are to be in the form year month day
 
 # Experimental!
+
+# Solution
 Solution ← (
   ⊸(-∩(÷86400°datetime))
   /↧◿≡(÷⊃∨×°⊟)⧅<2÷₂23_28_33¯
@@ -31,5 +33,6 @@ Solution ← (
   ↙₃
 )
 
+# Tests
 ⍤⤙≍ [2023 9 10] Solution [1971 10 31] [2023 1 1]
 ⍤⤙≍ [1984 2 23] Solution [1984 2 23] [1984 2 23] # one's birthdate is a triple critical day

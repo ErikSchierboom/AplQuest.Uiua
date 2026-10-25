@@ -8,17 +8,22 @@
 //! # <description line>
 //! # <more description lines...>
 //!
-//! <FunctionName> ← <reference solution expression>
+//! # Solution
+//! <FunctionName> ← <reference solution, possibly spanning several lines>
 //!
+//! # Tests
 //! <optional setup line, e.g. `Expected ← ...`>
 //! ⍤⤙≍ <expected> <call using FunctionName> # <optional test description>
 //! ...
 //! ```
 //!
-//! The reference solution line is extracted only to learn the function
-//! name visitors must define; its body is discarded. Everything after it
+//! The reference solution (everything between the `# Solution` and
+//! `# Tests` markers) is discarded. Everything after the `# Tests` marker
 //! (setup lines and assertions) is preserved so it can be run, unmodified,
 //! against whatever code the visitor supplies.
+
+const SOLUTION_MARKER: &str = "# Solution";
+const TESTS_MARKER: &str = "# Tests";
 
 pub struct Exercise {
     pub title: String,
@@ -39,20 +44,17 @@ pub struct TestCase {
 /// example, if it's empty or missing a reference solution), so callers
 /// can skip such files instead of failing the whole build.
 pub fn parse(content: &str) -> Option<Exercise> {
-    let mut lines = content.lines().peekable();
-
-    // Leading comment block (interspersed with blank lines) becomes the
-    // title (first line) and description (remaining lines).
+    // Everything before the `# Solution` marker is the header: the title
+    // (first comment line) followed by the description.
+    let mut lines = content.lines();
     let mut header_lines = Vec::new();
-    while let Some(line) = lines.peek() {
+    for line in lines.by_ref() {
         let trimmed = line.trim();
-        if trimmed.is_empty() {
-            lines.next();
-        } else if let Some(comment) = trimmed.strip_prefix('#') {
-            header_lines.push(comment.trim().to_string());
-            lines.next();
-        } else {
+        if trimmed == SOLUTION_MARKER {
             break;
+        }
+        if let Some(comment) = trimmed.strip_prefix('#') {
+            header_lines.push(comment.trim().to_string());
         }
     }
     let mut header_lines = header_lines.into_iter();
@@ -64,8 +66,11 @@ pub fn parse(content: &str) -> Option<Exercise> {
         .filter(|line| line != "Experimental!")
         .collect();
 
-    // The first non-comment, non-blank line is the reference solution.
-    lines.next();
+    // The reference solution runs up to the `# Tests` marker and is
+    // discarded so it isn't leaked to visitors.
+    if !lines.by_ref().any(|line| line.trim() == TESTS_MARKER) {
+        return None;
+    }
 
     // Remaining lines are either setup (re-used by later assertions) or
     // assertions themselves (identified by the `⍤` assert primitive).

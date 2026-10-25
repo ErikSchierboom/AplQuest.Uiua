@@ -5,8 +5,10 @@
 # - takes right and left arguments that are character vectors or scalars of equal length – these represent DNA strings.
 # - returns an integer representing the Hamming distance (the number of differences in corresponding positions) between the arguments.
 
+# Solution
 Solution ← ⨬(0|/+≠)◡(=∩⧻)
 
+# Tests
 ⍤⤙≍ 7 Solution "GAGCCTACTAACGGGAT" "CATCGTAATGACGGCCT"
 ⍤⤙≍ 1 Solution "A" "T"
 ⍤⤙≍ 0 Solution "" ""

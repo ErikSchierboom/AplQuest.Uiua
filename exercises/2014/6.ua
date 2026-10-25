@@ -1,8 +1,10 @@
 # 2014-6: Roll The Dice
 # Write code that takes an integer array representing the sides of a number of dice and returns a 2 column matrix of the number of ways each possible total of the dice can be rolled.
 
+# Solution
 Solution ← ⊕(⊟⊃⊢⧻)⊸⊛≡/+♭₂+1⇡
 
+# Tests
 Expected ← [
   2_1
   3_2

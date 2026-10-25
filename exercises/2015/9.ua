@@ -8,6 +8,8 @@
 
 # Write code that takes a character vector word as its argument and returns the word's letters juxtaposed as described above.
 
+# Solution
 Solution ← ⍚(⍜(⇌↘₁⇌↘₁|⊂⊃(/⊂⧈⇌[¤2]↙|↘)⊸(-⊸◿₂⧻)))
 
+# Tests
 ⍤⤙≍ {"tihs" "is" "aewosme"} Solution {"this" "is" "awesome"}

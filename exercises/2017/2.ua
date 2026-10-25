@@ -1,8 +1,10 @@
 # 2017-2: Good Evening
 # Write code that takes an integer array and replaces all the odd numbers with the next greater even number.
 
+# Solution
 Solution ← +⊸◿₂
 
+# Tests
 ⍤⤙≍ [2 2 4 4 6] Solution [1 2 3 4 5]
 ⍤⤙≍ [] Solution [] # should return an empty vector
 

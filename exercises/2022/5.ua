@@ -4,8 +4,10 @@
 # - takes a scalar integer argument, n, in the range 0-100.
 # - returns a character matrix comprised of spaces and ⎕ that resembles an n-level left-to-right ascending stairway.
 
+# Solution
 Solution ← ≡($"__"⊓(↯⊙@ [∘]|↯⊙@⎕[∘]))⇌⟜+₁⇡
 
+# Tests
 Expected ← ["         ⎕"
             "        ⎕⎕"
             "       ⎕⎕⎕"

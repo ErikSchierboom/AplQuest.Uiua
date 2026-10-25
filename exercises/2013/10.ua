@@ -11,7 +11,10 @@
 # The left argument is a vector of the values for the equations and the right argument is a matrix of the coefficients.
 
 # Experimental!
+
+# Solution
 Solution ← ⧋(/+×)⊙(⍉⇌⍜𝕍⟜(⍥¯°⊏÷/⨱|≡/⨱⧅<¯1))
 
+# Tests
 ⍤⤙≍ [3 2] Solution [13 1] ↯2_2[3 2 1 ¯1]
 ⍤⤙≍ [¯1 3 1] ⁅ Solution [2 6 4] ↯3_3[4 1 3 2 2 2 6 3 1]

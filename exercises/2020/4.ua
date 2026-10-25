@@ -3,8 +3,10 @@
 #
 # A leap year algorithm can be found [here](https://en.wikipedia.org/wiki/Leap_year#Algorithm).
 
+# Solution
 Solution ← ≡₀(/≠ =₀ ◿4_100_400)
 
+# Tests
 ⍤⤙≍ 1 Solution 2020
 ⍤⤙≍ [] Solution [] # returns an empty vector
 

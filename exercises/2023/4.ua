@@ -12,8 +12,10 @@
 #  0 if the left argument represents a version number equal to the right argument
 #  1 if the left argument represents a version number newer than the right argument
 
+# Solution
 Solution ← /+ ×[4 2 1] ≡±˜-
 
+# Tests
 ⍤⤙≍ 0 Solution [1 2 3] [1 2 3]
 ⍤⤙≍ 1 Solution [1 2 3] [1 0 9]
 ⍤⤙≍ ¯1 Solution [14 2 11] [14 2 12]

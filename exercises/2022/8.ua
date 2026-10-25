@@ -6,8 +6,10 @@
 # - returns a 2-element vector of character vectors in which the right argument is split immediately before the first occurence of any element in the left argument. 
 #   If no left-argument element occurs in the right argument, then the split should happen after the last element of the right argument.
 
+# Solution
 Solution ← {⊃↙↘}⊸(⊢⍆˜⊗)
 
+# Tests
 ⍤⤙≍ {"Hell" "o World"} Solution "do" "Hello World"
 ⍤⤙≍ {"ABCD" "EFGHIJKLMNOPQRSTUVWXYZ"} Solution "KEI" +@A⇡26
 ⍤⤙≍ {"" "ABCDEFGHIJKLMNOPQRSTUVWXYZ"} Solution "A" +@A⇡26

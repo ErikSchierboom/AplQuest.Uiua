@@ -3,8 +3,10 @@
 # - takes a right argument which is an array of positive numbers representing circle diameters
 # - returns a numeric array of the same shape as the right argument representing the difference between the areas of the circles and the areas of the largest squares that can be inscribed within each circle
 
+# Solution
 Solution ← ×÷₄-₂πⁿ₂
 
+# Tests
 Expected ← [1.14159265 4.56637061 10.27433388 18.26548246 28.53981634]
 ⍤⤙≍ Expected ⁅₈ Solution ×2+1⇡5
 

@@ -14,8 +14,10 @@
 # - the Bs occupy one odd and one even position
 # - otherwise a 0 is returned.
 
+# Solution
 Solution ← ×⊃(×⊃(≥⊙⋅∘|≤⋅∘)⊃(°⊟⊚∊@R|˜⊗@K)|=1/+◿2⊚∊@B)
 
+# Tests
 ⍤⤙≍ 1 Solution "RNBQKBNR" # standard chess layout
 ⍤⤙≍ 1 Solution "BBNRKNRQ" # layout in diagram above
 ⍤⤙≍ 0 Solution "RBBNQNRK" # K not between Rs
