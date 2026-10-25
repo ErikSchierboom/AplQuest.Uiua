@@ -9,7 +9,6 @@
 # if an element of T has length greater than W, truncate it after W characters.
 
 # Experimental!
-
 Solution ← ˜◇≡(⍜(⇌|˜⬚@ ↙)°□)
 
 Expected ← ["     ⍒"]

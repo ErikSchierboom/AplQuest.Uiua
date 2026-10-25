@@ -23,7 +23,6 @@
 # Note: All the dates in this specification are to be in the form year month day
 
 # Experimental!
-
 Solution ← (
   ⊸(-∩(÷86400°datetime))
   /↧◿≡(÷⊃∨×°⊟)⧅<2÷₂23_28_33¯
