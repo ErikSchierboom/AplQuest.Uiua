@@ -86,8 +86,43 @@ try {
 }
 runButton.disabled = !runTest;
 
+// One row per test, showing the test's code (not its comment). Rows start
+// neutral and are marked pass/fail in place when the tests are run.
+const summaryEl = document.createElement("div");
+summaryEl.className = "summary";
+resultsEl.appendChild(summaryEl);
+
+const rows = tests.map((test) => {
+  const row = document.createElement("div");
+  row.className = "test-result";
+
+  const icon = document.createElement("span");
+  icon.className = "icon";
+  row.appendChild(icon);
+
+  const detail = document.createElement("div");
+  detail.className = "detail";
+  const pre = document.createElement("pre");
+  pre.className = "test-code";
+  const code = document.createElement("code");
+  if (highlight) {
+    code.innerHTML = highlight(test.code);
+  } else {
+    code.textContent = test.code;
+  }
+  pre.appendChild(code);
+  detail.appendChild(pre);
+  const message = document.createElement("span");
+  message.className = "message";
+  message.hidden = true;
+  detail.appendChild(message);
+  row.appendChild(detail);
+
+  resultsEl.appendChild(row);
+  return { row, icon, message };
+});
+
 runButton.addEventListener("click", () => {
-  resultsEl.innerHTML = "";
   // Always enable experimental primitives
   const code = `# Experimental!\n${codeEl.value}`;
   let passed = 0;
@@ -97,32 +132,12 @@ runButton.addEventListener("click", () => {
     const ok = outcome === "PASS";
     if (ok) passed++;
 
-    const row = document.createElement("div");
+    const { row, icon, message } = rows[index];
     row.className = `test-result ${ok ? "pass" : "fail"}`;
-
-    const icon = document.createElement("span");
-    icon.className = "icon";
     icon.textContent = ok ? "✓" : "✗";
-    row.appendChild(icon);
-
-    const detail = document.createElement("div");
-    detail.className = "detail";
-    const label = document.createElement("span");
-    label.textContent = test.description || `Test ${index + 1}`;
-    detail.appendChild(label);
-    if (!ok) {
-      const message = document.createElement("span");
-      message.className = "message";
-      message.textContent = outcome.replace(/^FAIL: /, "");
-      detail.appendChild(message);
-    }
-    row.appendChild(detail);
-
-    resultsEl.appendChild(row);
+    message.hidden = ok;
+    message.textContent = ok ? "" : outcome.replace(/^FAIL: /, "");
   });
 
-  const summary = document.createElement("div");
-  summary.className = "summary";
-  summary.textContent = `${passed} / ${tests.length} tests passed`;
-  resultsEl.prepend(summary);
+  summaryEl.textContent = `${passed} / ${tests.length} tests passed`;
 });

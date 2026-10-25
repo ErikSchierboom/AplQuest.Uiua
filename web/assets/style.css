@@ -379,6 +379,17 @@ button:disabled {
   flex: 1;
 }
 
+.test-result .test-code {
+  margin: 0;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+}
+
+.test-result .icon {
+  min-width: 1em;
+}
+
 .test-result .message {
   display: block;
   color: var(--muted);
