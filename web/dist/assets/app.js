@@ -88,7 +88,8 @@ runButton.disabled = !runTest;
 
 runButton.addEventListener("click", () => {
   resultsEl.innerHTML = "";
-  const code = codeEl.value;
+  // Always enable experimental primitives
+  const code = `# Experimental!\n${codeEl.value}`;
   let passed = 0;
 
   tests.forEach((test, index) => {

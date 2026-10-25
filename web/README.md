@@ -40,6 +40,4 @@ expected shape (see any existing file for an example):
 ```
 
 Re-run `./build.sh` afterwards to regenerate the site.
-Note: if a solution uses an experimental Uiua primitive, add a `# Experimental!` line to the header (anywhere among the description comments); the
-generator detects it and prepends it to the visitor's code stub
-automatically.
+Note: the site always runs the visitor's code with `# Experimental!`, so experimental features can be used.

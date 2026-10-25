@@ -121,14 +121,7 @@ pub fn render_exercise(
         .expect("test cases serialize")
         .replace("</", "<\\/");
 
-    let stub = if exercise.experimental {
-        html_escape(&format!(
-            "# Experimental!\n{} ← \n",
-            exercise.function_name
-        ))
-    } else {
-        html_escape(&format!("{} ← \n", exercise.function_name))
-    };
+    let stub = html_escape(&format!("{} ← \n", exercise.function_name));
 
     let body = format!(
         r#"<header>

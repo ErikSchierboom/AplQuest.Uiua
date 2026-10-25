@@ -24,12 +24,6 @@ pub struct Exercise {
     pub title: String,
     pub description: Vec<String>,
     pub function_name: String,
-    /// Whether the reference solution uses an experimental Uiua feature,
-    /// requiring a `# Experimental!` semantic comment ahead of any code
-    /// that uses it. When set, this is baked into the visitor's starting
-    /// code stub so their solution compiles without them needing to know
-    /// about this Uiua convention up front.
-    pub experimental: bool,
     pub tests: Vec<TestCase>,
 }
 
@@ -67,16 +61,8 @@ pub fn parse(content: &str) -> Option<Exercise> {
     // The `# Experimental!` semantic comment enables experimental Uiua
     // primitives for the rest of the file; it's a code directive, not
     // problem prose, so it's pulled out of the description.
-    let mut experimental = false;
     let description: Vec<String> = header_lines
-        .filter(|line| {
-            if line == "Experimental!" {
-                experimental = true;
-                false
-            } else {
-                true
-            }
-        })
+        .filter(|line| line != "Experimental!")
         .collect();
 
     // The first non-comment, non-blank line is the reference solution.
@@ -117,7 +103,6 @@ pub fn parse(content: &str) -> Option<Exercise> {
         title,
         description,
         function_name,
-        experimental,
         tests,
     })
 }
