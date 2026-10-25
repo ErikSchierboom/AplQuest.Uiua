@@ -6,7 +6,7 @@
 # - returns an integer representing the Hamming distance (the number of differences in corresponding positions) between the arguments.
 
 # Solution
-Solution ← ⨬(0|/+≠)◡(=∩⧻)
+Solution ← /+≠
 
 # Tests
 ⍤⤙≍ 7 Solution "GAGCCTACTAACGGGAT" "CATCGTAATGACGGCCT"
