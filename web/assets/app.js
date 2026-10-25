@@ -15,7 +15,8 @@ const storageKey = `uiua-quest:${location.pathname}`;
 // Turn the visitor's body into a full definition. Multi-line bodies are
 // wrapped in parentheses so every line belongs to The code.
 function buildProgram(body) {
-  const trimmed = body.trim();
+  // Only strip newlines: a trailing space can be significant (`@ `).
+  const trimmed = body.replace(/^\s*\n|\n\s*$/g, "");
   const definition = trimmed.includes("\n")
     ? `Solution ← (\n${trimmed}\n)`
     : `Solution ← ${trimmed}`;

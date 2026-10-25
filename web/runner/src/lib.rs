@@ -36,11 +36,13 @@ pub fn run_test(user_code: &str, test_code: &str) -> String {
 
 /// Format `code` with the standard Uiua formatter (e.g. turning `+1 ⇡` names
 /// into glyphs). Returns an empty string if the code can't be parsed, in
-/// which case the caller should leave the code untouched.
+/// which case the caller should leave the code untouched. The result always
+/// ends with exactly one newline. Only newlines are trimmed, since a trailing
+/// space can be significant (`@ ` is the space character).
 #[wasm_bindgen]
 pub fn format_code(code: &str) -> String {
     match format_str(code, &FormatConfig::default()) {
-        Ok(formatted) => formatted.output.trim_end().to_string(),
+        Ok(formatted) => format!("{}\n", formatted.output.trim_end_matches(['\n', '\r'])),
         Err(_) => String::new(),
     }
 }
