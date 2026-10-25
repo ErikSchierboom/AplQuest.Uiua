@@ -121,29 +121,29 @@ pub fn render_exercise(
         .expect("test cases serialize")
         .replace("</", "<\\/");
 
-    let stub = html_escape(&format!("{} ← \n", exercise.function_name));
-
     let body = format!(
         r#"<header>
 <h1>{title}</h1>
-{description}<p class="hint">Define a function named <code>{function_name}</code>; the tests below will call it.</p>
-</header>
+{description}</header>
+<section class="examples">
+<h2>Examples</h2>
+<div id="results" class="results"></div>
+</section>
 <section class="editor">
+<h2>Implementation</h2>
 <div class="code-editor">
 <pre class="code-highlight" aria-hidden="true"><code id="code-highlight"></code></pre>
-<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">{stub}</textarea>
+<textarea id="code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="Enter your code"></textarea>
 </div>
 <div class="actions">
 <button id="run">Run tests</button>
 <span id="status"></span>
 </div>
 </section>
-<section id="results" class="results"></section>
 <script type="application/json" id="tests-data">{tests_json}</script>
 <script type="module" src="../assets/app.js"></script>
 "#,
-        title = html_escape(&exercise.title),
-        function_name = html_escape(&exercise.function_name),
+        title = html_escape(&exercise.title)
     );
 
     page_shell(&exercise.title, "..", categories, Some((category, num)), &body)

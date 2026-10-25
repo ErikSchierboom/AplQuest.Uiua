@@ -12,6 +12,32 @@ const testsDataEl = document.getElementById("tests-data");
 const tests = JSON.parse(testsDataEl.textContent);
 const storageKey = `uiua-quest:${location.pathname}`;
 
+// Turn the visitor's body into a full definition. Multi-line bodies are
+// wrapped in parentheses so every line belongs to the function.
+function buildProgram(body) {
+  const trimmed = body.trim();
+  const definition = trimmed.includes("\n")
+    ? `Solution ← (\n${trimmed}\n)`
+    : `Solution ← ${trimmed}`;
+  // Always enable experimental primitives
+  return `# Experimental!\n${definition}`;
+}
+
+// Show `<Name>` in tests where the visitor's solution gets called.
+const namePattern = new RegExp(
+  `(?<![\\p{L}\\p{N}_])Solution(?![\\p{L}\\p{N}_])`,
+  "gu",
+);
+function escapeHtml(text) {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+function markSolution(html) {
+  return html.replace(namePattern, `&lt;Solution&gt;`);
+}
+
 // Restore the visitor's previous attempt, if any.
 const saved = localStorage.getItem(storageKey);
 if (saved !== null) {
@@ -106,9 +132,9 @@ const rows = tests.map((test) => {
   pre.className = "test-code";
   const code = document.createElement("code");
   if (highlight) {
-    code.innerHTML = highlight(test.code);
+    code.innerHTML = markSolution(highlight(test.code));
   } else {
-    code.textContent = test.code;
+    code.innerHTML = markSolution(escapeHtml(test.code));
   }
   pre.appendChild(code);
   detail.appendChild(pre);
@@ -123,8 +149,7 @@ const rows = tests.map((test) => {
 });
 
 runButton.addEventListener("click", () => {
-  // Always enable experimental primitives
-  const code = `# Experimental!\n${codeEl.value}`;
+  const code = buildProgram(codeEl.value);
   let passed = 0;
 
   tests.forEach((test, index) => {

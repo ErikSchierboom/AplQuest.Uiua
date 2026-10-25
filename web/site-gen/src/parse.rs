@@ -23,7 +23,6 @@
 pub struct Exercise {
     pub title: String,
     pub description: Vec<String>,
-    pub function_name: String,
     pub tests: Vec<TestCase>,
 }
 
@@ -66,12 +65,7 @@ pub fn parse(content: &str) -> Option<Exercise> {
         .collect();
 
     // The first non-comment, non-blank line is the reference solution.
-    // Only its function name is kept; the implementation is discarded.
-    let solution_line = lines.next()?.trim();
-    let function_name = solution_line.split('←').next()?.trim().to_string();
-    if function_name.is_empty() {
-        return None;
-    }
+    lines.next();
 
     // Remaining lines are either setup (re-used by later assertions) or
     // assertions themselves (identified by the `⍤` assert primitive).
@@ -102,7 +96,6 @@ pub fn parse(content: &str) -> Option<Exercise> {
     Some(Exercise {
         title,
         description,
-        function_name,
         tests,
     })
 }
