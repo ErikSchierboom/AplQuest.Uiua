@@ -24,8 +24,6 @@
 
 # Experimental!
 
-# Experimental!
-
 Solution ← (
   ⊸(-∩(÷86400°datetime))
   ⧅<2÷₂23_28_33
