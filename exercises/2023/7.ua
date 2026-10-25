@@ -3,7 +3,7 @@
 # 
 # Write code that:
 # 
-# takes a single non-zero positive number right argument.
+# takes a single non-zero positive number argument.
 # returns a 2-element "integer" result representing the smallest non-zero positive values for p and q respectively
 
 # Experimental!

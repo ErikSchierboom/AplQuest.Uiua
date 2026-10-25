@@ -3,7 +3,7 @@
 
 # Write code that:
 
-# takes a right argument that is a non-decreasing vector or scalar of strictly positive integers, representing a set of scores.
+# takes an argument that is a non-decreasing vector or scalar of strictly positive integers, representing a set of scores.
 # returns a numeric vector of the place for each score; for duplicate scores, it returns the average of the places they hold.
 
 # Solution

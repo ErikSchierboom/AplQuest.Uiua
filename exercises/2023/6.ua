@@ -4,10 +4,10 @@
 # key1=value1;key2=value2
 # Write code that:
 # 
-# takes a 2-element character vector left argument where the first element represents the separator character between multiple key/value pairs and the second element represents the separator between the key and the value for each pair.
-# takes a character vector right argument representing a valid set of key/value pairs (delimited as specified by the left argument).
+# takes a 2-element character vector first argument where the first element represents the separator character between multiple key/value pairs and the second element represents the separator between the key and the value for each pair.
+# takes a character vector second argument representing a valid set of key/value pairs (delimited as specified by the first argument).
 # returns a 2-column matrix where the first column contains the character vector keys of the key/value pairs and the second column contains the character vector values.
-# Note: You may assume that there will be no empty names or values in the right argument.
+# Note: You may assume that there will be no empty names or values in the second argument.
 
 # Solution
 Solution ← (

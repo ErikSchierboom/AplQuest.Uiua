@@ -1,8 +1,8 @@
 # 2021-10: On the Right Side
 # Write code that:
 # 
-# has a right argument T that is a character scalar, vector or a vector of character vectors/scalars.
-# has a left argument W that is a positive integer specifying the width of the result.
+# has a second argument T that is a character scalar, vector or a vector of character vectors/scalars.
+# has a first argument W that is a positive integer specifying the width of the result.
 # returns a right-aligned character array R of shape ((2=|≡T)/≢T),W meaning R is one of the following:
 # a W-wide vector if T is a simple vector or scalar.
 # a W-wide matrix with the same number rows as elements of T if T is a vector of vectors/scalars.

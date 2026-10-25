@@ -14,7 +14,7 @@
 # ≡(□utf₈) graphemes "D¥⍺⌊○9"
 # {[68] [194 165] [226 141 186] [226 140 138] [226 151 139] [57]}
 # The rule is that an integer in the range 128 to 191 (inclusive) continues the character of the previous integer (which may itself be a continuation).
-#  With that in mind, Write code that, given a right argument which is a simple integer vector representing valid UTF-8 text, encloses each sequence of integers that represent a single character, like the result of 'UTF-8'∘⎕UCS¨'UTF-8'∘⎕UCS but does not use any system functions (names beginning with ⎕).
+#  With that in mind, Write code that, given an argument which is a simple integer vector representing valid UTF-8 text, encloses each sequence of integers that represent a single character, like the result of 'UTF-8'∘⎕UCS¨'UTF-8'∘⎕UCS but does not use any system functions (names beginning with ⎕).
 
 # Solution
 Solution ← ⊜□\+¬∩⇌⊸(↧⊃≥₁₂₈≤₁₉₁)⇌

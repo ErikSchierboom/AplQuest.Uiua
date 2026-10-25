@@ -2,9 +2,9 @@
 # In this problem, you"re asked to return a result that identifies the endings of occurrences of array X in array Y. To keep things simple, X and Y will be at most rank 1, meaning they"ll either be vectors or scalars.
 # 
 # Write code that:
-# - takes a scalar or vector left argument
-# - takes a scalar or vector right argument
-# - returns a Boolean result that is the same shape as the right argument where 1"s mark the ends of occurrences of the left argument in the right argument
+# - takes a scalar or vector first argument
+# - takes a scalar or vector second argument
+# - returns a Boolean result that is the same shape as the second argument where 1"s mark the ends of occurrences of the first argument in the second argument
 
 # Solution
 Solution ← ⍜∩⇌⌕

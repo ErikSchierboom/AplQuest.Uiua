@@ -6,11 +6,11 @@
 # The build number is incremented for bug fixes and similar changes.
 # Write code that:
 # 
-# Takes 3-element integer vector left and right arguments each representing a major version, minor version, and build number.
+# Takes 3-element integer vector first and second arguments each representing a major version, minor version, and build number.
 # Returns
-# ¯1 if the left argument represents a version number older than the right argument
-#  0 if the left argument represents a version number equal to the right argument
-#  1 if the left argument represents a version number newer than the right argument
+# ¯1 if the first argument represents a version number older than the second argument
+#  0 if the first argument represents a version number equal to the second argument
+#  1 if the first argument represents a version number newer than the second argument
 
 # Solution
 Solution ← /+ ×[4 2 1] ≡±˜-

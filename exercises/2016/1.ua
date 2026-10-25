@@ -1,5 +1,5 @@
 # 2016-1: Statistics - Mean
-# Write code that takes a numeric array as its right argument and returns the mean (average) of the array.
+# Write code that takes a numeric array as its argument and returns the mean (average) of the array.
 
 # Solution
 Solution ← ÷↥1⊃⧻/+

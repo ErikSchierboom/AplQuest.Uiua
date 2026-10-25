@@ -1,7 +1,7 @@
 # 2021-4: Square Peg, Round Hole
 # Write code that:
-# - takes a right argument which is an array of positive numbers representing circle diameters
-# - returns a numeric array of the same shape as the right argument representing the difference between the areas of the circles and the areas of the largest squares that can be inscribed within each circle
+# - takes an argument which is an array of positive numbers representing circle diameters
+# - returns a numeric array of the same shape as the argument representing the difference between the areas of the circles and the areas of the largest squares that can be inscribed within each circle
 
 # Solution
 Solution ← ×÷₄-₂πⁿ₂

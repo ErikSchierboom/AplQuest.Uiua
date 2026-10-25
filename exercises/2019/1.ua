@@ -1,5 +1,5 @@
 # 2019-1: Chunky Monkey
-# Write code that, given a scalar or vector as the right argument and a positive (>0) integer chunk size n as the left argument, breaks the array"s items up into chunks of size n.
+# Write code that, given a scalar or vector as the second argument and a positive (>0) integer chunk size n as the first argument, breaks the array"s items up into chunks of size n.
 # If the number of elements in the array is not evenly divisible by n, then the last chunk will have fewer than n elements.
 
 # Solution

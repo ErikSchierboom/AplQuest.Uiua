@@ -17,9 +17,9 @@
 #
 # Write code that:
 #
-# takes a 3-element integer left argument representing a valid birthdate
-# takes a 3-element integer right argument representing a valid date occurring on or after the left argument
-# returns a 3-element integer array representing the date of the next double or triple critical day occurring on or after the date represented by the right argument.
+# takes a 3-element integer first argument representing a valid birthdate
+# takes a 3-element integer second argument representing a valid date occurring on or after the first argument
+# returns a 3-element integer array representing the date of the next double or triple critical day occurring on or after the date represented by the second argument.
 # Note: All the dates in this specification are to be in the form year month day
 
 # Experimental!

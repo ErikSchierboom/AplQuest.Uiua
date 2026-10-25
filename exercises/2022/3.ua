@@ -1,7 +1,7 @@
 # 2022-3: Uniquely Qualified
 # Write code that:
 # 
-# takes right and left arguments that are arrays of arbitrary rank, depth, and value.
+# takes first and second arguments that are arrays of arbitrary rank, depth, and value.
 # returns a vector of all elements that appear in either of the two argument arrays but not in both. The order of elements in the result is not significant.
 
 # Solution

@@ -1,7 +1,7 @@
 # 2021-5: Rect-ify
 # Suppose you have a number of trees that you want to plant in a rectangular pattern with complete rows and columns, meaning all rows have the same number of trees. You also want that rectangular pattern to be as "square" as possible, meaning there is a minimal difference between the number of rows and columns in the pattern.
 # 
-# Write code that: - has a right argument N which is a positive integer less than or equal to 1,000,000. - returns a 2-element integer vector R representing the rows and columns of the rectangle such that: - N=×/R meaning N equals the number of rows × the number of columns (you planted all the trees!) - ≤/R meaning the number of rows is less than or equal to the number of columns - |-/R is minimal, meaning the difference between the elements of R is as small as possible
+# Write code that: - has an argument N which is a positive integer less than or equal to 1,000,000. - returns a 2-element integer vector R representing the rows and columns of the rectangle such that: - N=×/R meaning N equals the number of rows × the number of columns (you planted all the trees!) - ≤/R meaning the number of rows is less than or equal to the number of columns - |-/R is minimal, meaning the difference between the elements of R is as small as possible
 
 # Solution
 Solution ← ≡(↙₂↘⊃(-1⧻|▽2)+1⊚=0◿⊸(+1⇡))

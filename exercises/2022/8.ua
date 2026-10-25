@@ -1,10 +1,10 @@
 # 2022-8: Let"s Split!
 # Write code that:
 # 
-# - takes a right argument that is a non-empty character vector or scalar.
-# - takes a left argument that is a non-empty character vector or scalar.
-# - returns a 2-element vector of character vectors in which the right argument is split immediately before the first occurence of any element in the left argument. 
-#   If no left-argument element occurs in the right argument, then the split should happen after the last element of the right argument.
+# - takes a second argument that is a non-empty character vector or scalar.
+# - takes a first argument that is a non-empty character vector or scalar.
+# - returns a 2-element vector of character vectors in which the second argument is split immediately before the first occurence of any element in the first argument. 
+#   If no first argument element occurs in the second argument, then the split should happen after the last element of the second argument.
 
 # Solution
 Solution ← {⊃↙↘}⊸(⊢⍆˜⊗)

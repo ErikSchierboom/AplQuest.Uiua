@@ -2,7 +2,7 @@
 # This problem is inspired by the Counting Point Mutations problem found on the excellent Bioinformatics education website rosalind.info.
 # 
 # Write code that:
-# - takes right and left arguments that are character vectors or scalars of equal length – these represent DNA strings.
+# - takes first and second arguments that are character vectors or scalars of equal length – these represent DNA strings.
 # - returns an integer representing the Hamming distance (the number of differences in corresponding positions) between the arguments.
 
 # Solution

@@ -1,5 +1,5 @@
 # 2016-5: You're Unique Just Like Everyone Else
-# Write code that takes a vector as its right argument and returns elements that occur only once in the vector.
+# Write code that takes a vector as its argument and returns elements that occur only once in the vector.
 
 # Solution
 Solution ← ▽=1⊃(⊕⧻|⋅◴)⊸⊛

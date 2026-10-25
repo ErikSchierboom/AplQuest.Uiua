@@ -3,10 +3,10 @@
 #
 # Write code that:
 #
-# - takes a non-empty, descending integer vector left argument representing the attacker's dice rolls
-# - takes a non-empty, descending integer vector right argument representing the defender's dice rolls
+# - takes a non-empty, descending integer vector first argument representing the attacker's dice rolls
+# - takes a non-empty, descending integer vector second argument representing the defender's dice rolls
 # - returns a 2-element vector where the first element represents the number of armies the attacker lost and the second element represents the number of armies the defender lost.
-# Note: The left and right arguments do not need to be the same length.
+# Note: The first and second arguments do not need to be the same length.
 
 # Solution
 Solution ← [∩/+]⊃≥<↙◡(↧∩⧻)

@@ -1,7 +1,7 @@
 # 2021-3: Multiplicity
 # Write code that:
-# - has a right argument Y which is an integer vector or scalar
-# - has a left argument X which is also an integer vector or scalar
+# - has a second argument Y which is an integer vector or scalar
+# - has a first argument X which is also an integer vector or scalar
 # - finds which elements of Y are multiples of each element of X and returns them as a vector (in the order of X) of vectors (in the order of Y).
 
 # Solution

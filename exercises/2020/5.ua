@@ -1,5 +1,5 @@
 # 2020-5: Stepping in the Proper Direction
-# Write code that, given a right argument of 2 integers, returns a vector of the integers from the first element of the right argument to the second, inclusively.
+# Write code that, given an argument of 2 integers, returns a vector of the integers from the first element of the argument to the second, inclusively.
 
 # Solution
 Solution ← ⊂+◡(×⊃(±|⇡⌵)-)

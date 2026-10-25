@@ -8,7 +8,7 @@
 # 
 # Write code which solves this type of problem. Hint: this is the easiest of all of the problems presented here.
 # 
-# The left argument is a vector of the values for the equations and the right argument is a matrix of the coefficients.
+# The first argument is a vector of the values for the equations and the second argument is a matrix of the coefficients.
 
 # Experimental!
 

@@ -1,7 +1,7 @@
 # 2017-4: Slice(s) of Pie(s)
 # Write code that calculates and returns the areas of 0 or more pie slices.
-# The left argument is 0 or more angles (in degrees).
-# The right argument is 0 or more pie diameters.
+# The first argument is 0 or more angles (in degrees).
+# The second argument is 0 or more pie diameters.
 
 # Solution
 Solution ← ≡(×⊓(÷360|×πⁿ2))

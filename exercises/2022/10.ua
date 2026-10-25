@@ -1,9 +1,9 @@
 # 2022-10: Separation Anxiety
 # Write code that:
 #
-# - takes a right argument that is a character vector or scalar representing a valid non-negative integer.
-# - takes a left argument that is a character scalar "separator" character.
-# - returns a character vector that is a representation of the right argument formatted such that the separator character is found between trailing groups of 3 digits.
+# - takes a second argument that is a character vector or scalar representing a valid non-negative integer.
+# - takes a first argument that is a character scalar "separator" character.
+# - returns a character vector that is a representation of the second argument formatted such that the separator character is found between trailing groups of 3 digits.
 # - Note that the number of digits in the character representation might exceed the number of digits that can be represented as a 32-bit integer.
 
 # Solution

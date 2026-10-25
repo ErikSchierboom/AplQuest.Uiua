@@ -8,7 +8,7 @@
 #
 # Write code that:
 
-# has a character vector right argument that is a permutation of "KQRRBBNN"
+# has a character vector argument that is a permutation of "KQRRBBNN"
 # returns 1 if the following are true:
 # - the K is between the two Rs
 # - the Bs occupy one odd and one even position

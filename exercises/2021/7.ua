@@ -4,7 +4,7 @@
 # 
 # Write code to test whether an array is a magic square. The function must:
 # 
-# - have a right argument that is a square matrix of integers (not necessarily all positive integers)
+# - have an argument that is a square matrix of integers (not necessarily all positive integers)
 # - return 1 if the array represents a magic square, otherwise return 0
 
 # Solution

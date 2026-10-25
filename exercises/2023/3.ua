@@ -4,9 +4,9 @@
 #
 # Write code that:
 #
-# - takes a character vector right argument representing the plaintext message
-# - takes a single integer left argument representing the size of the shift
-# - returns a result with the same shape as the right argument representing the encrypted message
+# - takes a character vector second argument representing the plaintext message
+# - takes a single integer first argument representing the size of the shift
+# - returns a result with the same shape as the second argument representing the encrypted message
 #
 # The input will be uppercase letters and spaces.
 

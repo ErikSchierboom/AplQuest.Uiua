@@ -3,7 +3,7 @@
 # 
 # Write code that:
 # 
-# takes a non-empty non-scalar array right argument
+# takes a non-empty non-scalar array argument
 # returns an array of the same shape as the argument, but with pairs of elements along the last axis "flipped". If the array has an odd number of elements in the last axis, leave the last element unchanged.
 
 # Solution

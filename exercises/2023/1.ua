@@ -3,8 +3,8 @@
 # 
 # Write code that:
 # 
-# takes a non-empty numeric vector right argument
-# returns an "Elimination-sorted" vector of the right argument
+# takes a non-empty numeric vector argument
+# returns an "Elimination-sorted" vector of the argument
 
 # Solution
 Solution ← ▽⊸≥⊸\↥

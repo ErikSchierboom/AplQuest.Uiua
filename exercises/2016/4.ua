@@ -1,5 +1,5 @@
 # 2016-4: Just Meshing Around
-# Write code that takes vectors as its left and right arguments and returns them “meshed” into a single vector formed by alternately taking successive elements from each argument. The arguments do not have to be the same length.
+# Write code that takes vectors as its first and second arguments and returns them “meshed” into a single vector formed by alternately taking successive elements from each argument. The arguments do not have to be the same length.
 
 # Experimental!
 
