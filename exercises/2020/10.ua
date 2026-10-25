@@ -1,7 +1,7 @@
 # 2020-10: Stacking It Up
 # Write code that takes as its argument a vector of simple arrays of rank 2 or less (scalar, vector, or matrix). 
 # Each simple array will consist of either non-negative integers or printable ASCII characters.
-# The function must return a simple character array that displays identically to what {⎕←⍵}¨ displays when applied to the argument.
+# The code must return a simple character array that displays identically to what {⎕←⍵}¨ displays when applied to the argument.
 
 # Solution
 Solution ← ⍚(°¤pretty)

@@ -2,7 +2,7 @@
 # 
 # Wikipedia states that, in recreational mathematics, a square array of numbers, usually positive integers, is called a magic square if the sums of the numbers in each row, each column, and both main diagonals are the same.
 # 
-# Write code to test whether an array is a magic square. The function must:
+# Write code to test whether an array is a magic square. The code must:
 # 
 # - have an argument that is a square matrix of integers (not necessarily all positive integers)
 # - return 1 if the array represents a magic square, otherwise return 0
