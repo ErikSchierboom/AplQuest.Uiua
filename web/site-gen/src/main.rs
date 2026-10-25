@@ -84,20 +84,62 @@ fn write_site(
     }
     fs::create_dir_all(dist_dir.join("assets")).expect("create assets dir");
 
-    fs::write(dist_dir.join("index.html"), template::render_index(by_category))
+    let style_src = assets_src_dir.join("style.css");
+    let style = fs::read_to_string(&style_src)
+        .unwrap_or_else(|e| panic!("reading {}: {e}", style_src.display()));
+    fs::write(dist_dir.join("assets/style.css"), &style).expect("write style.css");
+
+    let app_src = assets_src_dir.join("app.js");
+    let app = fs::read_to_string(&app_src)
+        .unwrap_or_else(|e| panic!("reading {}: {e}", app_src.display()))
+        .replace("RUNNER_HASH", &runner_hash(&dist_dir.join("assets")));
+    fs::write(dist_dir.join("assets/app.js"), &app).expect("write app.js");
+
+    // Version the asset URLs in the pages too, so a changed asset is
+    // refetched instead of served from the browser cache.
+    let versioned = |page: String| {
+        page.replace(
+            "/assets/style.css\"",
+            &format!("/assets/style.css?v={}\"", hash_bytes(style.as_bytes())),
+        )
+        .replace(
+            "/assets/app.js\"",
+            &format!("/assets/app.js?v={}\"", hash_bytes(app.as_bytes())),
+        )
+    };
+
+    fs::write(dist_dir.join("index.html"), versioned(template::render_index(by_category)))
         .expect("write index.html");
 
     for (category, exercises) in by_category {
         for (num, exercise) in exercises {
-            let page = template::render_exercise(by_category, category, num, exercise);
+            let page = versioned(template::render_exercise(by_category, category, num, exercise));
             fs::write(dist_dir.join(category).join(format!("{num}.html")), page)
                 .expect("write exercise page");
         }
     }
+}
 
-    for asset in ["style.css", "app.js"] {
-        let src = assets_src_dir.join(asset);
-        let dst = dist_dir.join("assets").join(asset);
-        fs::copy(&src, &dst).unwrap_or_else(|e| panic!("copying {}: {e}", src.display()));
+/// Content hash (FNV-1a, hex), used to bust the browser cache when a file
+/// changes.
+fn hash_bytes(bytes: &[u8]) -> String {
+    format!("{:016x}", fnv1a(0xcbf29ce484222325, bytes))
+}
+
+fn fnv1a(mut hash: u64, bytes: &[u8]) -> u64 {
+    for &byte in bytes {
+        hash = (hash ^ u64::from(byte)).wrapping_mul(0x100000001b3);
     }
+    hash
+}
+
+/// Hash of the built runner files.
+fn runner_hash(assets_dir: &Path) -> String {
+    let mut hash = 0xcbf29ce484222325;
+    for name in ["runner.js", "runner_bg.wasm"] {
+        let path = assets_dir.join(name);
+        let bytes = fs::read(&path).unwrap_or_else(|e| panic!("reading {}: {e}", path.display()));
+        hash = fnv1a(hash, &bytes);
+    }
+    format!("{hash:016x}")
 }

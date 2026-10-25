@@ -101,8 +101,15 @@ statusEl.textContent = "Loading Uiua...";
 let runTest;
 let formatCode;
 try {
-  const mod = await import("../assets/runner.js");
-  await mod.default();
+  // 256418328f04a4ea is substituted by site-gen so a rebuilt runner is never
+  // served from the browser cache.
+  const mod = await import("../assets/runner.js?v=256418328f04a4ea");
+  await mod.default({
+    module_or_path: new URL(
+      "../assets/runner_bg.wasm?v=256418328f04a4ea",
+      import.meta.url,
+    ),
+  });
   runTest = mod.run_test;
   highlight = mod.highlight_html;
   docsUrlAt = mod.primitive_docs_url_at;
