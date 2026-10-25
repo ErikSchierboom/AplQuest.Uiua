@@ -1,5 +1,5 @@
 # 2014-10: Sales Are Up
-# Given a vector representing monthly sales figures, write a function that returns the greatest percent month to month increase.
+# Given a vector representing monthly sales figures, Write code that returns the greatest percent month to month increase.
 
 Solution ← /↥⧈(×100÷⟜-)
 

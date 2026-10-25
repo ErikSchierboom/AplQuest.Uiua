@@ -1,5 +1,5 @@
 # 2016-8: Separating Out the Negative
-# Write a function that takes a numeric vector and returns a two element vector whose first element contains the values less than 0 (zero) in the vector and the second element contains all values greater than or equal to 0.
+# Write code that takes a numeric vector and returns a two element vector whose first element contains the values less than 0 (zero) in the vector and the second element contains all values greater than or equal to 0.
 
 Solution ← ⊕□⊸≥₀
 

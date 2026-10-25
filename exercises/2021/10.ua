@@ -1,5 +1,5 @@
 # 2021-10: On the Right Side
-# Write a function that:
+# Write code that:
 # 
 # has a right argument T that is a character scalar, vector or a vector of character vectors/scalars.
 # has a left argument W that is a positive integer specifying the width of the result.

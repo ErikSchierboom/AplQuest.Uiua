@@ -1,5 +1,5 @@
 # 2014-8: Go The Distance
-# Write a function that returns the distance between two points in a space of any number of dimensions.
+# Write code that returns the distance between two points in a space of any number of dimensions.
 
 Solution ← √/+≡ⁿ₂-
 

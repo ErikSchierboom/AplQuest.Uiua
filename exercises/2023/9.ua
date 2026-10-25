@@ -1,7 +1,7 @@
 # 2023-9: Flipping Pairs
 # This problem has no practical use in the real world (that the author can think of) other than to give your array manipulation muscles some exercise.
 # 
-# Write a function that:
+# Write code that:
 # 
 # takes a non-empty non-scalar array right argument
 # returns an array of the same shape as the argument, but with pairs of elements along the last axis "flipped". If the array has an odd number of elements in the last axis, leave the last element unchanged.

@@ -1,5 +1,5 @@
 # 2013-9: It Is a Moving Experience
-# Write a function which produces n month moving averages for a year's worth of data.
+# Write code which produces n month moving averages for a year's worth of data.
 
 Solution ← ⧈(÷⊸⊃⧻/+)
 

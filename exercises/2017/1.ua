@@ -1,5 +1,5 @@
 # 2017-1: What an Odd Bunch
-# Write a function that will return the first n odd natural numbers.
+# Write code that will return the first n odd natural numbers.
 
 Solution ← ▽⊸◿₂ +1 ⇡×2
 

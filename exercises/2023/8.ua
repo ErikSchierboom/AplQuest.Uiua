@@ -15,7 +15,7 @@
 # [322 379.5 462]
 # Fortunately, the dreaded "triple critical day", when all three cycles cross the x-axis on the same day, only occurs every (∧/23 28 33÷2) or 10,626 days (a bit more than 29 years).
 #
-# Write a function that:
+# Write code that:
 #
 # takes a 3-element integer left argument representing a valid birthdate
 # takes a 3-element integer right argument representing a valid date occurring on or after the left argument

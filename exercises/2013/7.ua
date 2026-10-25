@@ -1,5 +1,5 @@
 # 2013-7: Float Your Boat
-# Write a function which selects the floating point (non-integer) numbers from a numeric array.
+# Write code which selects the floating point (non-integer) numbers from a numeric array.
 
 Solution ← ▽⊸≠⊸⁅
 ⍤⤙≍ [14.2 3.1 ¯1.1] Solution [14.2 9 ¯3 3.1 0 ¯1.1]

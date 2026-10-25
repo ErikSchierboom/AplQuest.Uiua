@@ -1,5 +1,5 @@
 # 2017-4: Slice(s) of Pie(s)
-# Write a function that calculates and returns the areas of 0 or more pie slices.
+# Write code that calculates and returns the areas of 0 or more pie slices.
 # The left argument is 0 or more angles (in degrees).
 # The right argument is 0 or more pie diameters.
 

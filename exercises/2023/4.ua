@@ -4,7 +4,7 @@
 # The major version is incremented when a new version of the software introduces changes that would make existing applications using the software fail or behave differently.
 # The minor version is incremented when new features are added that didn't previously exist — no pre-existing use of the software will fail in this case.
 # The build number is incremented for bug fixes and similar changes.
-# Write a function that:
+# Write code that:
 # 
 # Takes 3-element integer vector left and right arguments each representing a major version, minor version, and build number.
 # Returns

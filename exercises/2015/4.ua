@@ -3,7 +3,7 @@
 # If a major cell of Y cannot be found in X, then the corresponding item of the returned array will be 1+≢X.
 #
 # Progressive dyadic iota is similar to indexin except that it returns the index of subsequent matches in the left argument until they are exhausted.
-# Write a function that implements progressive dyadic iota.
+# Write code that implements progressive dyadic iota.
 
 Solution ← ⊗∩(⍉⊟∩⍚∘⊸⧆)
 

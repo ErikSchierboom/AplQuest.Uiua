@@ -1,7 +1,7 @@
 # 2023-5: Risky Business
 # The board game Risk is a game of world domination where opposing players roll dice to determine the outcome of one player's armies attacking another's. The attacker can roll up to three 6-sided dice and the defender can roll up to two 6-sided dice. The resulting rolls are then individually compared from highest to lowest. If the attacker's die value is greater than the defender's, the defender loses one army. If the defender's die value is greater than or equal to the attacker's, the attacker loses one army. If one player rolls more dice than the other other player, the additional dice are not considered in the evaluation. For this problem, we'll generalize the task by allowing any number of dice for either the attacker or defender, and any integer values in the arguments.
 #
-# Write a function that:
+# Write code that:
 #
 # - takes a non-empty, descending integer vector left argument representing the attacker's dice rolls
 # - takes a non-empty, descending integer vector right argument representing the defender's dice rolls

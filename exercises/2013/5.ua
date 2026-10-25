@@ -1,6 +1,6 @@
 # 2013-5: Identity Crisis
 # An identity matrix is a square matrix (table) of 0 with 1's in the main diagonal.
-# Write a function which produces an n×n identity matrix.
+# Write code which produces an n×n identity matrix.
 
 Solution ← ˙⊞=⇡
 

@@ -1,7 +1,7 @@
 # 2015-5: He's so mean, he has no standard deviation
 # The standard deviation of a population is calculated by taking the square root of the average of the squared differences of the values from their average value.
 #
-# Write a function that returns the population standard deviation of its numeric array right argument.
+# Write code that returns the population standard deviation of its numeric array right argument.
 
 Solution ← √÷⊃(⋅⧻|/+ⁿ₂-) ⊸(÷⊃⧻/+)♭
 

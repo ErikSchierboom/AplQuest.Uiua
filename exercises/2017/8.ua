@@ -1,5 +1,5 @@
 # 2017-8: Be the First 1
-# Write a function that takes a Boolean vector or scalar and “turns off” all the 1s after the first 1.
+# Write code that takes a Boolean vector or scalar and “turns off” all the 1s after the first 1.
 
 Solution ← ×⊸(=₀⧆)
 

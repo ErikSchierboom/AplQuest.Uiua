@@ -1,5 +1,5 @@
 # 2016-3: Statistics - Mode
-# Write a function that takes a numeric vector or scalar as its right argument and returns the mode (that is, the most common value) of the array. If more than one number occurs the greatest number of times, return all such numbers.
+# Write code that takes a numeric vector or scalar as its right argument and returns the mode (that is, the most common value) of the array. If more than one number occurs the greatest number of times, return all such numbers.
 
 Solution ← ▽⌕⊸/↥⊃(⊕⧻|⋅◴)⊸⊛⍆
 

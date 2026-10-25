@@ -1,5 +1,5 @@
 # 2017-10: Squaring Off
-# Write a function that will reshape a given array into the smallest square matrix that will contain all the elements of the argument, padding with additional elements if necessary.
+# Write code that will reshape a given array into the smallest square matrix that will contain all the elements of the argument, padding with additional elements if necessary.
 # The pad element should be 0.
 
 Solution ← ⬚0↯⊸([⟜∘⌈√⧻])

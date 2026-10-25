@@ -8,7 +8,7 @@
 # and shifting by ¯3 would result in
 # 1 1 0 1 1 0 0 0
 
-# Write a function that given a right argument of a Boolean scalar or vector, and left argument scalar integer of the shift amount, returns an appropriately shifted transformation of the right argument.
+# Write code that given a right argument of a Boolean scalar or vector, and left argument scalar integer of the shift amount, returns an appropriately shifted transformation of the right argument.
 
 Solution ← ⬚0↻¯
 

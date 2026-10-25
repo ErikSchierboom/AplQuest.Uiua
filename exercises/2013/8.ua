@@ -1,5 +1,5 @@
 # 2013-8: Go Forth And Multiply
-# Write a function which produces a multiplication table.
+# Write code which produces a multiplication table.
 
 Solution ← ˙⊞× +1⇡
 

@@ -6,7 +6,7 @@
 # The King must be placed on a square between the rooks.
 # The good news is that you don"t actually need to know anything about chess to solve this problem! We"ll use strings whose elements are "KQRRBBNN" for the King (♔), Queen (♕), 2 Rooks (♖), 2 Bishops (♗), and 2 kNights (♘) respectively.
 #
-# Write a function that:
+# Write code that:
 
 # has a character vector right argument that is a permutation of "KQRRBBNN"
 # returns 1 if the following are true:

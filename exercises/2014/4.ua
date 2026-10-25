@@ -1,5 +1,5 @@
 # 2014-4: Space The Final Frontier
-# Write a function that removes extraneous (leading, trailing, and multiple) spaces from a character array.
+# Write code that removes extraneous (leading, trailing, and multiple) spaces from a character array.
 
 Solution ← ▽⊸(↧↧⊃(\↥|⍜⇌\↥|⊂1⧈₂/↥)≠@ )
 

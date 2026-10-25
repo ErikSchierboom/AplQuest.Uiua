@@ -1,5 +1,5 @@
 # 2014-3: Tell a Fib
-# Write a function that takes an integer right argument and returns that number of terms in the Fibonacci sequence.
+# Write code that takes an integer right argument and returns that number of terms in the Fibonacci sequence.
 
 Solution ← ⍥◡+⊙(1 1)
 

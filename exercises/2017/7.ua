@@ -1,5 +1,5 @@
 # 2017-7: Counting DNA Nucleotides
-# Write a function that takes a character vector representing a DNA string and returns 4 integers of the number of occurrences for each of the symbols 'A', 'C', 'G', and 'T' respectively.
+# Write code that takes a character vector representing a DNA string and returns 4 integers of the number of occurrences for each of the symbols 'A', 'C', 'G', and 'T' respectively.
 
 Solution ← map ⟜(⬚0↯[4] ⊕⧻ ⊸⊗) "ACGT"
 

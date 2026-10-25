@@ -6,7 +6,7 @@
 
 # In the above example, for words that contain more than 3 letters, the first and last letters remain the same while all of the interior letters are transposed in groups of two, ignoring punctuation. If there are an odd number of letters in the interior of the word, then the last letter is left as it is.
 
-# Write a function that takes a character vector word as its argument and returns the word's letters juxtaposed as described above.
+# Write code that takes a character vector word as its argument and returns the word's letters juxtaposed as described above.
 
 Solution ← ⍚(⍜(⇌↘₁⇌↘₁|⊂⊃(/⊂⧈⇌[¤2]↙|↘)⊸(-⊸◿₂⧻)))
 

@@ -1,5 +1,5 @@
 # 2013-1: Seems a Bit Odd To Me
-# Write a function to produce a array of the ⊢ n odd numbers.
+# Write code to produce a array of the first n odd numbers.
 
 Solution ← ▽⊸◿₂ +1 ⇡×2
 

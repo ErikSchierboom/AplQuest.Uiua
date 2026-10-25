@@ -1,7 +1,7 @@
 # 2023-1: Elimination Sort
 # An “Elimination Sort” is a somewhat farcical sorting algorithm which starts with the leftmost element and keeps subsequent elements that are at least as large as the previous kept element, discarding all other elements. For example:
 # 
-# Write a function that:
+# Write code that:
 # 
 # takes a non-empty numeric vector right argument
 # returns an "Elimination-sorted" vector of the right argument

@@ -1,5 +1,5 @@
 # 2022-9: An Average Window (or a Windowed Average)
-# Write a function that:
+# Write code that:
 #
 # - takes a right argument Y that is a numeric scalar or non-empty vector.
 # - takes a left argument X that represents the number of neighboring elements on either side of each element in Y.

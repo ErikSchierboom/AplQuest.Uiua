@@ -1,5 +1,5 @@
 # 2022-10: Separation Anxiety
-# Write a function that:
+# Write code that:
 #
 # - takes a right argument that is a character vector or scalar representing a valid non-negative integer.
 # - takes a left argument that is a character scalar "separator" character.

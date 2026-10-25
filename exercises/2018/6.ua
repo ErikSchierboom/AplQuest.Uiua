@@ -9,7 +9,7 @@
 # <math><relation>2<3</relation></math>
 # One easy validation is to check that the angle brackets are properly balanced – all left angle brackets < must be "closed" with right angle brackets > before another occurrence of a left angle bracket.
 #
-# Write a function that, given a character scalar or vector representing some XML, returns 1 if the angle brackets are properly balanced and 0 if not.
+# Write code that, given a character scalar or vector representing some XML, returns 1 if the angle brackets are properly balanced and 0 if not.
 
 Solution ← ⬚1/↧⦷"<>"▽⊸∊"<>"
 

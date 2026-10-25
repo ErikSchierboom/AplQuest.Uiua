@@ -7,7 +7,7 @@
 #  Some people like to remember phone numbers by converting them to an alphanumeric form using one of the letters on the corresponding key.
 #  For example, in the keypad shown, "ALSMITH" would correspond to the number 257-6484 and "1DYALOGBEST" would correspond to 1-392-564-2378.
 # 
-# Write a function that takes a character vector right argument that consists of digits and uppercase letters and returns an integer vector of the corresponding digits on the keypad.
+# Write code that takes a character vector right argument that consists of digits and uppercase letters and returns an integer vector of the corresponding digits on the keypad.
 
 Solution ← -@0⍜(▽|˜⊏▽3_3_3_3_3_4_3_4+@0+2⇡8-@A)⊸±
 

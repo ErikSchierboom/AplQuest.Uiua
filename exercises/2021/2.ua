@@ -1,5 +1,5 @@
 # 2021-2: Index-Of Modified
-# Write a function that behaves like the APL index-of function R←X⍳Y except that it returns 0 instead of 1+≢X for elements of Y not found in X.
+# Write code that behaves like the APL index-of function R←X⍳Y except that it returns 0 instead of 1+≢X for elements of Y not found in X.
 
 Solution ← +1 ⍜(▽|¯1◌) ⊸= ⊃⧻⊗
 

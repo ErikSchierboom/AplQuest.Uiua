@@ -1,5 +1,5 @@
 # 2020-6: Move to the Front
-# Write a function that, given a right argument which is an integer vector and a left argument which is an integer scalar, reorders the right argument so any elements equal to the left argument come first while all other elements keep their order.
+# Write code that, given a right argument which is an integer vector and a left argument which is an integer scalar, reorders the right argument so any elements equal to the left argument come first while all other elements keep their order.
 
 Solution ← /◇⊂⊕□⊸≠
 

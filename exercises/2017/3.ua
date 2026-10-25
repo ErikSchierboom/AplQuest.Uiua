@@ -1,5 +1,5 @@
 # 2017-3: Miss Quoted
-# Write a function that will remove text found between pairs of double quotes (").
+# Write code that will remove text found between pairs of double quotes (").
 
 Solution ← ▽⊸(↥⊸(¬\≠)=@")
 

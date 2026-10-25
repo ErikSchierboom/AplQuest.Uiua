@@ -1,7 +1,7 @@
 # 2022-7: Just Golfing Around
 # Apologies to the code golfers out there, but this problem has nothing to do with code golf! Instead, it addresses the problem of assigning places in a golf tournament. In regular golf, lower scores place higher – the lowest score places first and the highest score places last.
 
-# Write a function that:
+# Write code that:
 
 # takes a right argument that is a non-decreasing vector or scalar of strictly positive integers, representing a set of scores.
 # returns a numeric vector of the place for each score; for duplicate scores, it returns the average of the places they hold.

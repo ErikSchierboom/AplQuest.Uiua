@@ -8,7 +8,7 @@
 # Leo     July 23–August 22        Aquarius January 20–February 18
 # Virgo   August 23–September 22   Pisces February 19–March 20
 #
-# Write a function that, given a 2-element integer vector representing month and day, returns a character vector (string) of the corresponding Western zodiac sign.
+# Write code that, given a 2-element integer vector representing month and day, returns a character vector (string) of the corresponding Western zodiac sign.
 
 Solution ← ⨬(
   ⍤"Invalid month"

@@ -1,5 +1,5 @@
 # 2016-6: Shorter Ones to the Front
-# Write a function that takes a vector of vectors as its right argument and returns it sorted by the length of each element.
+# Write code that takes a vector of vectors as its right argument and returns it sorted by the length of each element.
 # An element of the vector can be scalar or an empty vector.
 
 Solution ← ⊏⍏⊸⍚⧻

@@ -1,5 +1,5 @@
 # 2017-9: Double Trouble
-# Write a function that takes a character vector or scalar and returns a Boolean vector indicating anywhere an element is followed by an element of the same value.
+# Write code that takes a character vector or scalar and returns a Boolean vector indicating anywhere an element is followed by an element of the same value.
 
 Solution ← ↘₁⬚@\0⧈₂/=
 

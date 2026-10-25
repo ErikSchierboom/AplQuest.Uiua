@@ -6,7 +6,7 @@
 # 
 # The answer in this case is x=3 and y=2
 # 
-# Write a function which solves this type of problem. Hint: this is the easiest of all of the problems presented here.
+# Write code which solves this type of problem. Hint: this is the easiest of all of the problems presented here.
 # 
 # The left argument is a vector of the values for the equations and the right argument is a matrix of the coefficients.
 

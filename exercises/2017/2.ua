@@ -1,5 +1,5 @@
 # 2017-2: Good Evening
-# Write a function that takes an integer array and replaces all the odd numbers with the next greater even number.
+# Write code that takes an integer array and replaces all the odd numbers with the next greater even number.
 
 Solution ← +⊸◿₂
 

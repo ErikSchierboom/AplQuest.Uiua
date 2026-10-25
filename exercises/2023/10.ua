@@ -1,7 +1,7 @@
 # 2023-10: Partition with a Twist
 # Splitting delimited data into sub-arrays using partitioning on a delimiter character (or characters) is a fairly common operation in APL. For instance, if you partition the character vector "this is an example" on each occurrence of the space character, there would be 4 sub-arrays: "this" "is" "an" "example". This problem adds a slight twist to the operation in that the left argument indicates how many sub-arrays to return.
 #
-# Write a function that:
+# Write code that:
 #
 # takes a non-negative integer left argument, N
 # takes a space-delimited character vector right argument, string

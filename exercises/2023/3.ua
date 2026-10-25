@@ -2,7 +2,7 @@
 # A Caesar cipher, also known as a shift cipher, is one of the simplest encryption techniques.
 # In a Caesar cipher, each letter in the plaintext is replaced by a letter some fixed number of positions away in the alphabet, effectively "shifting" the alphabet.
 #
-# Write a function that:
+# Write code that:
 #
 # - takes a character vector right argument representing the plaintext message
 # - takes a single integer left argument representing the size of the shift

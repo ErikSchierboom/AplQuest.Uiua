@@ -1,5 +1,5 @@
 # 2016-7: 3s and 5s
-# Write a function that takes a numeric vector and returns all elements that are divisible by 3 or 5.
+# Write code that takes a numeric vector and returns all elements that are divisible by 3 or 5.
 
 Solution ← ▽⊸(≡/↥=₀◿ ¤3_5)
 

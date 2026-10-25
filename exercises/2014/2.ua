@@ -1,5 +1,5 @@
 # 2014-2: How Tweet It Is
-# Twitter messages have a 140 character limit; what if the limit was even shorter? One way to shorten the message yet retain most readability is to remove interior vowels from its words. Write a function which takes a character array and removes the interior vowels from each word.
+# Twitter messages have a 140 character limit; what if the limit was even shorter? One way to shorten the message yet retain most readability is to remove interior vowels from its words. Write code which takes a character array and removes the interior vowels from each word.
 
 Solution ← ▽⊸(¬×⊃(∊"AEOUI"|⬚0⧈/× [¤3¤1¤1] ±)⌵)
 

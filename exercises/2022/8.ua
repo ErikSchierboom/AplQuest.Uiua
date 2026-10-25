@@ -1,5 +1,5 @@
 # 2022-8: Let"s Split!
-# Write a function that:
+# Write code that:
 # 
 # - takes a right argument that is a non-empty character vector or scalar.
 # - takes a left argument that is a non-empty character vector or scalar.

@@ -10,7 +10,7 @@
 # 2013 Snake    2007 Pig
 # Note that the year 1 AD (represented as 1) follows the year 1 BC (represented as ¯1) with no intervening "0" year.
 #
-# Write a function that, given a scalar integer year, returns a character vector (string) of the Chinese zodiac sign for that year. For the purposes of this problem, assume that each year number corresponds to exactly one Chinese zodiac animal.
+# Write code that, given a scalar integer year, returns a character vector (string) of the Chinese zodiac sign for that year. For the purposes of this problem, assume that each year number corresponds to exactly one Chinese zodiac animal.
 
 Solution ← °□ ⊡⟜{"Monkey" "Rooster" "Dog" "Pig" "Rat" "Ox" "Tiger" "Rabbit" "Dragon" "Snake" "Horse" "Goat"} ◿12 -⊸(↧0±)
 

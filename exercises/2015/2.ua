@@ -1,5 +1,5 @@
 # 2015-2: Longest Streak
-# Write a function that takes a numeric vector and returns the length of the longest streak of positive growth.
+# Write code that takes a numeric vector and returns the length of the longest streak of positive growth.
 
 Solution ← ⬚0/↥⊜⧻⊸∘⧈>
 

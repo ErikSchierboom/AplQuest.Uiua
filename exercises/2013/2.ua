@@ -1,5 +1,5 @@
 # 2013-2: Making The Grade
-# Write a function which returns the percent (from 0 to 100) of passing (65 or higher) grades in a array of grades.
+# Write code which returns the percent (from 0 to 100) of passing (65 or higher) grades in a array of grades.
 
 Solution ← ↧100 ×100 ÷⊃(⧻|/+≥65)
 

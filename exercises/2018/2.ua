@@ -1,5 +1,5 @@
 # 2018-2: Number Splitting
-# Write a function that, given a scalar real non-negative number, will return a two-element vector of the integer and fractional parts of the number.
+# Write code that, given a scalar real non-negative number, will return a two-element vector of the integer and fractional parts of the number.
 
 Solution ← ⊂∩⬚0⋕ ⊃↙↘ ⊸˜⊗@. °⋕
 

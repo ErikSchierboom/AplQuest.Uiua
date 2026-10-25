@@ -1,6 +1,6 @@
 # 2014-7: Revolutionary Thinking
 # Imagine there are two circles that are tangent to one another. One circle is stationary, the other can "roll" around the stationary circle.
-# Write a function which takes the diameters of the stationary and mobile circles and returns the number of revolutions the mobile must traverse until the tangent points meet again.
+# Write code which takes the diameters of the stationary and mobile circles and returns the number of revolutions the mobile must traverse until the tangent points meet again.
 
 # Experimental!
 Solution ← ÷⤙(÷⊃∨×)

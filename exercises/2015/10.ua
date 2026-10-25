@@ -3,7 +3,7 @@
 # 
 # ⍚(≡⧅<⇡⊸+1)⇡11
 
-# However, the output leaves something to be desired. Write a function that takes an integer right argument representing the order of the Pascal's triangle to be created and returns a "nicely" formatted character matrix. Because we're using a mono-spaced font and can only format whole character positions, lines do not have to be perfectly centered and may vary by a character position.
+# However, the output leaves something to be desired. Write code that takes an integer right argument representing the order of the Pascal's triangle to be created and returns a "nicely" formatted character matrix. Because we're using a mono-spaced font and can only format whole character positions, lines do not have to be perfectly centered and may vary by a character position.
 
 Solution ← (
   ⍚(/$"_ _"≡⧅<⇡⊸+1)⇡+₁

@@ -1,5 +1,5 @@
 # 2013-6: Home On The Range
-# Write a function which returns the magnitude of the range (i.e. the difference between the lowest and highest values) of a numeric array.
+# Write code which returns the magnitude of the range (i.e. the difference between the lowest and highest values) of a numeric array.
 
 Solution ← ⨬(0|∘|⌵-⊃⊢⊣⍆♭)⊸(↧2⧻)
 ⍤⤙≍ 25 Solution [19 ¯3 7.6 22]

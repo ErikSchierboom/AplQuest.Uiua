@@ -1,5 +1,5 @@
 # 2022-4: In the Long One...
-# Write a function that:
+# Write code that:
 # - takes a right argument that is a Boolean scalar or vector.
 # - returns the length of the longest sequence of consecutive 1s.
 

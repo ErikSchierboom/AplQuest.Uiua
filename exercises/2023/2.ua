@@ -1,7 +1,7 @@
 # 2023-2: Put It In Reverse
 # In this problem, you"re asked to return a result that identifies the endings of occurrences of array X in array Y. To keep things simple, X and Y will be at most rank 1, meaning they"ll either be vectors or scalars.
 # 
-# Write a function that:
+# Write code that:
 # - takes a scalar or vector left argument
 # - takes a scalar or vector right argument
 # - returns a Boolean result that is the same shape as the right argument where 1"s mark the ends of occurrences of the left argument in the right argument
