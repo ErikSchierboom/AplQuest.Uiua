@@ -138,6 +138,7 @@ pub fn render_exercise(
 <div class="actions">
 <button id="run">Run tests</button>
 <span id="status"></span>
+<span class="shortcut-hint">You can also run the tests via ⌘/shift + enter</span>
 </div>
 </section>
 <script type="application/json" id="tests-data">{tests_json}</script>

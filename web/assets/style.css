@@ -336,6 +336,12 @@ button:disabled {
   cursor: default;
 }
 
+.shortcut-hint {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 #status {
   color: var(--muted);
   font-size: 0.9rem;

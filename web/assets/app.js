@@ -98,12 +98,14 @@ runButton.disabled = true;
 statusEl.textContent = "Loading Uiua...";
 
 let runTest;
+let formatCode;
 try {
   const mod = await import("../assets/runner.js");
   await mod.default();
   runTest = mod.run_test;
   highlight = mod.highlight_html;
   docsUrlAt = mod.primitive_docs_url_at;
+  formatCode = mod.format_code;
   statusEl.textContent = "";
   renderHighlight();
 } catch (err) {
@@ -148,7 +150,31 @@ const rows = tests.map((test) => {
   return { row, icon, message };
 });
 
+// Format the visitor's code in place, leaving it untouched if it doesn't
+// parse.
+function formatEditor() {
+  const formatted = formatCode?.(codeEl.value);
+  if (formatted && formatted !== codeEl.value) {
+    codeEl.value = formatted;
+    localStorage.setItem(storageKey, formatted);
+    renderHighlight();
+  }
+}
+
+// Cmd/Ctrl/Shift-Enter formats the code and runs the tests.
+codeEl.addEventListener("keydown", (event) => {
+  if (
+    event.key === "Enter" &&
+    (event.metaKey || event.ctrlKey || event.shiftKey) &&
+    !runButton.disabled
+  ) {
+    event.preventDefault();
+    runButton.click();
+  }
+});
+
 runButton.addEventListener("click", () => {
+  formatEditor();
   const code = buildProgram(codeEl.value);
   let passed = 0;
 

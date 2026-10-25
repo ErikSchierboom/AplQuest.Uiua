@@ -9,6 +9,7 @@
 use std::time::Duration;
 
 use uiua::{
+    format::{format_str, FormatConfig},
     PrimClass, Primitive, SafeSys, Signature, Uiua,
     lsp::{SpanKind, Spans},
 };
@@ -30,6 +31,17 @@ pub fn run_test(user_code: &str, test_code: &str) -> String {
     match env.run_str(&program) {
         Ok(_) => "PASS".to_string(),
         Err(e) => format!("FAIL: {e}"),
+    }
+}
+
+/// Format `code` with the standard Uiua formatter (e.g. turning `+1 ⇡` names
+/// into glyphs). Returns an empty string if the code can't be parsed, in
+/// which case the caller should leave the code untouched.
+#[wasm_bindgen]
+pub fn format_code(code: &str) -> String {
+    match format_str(code, &FormatConfig::default()) {
+        Ok(formatted) => formatted.output.trim_end().to_string(),
+        Err(_) => String::new(),
     }
 }
 

@@ -1,4 +1,34 @@
 /**
+ * Format `code` with the standard Uiua formatter (e.g. turning `+1 ⇡` names
+ * into glyphs). Returns an empty string if the code can't be parsed, in
+ * which case the caller should leave the code untouched.
+ * @param {string} code
+ * @returns {string}
+ */
+export function format_code(code) {
+  let deferred2_0;
+  let deferred2_1;
+  try {
+    const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+    const ptr0 = passStringToWasm0(
+      code,
+      wasm.__wbindgen_export,
+      wasm.__wbindgen_export2,
+    );
+    const len0 = WASM_VECTOR_LEN;
+    wasm.format_code(retptr, ptr0, len0);
+    var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+    var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+    deferred2_0 = r0;
+    deferred2_1 = r1;
+    return getStringFromWasm0(r0, r1);
+  } finally {
+    wasm.__wbindgen_add_to_stack_pointer(16);
+    wasm.__wbindgen_export4(deferred2_0, deferred2_1, 1);
+  }
+}
+
+/**
  * Render `code` as HTML, wrapping each glyph/token in a `<span>` whose
  * class colors it the same way the official Uiua pad does. Used to draw
  * a read-only, syntax-highlighted copy of the code behind the real
