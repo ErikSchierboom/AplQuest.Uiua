@@ -6,6 +6,6 @@ Solution ← ⨬(0|∘|⌵-⊃⊢⊣⍆♭)⊸(↧2⧻)
 
 # Tests
 ⍤⤙≍ 25 Solution [19 ¯3 7.6 22]
-⍤⤙≍ 101 Solution 101                    # should work with a scalar argument
+⍤⤙≍ 0 Solution 101                      # should work with a scalar argument
 ⍤⤙≍ 50 Solution [[10 20 30] [40 50 60]] # should work with arrays of any number of dimensions
 ⍤⤙≍ 0 Solution []                       # including empty arrays
