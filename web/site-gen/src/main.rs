@@ -84,9 +84,21 @@ fn write_site(
     }
     fs::create_dir_all(dist_dir.join("assets")).expect("create assets dir");
 
+    fs::create_dir_all(dist_dir.join("assets/fonts")).expect("create fonts dir");
+    let mut font_hash = String::new();
+    for font_file in ["Uiua386.ttf", "LICENSE.txt"] {
+        let src = assets_src_dir.join("fonts").join(font_file);
+        fs::copy(&src, dist_dir.join("assets/fonts").join(font_file))
+            .unwrap_or_else(|e| panic!("copying {}: {e}", src.display()));
+        if font_file == "Uiua386.ttf" {
+            font_hash = hash_bytes(&fs::read(&src).expect("read font"));
+        }
+    }
+
     let style_src = assets_src_dir.join("style.css");
     let style = fs::read_to_string(&style_src)
-        .unwrap_or_else(|e| panic!("reading {}: {e}", style_src.display()));
+        .unwrap_or_else(|e| panic!("reading {}: {e}", style_src.display()))
+        .replace("FONT_HASH", &font_hash);
     fs::write(dist_dir.join("assets/style.css"), &style).expect("write style.css");
 
     let app_src = assets_src_dir.join("app.js");
