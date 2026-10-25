@@ -11,11 +11,17 @@
 # if N is greater than the number of sub-arrays, pad the result with as many empty arrays as necessary to achieve length N.
 # Note: Each space in string be considered as a delimiter. This means that leading, trailing, or contiguous spaces are potentially significant.
 
-Solution ← {}
+Solution ← (
+  ⊙(⊂@ )
+  ⊙⊸(-1\+=@ )
+  ⟜(↧-1)
+  ⊙⊕(□↘1)
+  ⊂{}⬚(□"")↙
+)
 
 ⍤⤙≍ {"this is a sample"} Solution 1 "this is a sample"
 ⍤⤙≍ {"this" "is a sample"} Solution 2 "this is a sample"
 ⍤⤙≍ {"this" "is" "a" "sample"} Solution 4 "this is a sample"
-⍤⤙≍ {{} {} "this" "is" {} "a" "sample" {} {} {} {} {}} Solution 13 "  this  is  a sample  " # note the leading, trailing, and multiple interior spaces 
-⍤⤙≍ {} Solution 0 "this is a sample"                                                        # returns an empty vector
-⍤⤙≍ {{} {} {} {}} Solution 4 ""
+⍤⤙≍ {"" "" "this" "" "is" "" "a" "sample" "" "" "" "" ""} Solution 13 "  this  is  a sample  " # note the leading, trailing, and multiple interior spaces 
+⍤⤙≍ {} Solution 0 "this is a sample"                                                           # returns an empty vector
+⍤⤙≍ {"" "" "" ""} Solution 4 ""
