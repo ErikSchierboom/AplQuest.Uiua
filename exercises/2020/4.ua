@@ -1,7 +1,7 @@
 # 2020-4: Take a Leap
 # Write code that, given an argument which is an integer array of year numbers greater than or equal to 1752 and less than 4000, returns a result of the same shape as the argument where 1 indicates that the corresponding year is a leap year (0 otherwise).
 #
-# A leap year algorithm can be found [here](https://en.wikipedia.org/wiki/Leap_year#Algorithm).
+# A leap year algorithm can be found at https://en.wikipedia.org/wiki/Leap_year#Algorithm.
 
 # Solution
 Solution ← ≡₀(/≠ =₀ ◿4_100_400)
