@@ -8,7 +8,7 @@ publish = false
 crate-type = ["cdylib"]
 
 [dependencies]
-uiua = { version = "0.19", default-features = false, features = ["opt", "web"] }
+uiua = { git = "https://github.com/uiua-lang/uiua.git", branch = "main" , default-features = false, features = ["opt", "web", "ga"] }
 wasm-bindgen = "=0.2.108"
 
 [dependencies.getrandom]
