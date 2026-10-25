@@ -24,10 +24,16 @@
 
 # Experimental!
 
+# Experimental!
+
 Solution ← (
+  ⊸(-∩(÷86400°datetime))
   ⧅<2÷₂23_28_33
   ≡(÷⊃∨×°⊟)
+  ×86400/↧⌵◿¯
+  ˜⍜(°datetime|+)
+  ↙₃
 )
 
-⍤⤙≍ [2023 2 4] Solution [1962 10 31] [2023 1 1]
-⍤⤙≍ [1961 2 23] Solution [1961 2 23] [1961 2 23] # one's birthdate is a triple critical day
+⍤⤙≍ [2023 9 10] Solution [1971 10 31] [2023 1 1]
+⍤⤙≍ [1984 2 23] Solution [1984 2 23] [1984 2 23] # one's birthdate is a triple critical day
