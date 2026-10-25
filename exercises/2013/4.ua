@@ -1,5 +1,5 @@
 # 2013-4: Keeping Things In Balance
-# Write code which returns a 1 if the opening and closing parentheses in a character array are balanced, or a zero otherwise.
+# Write code which returns a 1 if the opening and closing parentheses in a character array are balanced, or a 0 otherwise.
 
 Solution ← ≍"" ⍥(▽¬⊸(⦷"()") ▽⊸∊"()")∞
 

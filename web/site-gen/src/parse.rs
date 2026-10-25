@@ -69,7 +69,10 @@ pub fn parse(content: &str) -> Option<Exercise> {
 
     // Remaining lines are either setup (re-used by later assertions) or
     // assertions themselves (identified by the `⍤` assert primitive).
-    let mut setup_lines: Vec<&str> = Vec::new();
+    // Setup statements, in order. A line containing `←` starts a new
+    // statement; other lines continue the previous one (multi-line arrays).
+    // Redefining a name replaces its earlier statement.
+    let mut setup: Vec<(Option<&str>, Vec<&str>)> = Vec::new();
     let mut tests = Vec::new();
     for line in lines {
         let trimmed = line.trim();
@@ -78,14 +81,27 @@ pub fn parse(content: &str) -> Option<Exercise> {
         }
         if trimmed.contains('⍤') {
             let (code, description) = split_trailing_comment(trimmed);
-            let mut full = setup_lines.clone();
+            let mut full: Vec<&str> = setup
+                .iter()
+                .flat_map(|(_, lines)| lines.iter().copied())
+                .collect();
             full.push(code);
             tests.push(TestCase {
                 description,
                 code: full.join("\n"),
             });
         } else {
-            setup_lines.push(trimmed);
+            match trimmed.split_once('←') {
+                Some((name, _)) => {
+                    let name = name.trim();
+                    setup.retain(|(n, _)| *n != Some(name));
+                    setup.push((Some(name), vec![line.trim_end()]));
+                }
+                None => match setup.last_mut() {
+                    Some((_, lines)) => lines.push(line.trim_end()),
+                    None => setup.push((None, vec![line.trim_end()])),
+                },
+            }
         }
     }
 

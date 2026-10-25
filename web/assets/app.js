@@ -161,7 +161,11 @@ runButton.addEventListener("click", () => {
     row.className = `test-result ${ok ? "pass" : "fail"}`;
     icon.textContent = ok ? "✓" : "✗";
     message.hidden = ok;
-    message.textContent = ok ? "" : outcome.replace(/^FAIL: /, "");
+    // Keep only the failure message (the actual value); drop the
+    // traceback, which just repeats the test's code and expected value.
+    message.textContent = ok
+      ? ""
+      : outcome.replace(/^FAIL: /, "").split(/\n\s+at /)[0];
   });
 
   summaryEl.textContent = `${passed} / ${tests.length} tests passed`;
