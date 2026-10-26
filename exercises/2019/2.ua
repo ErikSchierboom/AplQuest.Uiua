@@ -10,12 +10,12 @@
 # | 90–100      | A            |
 
 # Solution
-Solution ← ≡₀(˜⊡ "FDCBA" ˜⊗1 ≤ [64 69 79 89 100])
+Solution ← ˜⊏ ▽ 65_5_10_10_11 "FDCBA"
 
 # Tests
 ⍤⤙≍ "FFDDCCBBAA" Solution [0 64 65 69 70 79 80 89 90 100]
 
-⍤⤙≍ △ 0 Solution [] # returns an empty vector
+⍤⤙≍ "" Solution [] # returns an empty vector
 
 Expected ← ["CBB"
             "BBF"]
