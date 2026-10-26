@@ -428,3 +428,9 @@ button:disabled {
 .attribution a {
   color: inherit;
 }
+
+pre.diagram {
+  overflow-x: auto;
+  line-height: 1.2;
+  margin: 0.75rem 0;
+}

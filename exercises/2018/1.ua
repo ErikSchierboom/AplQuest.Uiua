@@ -16,7 +16,7 @@
 #  │   │  │   │         │   │  ┌───┐  │   │  │   │
 #  │   │  │   │  ┌───┐  │   │  │   │  │   │  │   │
 #  │   │  │   │  │   │  │   │  │   │  │   │  │   │
-#  │ 5 │  │ 5 │  │ 2 │  │ 10 │  │ 3 │  │ 15 │  │ 10 │
+#  │ 5 │  │ 5 │  │ 2 │  │10 │  │ 3 │  │15 │  │10 │
 # ─┘   └──┘   └──┘   └──┘   └──┘   └──┘   └──┘   └─
 # Write code that, given a scalar or vector of skyscraper heights from closest to furthest, will return an integer representing the number of skyscrapers that can be seen.
 

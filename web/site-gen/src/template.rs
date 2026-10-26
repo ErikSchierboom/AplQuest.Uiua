@@ -97,17 +97,52 @@ in the browser, then check it against the exercise's own tests.</p>\n\
 }
 
 /// Render a single exercise page.
+/// Whether a description line is part of a diagram or table (as opposed to
+/// prose): it uses box-drawing characters or tabs, or is indented.
+fn is_preformatted(line: &str) -> bool {
+    line.contains('\t')
+        || line.starts_with("  ")
+        || line.chars().any(|c| ('\u{2500}'..='\u{257f}').contains(&c))
+}
+
+/// Render description lines as paragraphs, with runs of preformatted lines
+/// (diagrams) kept verbatim in a `<pre>` block.
+fn render_description(lines: &[String]) -> String {
+    let mut html = String::new();
+    let mut i = 0;
+    while i < lines.len() {
+        let line = &lines[i];
+        if is_preformatted(line) {
+            let end = lines[i..]
+                .iter()
+                .position(|l| !is_preformatted(l))
+                .map_or(lines.len(), |n| i + n);
+            let block = &lines[i..end];
+            let indent = block
+                .iter()
+                .map(|l| l.len() - l.trim_start_matches(' ').len())
+                .min()
+                .unwrap_or(0);
+            let text: Vec<String> = block.iter().map(|l| html_escape(&l[indent..])).collect();
+            html.push_str(&format!("<pre class=\"diagram\">{}</pre>\n", text.join("\n")));
+            i = end;
+        } else {
+            if !line.is_empty() {
+                html.push_str(&format!("<p>{}</p>\n", html_escape(line)));
+            }
+            i += 1;
+        }
+    }
+    html
+}
+
 pub fn render_exercise(
     categories: &Categories,
     category: &str,
     num: &str,
     exercise: &Exercise,
 ) -> String {
-    let description = exercise
-        .description
-        .iter()
-        .map(|line| format!("<p>{}</p>\n", html_escape(line)))
-        .collect::<String>();
+    let description = render_description(&exercise.description);
 
     let tests: Vec<TestCaseJson> = exercise
         .tests

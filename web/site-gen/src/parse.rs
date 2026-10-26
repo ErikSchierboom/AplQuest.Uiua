@@ -58,8 +58,11 @@ pub fn parse(content: &str) -> Option<Exercise> {
         if trimmed == SOLUTION_MARKER {
             break;
         }
-        if let Some(comment) = trimmed.strip_prefix('#') {
-            header_lines.push(comment.trim().to_string());
+        if let Some(comment) = line.trim_start().strip_prefix('#') {
+            // Keep indentation (minus the single space after `#`) so that
+            // ASCII-art diagrams survive.
+            let comment = comment.strip_prefix(' ').unwrap_or(comment);
+            header_lines.push(comment.trim_end().to_string());
         }
     }
     let mut header_lines = header_lines.into_iter();
