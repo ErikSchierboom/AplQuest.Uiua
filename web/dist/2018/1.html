@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>2018-1: Oh Say Can You See?</title>
-    <link rel="stylesheet" href="../assets/style.css?v=350dd89b3c51ceae" />
+    <link rel="stylesheet" href="../assets/style.css?v=da1838e0949ef3d2" />
   </head>
   <body>
     <div class="layout">
@@ -242,24 +242,24 @@
             from left to right. In contrast, a person on the right can see 2
             skyscrapers – the seventh and sixth.
           </p>
-          <p></p>
-          <p>┌───┐</p>
-          <p>│ │</p>
-          <p>│ │</p>
-          <p>│ │</p>
-          <p>│ │</p>
-          <p>┌───┐ │ │ ┌───┐</p>
-          <p>│ │ │ │ │ │</p>
-          <p>│ │ │ │ │ │</p>
-          <p>│ │ │ │ │ │</p>
-          <p>│ │ │ │ │ │</p>
-          <p>┌───┐ ┌───┐ │ │ │ │ │ │</p>
-          <p>│ │ │ │ │ │ │ │ │ │</p>
-          <p>│ │ │ │ │ │ ┌───┐ │ │ │ │</p>
-          <p>│ │ │ │ ┌───┐ │ │ │ │ │ │ │ │</p>
-          <p>│ │ │ │ │ │ │ │ │ │ │ │ │ │</p>
-          <p>│ 5 │ │ 5 │ │ 2 │ │ 10 │ │ 3 │ │ 15 │ │ 10 │</p>
-          <p>─┘ └──┘ └──┘ └──┘ └──┘ └──┘ └──┘ └─</p>
+          <pre class="diagram">
+                                    ┌───┐
+                                    │   │
+                                    │   │
+                                    │   │
+                                    │   │
+                      ┌───┐         │   │  ┌───┐
+                      │   │         │   │  │   │
+                      │   │         │   │  │   │
+                      │   │         │   │  │   │
+                      │   │         │   │  │   │
+ ┌───┐  ┌───┐         │   │         │   │  │   │
+ │   │  │   │         │   │         │   │  │   │
+ │   │  │   │         │   │  ┌───┐  │   │  │   │
+ │   │  │   │  ┌───┐  │   │  │   │  │   │  │   │
+ │   │  │   │  │   │  │   │  │   │  │   │  │   │
+ │ 5 │  │ 5 │  │ 2 │  │10 │  │ 3 │  │15 │  │10 │
+─┘   └──┘   └──┘   └──┘   └──┘   └──┘   └──┘   └─</pre>
           <p>
             Write code that, given a scalar or vector of skyscraper heights from
             closest to furthest, will return an integer representing the number
