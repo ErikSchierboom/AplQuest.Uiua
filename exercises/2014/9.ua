@@ -1,5 +1,7 @@
 # 2014-9: Going Ballistic
 # The following formula gives the horizontal distance a projectile travels:
+# d = v^2 * sin(2θ) / G
+#
 # Where: v is the initial velocity, θ is the trajectory in degrees, d is the horizontal distance and G is the gravitational constant.
 # Write code which calculates the distance (in meters) a projectile travels given an initial velocity in meters per second and a trajectory in degrees. Use 9.8 meters per second squared as the gravitational constant.
 
