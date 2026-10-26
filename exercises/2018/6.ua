@@ -16,7 +16,11 @@ Solution ← ⬚1/↧⦷"<>"▽⊸∊"<>"
 
 # Tests
 ⍤⤙≍ 1 Solution "<name><first>Drake</first><last>Mallard</last></name>"
+
 ⍤⤙≍ 0 Solution "<math><relation>2<3</relation></math>"
+
 ⍤⤙≍ 1 Solution "" # an empty vector is balanced
+
 ⍤⤙≍ 0 Solution ">stuff<>/stuff<"
+
 ⍤⤙≍ 0 Solution "<"

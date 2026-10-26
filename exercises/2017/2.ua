@@ -6,6 +6,7 @@ Solution ← +⊸◿₂
 
 # Tests
 ⍤⤙≍ [2 2 4 4 6] Solution [1 2 3 4 5]
+
 ⍤⤙≍ [] Solution [] # should return an empty vector
 
 Expected ← [[2 2 4 4]

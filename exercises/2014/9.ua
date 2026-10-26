@@ -7,6 +7,8 @@
 Solution ← ÷ 9.8 ×⊓(ⁿ₂|∿ ÷180 ×π ×2)
 
 # Tests
-⍤⤙≍ 1020.408163 ⁅₆ Solution 100 45      # 100 meters per second and 45 degree trajectory
-⍤⤙≍ 0 Solution 0 45                     # no velocity = no distance
+⍤⤙≍ 1020.408163 ⁅₆ Solution 100 45 # 100 meters per second and 45 degree trajectory
+
+⍤⤙≍ 0 Solution 0 45 # no velocity = no distance
+
 ⍤⤙≍ 1.249639591E¯13 ⁅₂₂ Solution 100 90 # shooting straight up = no distance

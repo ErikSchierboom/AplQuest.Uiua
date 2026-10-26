@@ -10,5 +10,7 @@ Solution ← ⊗∩(⍉⊟∩⍚∘⊸⧆)
 
 # Tests
 ⍤⤙≍ [2 7 10 3 9 10 10] Solution "DYALOG APL" "AAALLLB"
+
 ⍤⤙≍ [0 0 0 0] Solution "" "test" # should work with empty first argument 
-⍤⤙≍ [] Solution "test" ""        # should work with empty second argument
+
+⍤⤙≍ [] Solution "test" "" # should work with empty second argument

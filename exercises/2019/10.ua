@@ -6,5 +6,7 @@ Solution ← {⊃(▽¬|▽)}⊸≡◇(=₀◿₂⧻)
 
 # Tests
 ⍤⤙≍ {{"the" "great"} {"plan" "is"}} Solution {"the" "plan" "is" "great"}
-⍤⤙≍ {{"all" "odd"} {}} Solution {"all" "odd"}                   # note the empty 2nd element of the result
+
+⍤⤙≍ {{"all" "odd"} {}} Solution {"all" "odd"} # note the empty 2nd element of the result
+
 ⍤⤙≍ {{} {"only" "even" "here"}} Solution {"only" "even" "here"} # note the empty 1st element of the result

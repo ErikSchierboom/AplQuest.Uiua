@@ -6,6 +6,9 @@ Solution ← {⊃↙↘} ⨬(⋅∘|∘)⊸±⊸˜◿⊙⊸⧻
 
 # Tests
 ⍤⤙≍ {"Splitting" "Hairs"} Solution 9 "SplittingHairs"
+
 ⍤⤙≍ {"Dyalog" "APL"} Solution ¯3 "DyalogAPL"
+
 ⍤⤙≍ {[1 2 3 4 5 6 7 8 9 10] []} Solution 10 +1⇡10
+
 ⍤⤙≍ {{"works"} {"with" "words" "also"}} Solution 1 {"works" "with" "words" "also"}

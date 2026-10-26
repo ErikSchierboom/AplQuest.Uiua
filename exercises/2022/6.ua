@@ -27,4 +27,5 @@ Expected ← [[1 1 1 1 1 1 1 1 1]
 ⍤⤙≍ Expected Solution 5
 
 ⍤⤙≍ [[1]] Solution 1 # ⍝ should return 1 1⍴1
-⍤⤙≍ 0_0△ Solution 0  # should return 0 0⍴0
+
+⍤⤙≍ 0_0△ Solution 0 # should return 0 0⍴0

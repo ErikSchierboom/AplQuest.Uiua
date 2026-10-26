@@ -10,8 +10,13 @@ Solution ← ⌵-∩(/+⬚0×1_60_1440↯[∞]⇌)
 
 # Tests
 ⍤⤙≍ 165 Solution [2 30] [5 15]
+
 ⍤⤙≍ 165 Solution [5 15] [2 30]
-⍤⤙≍ 1440 Solution [1 0 0] 0  # number of minutes in a day
+
+⍤⤙≍ 1440 Solution [1 0 0] 0 # number of minutes in a day
+
 ⍤⤙≍ 1440 Solution [1 0 0] [] # don't forget to handle empty arguments!
+
 ⍤⤙≍ 120 Solution [1 0] [¯1 0]
+
 ⍤⤙≍ 0 Solution [1.5 0] 90

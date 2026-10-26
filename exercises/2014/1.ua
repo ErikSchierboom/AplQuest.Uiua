@@ -6,4 +6,5 @@ Solution ← =+°⊟₃ⁿ₂
 
 # Tests
 ⍤⤙≍ 1 Solution [3 4 5]
+
 ⍤⤙≍ 0 Solution [2 3 4]

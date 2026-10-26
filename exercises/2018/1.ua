@@ -24,7 +24,10 @@
 Solution ← ⧻◴\↥
 
 # Tests
-⍤⤙≍ 3 Solution [5 5 2 10 3 15 10]   # from the left person's view
+⍤⤙≍ 3 Solution [5 5 2 10 3 15 10] # from the left person's view
+
 ⍤⤙≍ 2 Solution ⇌ [5 5 2 10 3 15 10] # from the right person's view
-⍤⤙≍ 0 Solution []                   # no skyscrapers here!
-⍤⤙≍ 1 Solution [10]                 # single skyscraper
+
+⍤⤙≍ 0 Solution [] # no skyscrapers here!
+
+⍤⤙≍ 1 Solution [10] # single skyscraper

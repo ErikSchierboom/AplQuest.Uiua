@@ -6,6 +6,9 @@ Solution ← ÷₂⬚0/+⬚0⊏[⊃⌊⌈]÷₂⊸(↥₀-₁⧻)⍆
 
 # Tests
 ⍤⤙≍ 5 Solution [1 2 3 4 5 6 7 8 9]
+
 ⍤⤙≍ 4.5 Solution [1 8 2 7 3 6 4 5]
+
 ⍤⤙≍ 0 Solution []
+
 ⍤⤙≍ 7 Solution [7 7]

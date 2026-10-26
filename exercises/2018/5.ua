@@ -28,5 +28,6 @@ Solution ← ⨬(
 | )
 
 # Tests
-⍤⤙≍ "Pisces" Solution 2 23   # February 23
+⍤⤙≍ "Pisces" Solution 2 23 # February 23
+
 ⍤⤙≍ "Scorpio" Solution 10 31 # October 31

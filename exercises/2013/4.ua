@@ -6,8 +6,13 @@ Solution ← ≍"" ⍥(▽¬⊸(⦷"()") ▽⊸∊"()")∞
 
 # Tests
 ⍤⤙≍ 1 Solution "((2×3)+4)"
+
 ⍤⤙≍ 1 Solution ""
+
 ⍤⤙≍ 1 Solution "hello world!"
+
 ⍤⤙≍ 0 Solution ")(2×3)+4("
+
 ⍤⤙≍ 0 Solution "(()"
+
 ⍤⤙≍ 0 Solution ")"

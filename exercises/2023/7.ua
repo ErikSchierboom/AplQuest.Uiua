@@ -13,5 +13,7 @@ Solution ← ˜⊟∩(⁅÷⊃∨×)⟜◡(˜÷)1
 
 # Tests
 ⍤⤙≍ [6 5] Solution 1.2
+
 ⍤⤙≍ [7 2] Solution 3.5
+
 ⍤⤙≍ [1 3] Solution ÷3 1

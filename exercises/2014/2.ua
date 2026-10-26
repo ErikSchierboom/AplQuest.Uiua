@@ -6,6 +6,9 @@ Solution ← ▽⊸(¬×⊃(∊"AEOUI"|⬚0⧈/× [¤3¤1¤1] ±)⌵)
 
 # Tests
 ⍤⤙≍ "if yu cn rd ths, it wrkd!" Solution "if you can read this, it worked!"
+
 ⍤⤙≍ "APL is RLLY cl" Solution "APL is REALLY cool"
-⍤⤙≍ "" Solution ""   # an empty array arg should return an empty array
+
+⍤⤙≍ "" Solution "" # an empty array arg should return an empty array
+
 ⍤⤙≍ "a" Solution "a" # should work with a single character message

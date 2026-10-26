@@ -8,4 +8,5 @@ Solution ← ˜∊∩⌵
 
 # Tests
 ⍤⤙≍ [0 0 1 1 0 0] Solution "dyalog" "APL"
+
 ⍤⤙≍ [0 1 1 1 0 1 0] Solution "bramley" "HAMPSHIRE"

@@ -9,5 +9,7 @@ Solution ← /↥⊜⧻⊸(⊂0+2±⧈-)
 
 # Tests
 ⍤⤙≍ 3 Solution [1 2 3 5 5 5 6 4 3]
+
 ⍤⤙≍ 4 Solution [1 2 3 4 4 4 4 4 5 4 3]
+
 ⍤⤙≍ 1 Solution [1 2]

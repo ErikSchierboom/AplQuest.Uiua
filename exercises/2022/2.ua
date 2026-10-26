@@ -10,6 +10,9 @@ Solution ← /+≠
 
 # Tests
 ⍤⤙≍ 7 Solution "GAGCCTACTAACGGGAT" "CATCGTAATGACGGCCT"
+
 ⍤⤙≍ 1 Solution "A" "T"
+
 ⍤⤙≍ 0 Solution "" ""
+
 ⍤⤙≍ 0 Solution "CATCGTAATGACGGCCT" "CATCGTAATGACGGCCT"

@@ -13,4 +13,5 @@ Solution ← [∩/+]⊃≥<↙◡(↧∩⧻)
 
 # Tests
 ⍤⤙≍ [0 1] Solution [6] [5]
+
 ⍤⤙≍ [2 1] Solution [6 6 4 2 1] [6 5 5] # attacker loses 2 armies, defender loses 1 army

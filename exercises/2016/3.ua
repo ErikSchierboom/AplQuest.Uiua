@@ -6,5 +6,7 @@ Solution ← ▽⌕⊸/↥⊃(⊕⧻|⋅◴)⊸⊛⍆
 
 # Tests
 ⍤⤙≍ [2] Solution [2 1 4 3 2 5 1 2]
+
 ⍤⤙≍ [] Solution [] # should return an empty vector
+
 ⍤⤙≍ [1 2] Solution [1 2 3 4 1 2]

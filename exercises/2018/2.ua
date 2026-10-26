@@ -6,6 +6,9 @@ Solution ← ⊂∩⬚0⋕ ⊃↙↘ ⊸˜⊗@. °⋕
 
 # Tests
 ⍤⤙≍ [1 0.234] Solution 1.234
+
 ⍤⤙≍ [12 0] Solution 12
+
 ⍤⤙≍ [0 0.1234] Solution 0.1234
+
 ⍤⤙≍ [0 0] Solution 0

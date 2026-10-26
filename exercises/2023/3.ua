@@ -15,7 +15,11 @@ Solution ← ⊏⊃(⊗⊙◌|˜↻) ⊂@ +@A⇡26
 
 # Tests
 ⍤⤙≍ "LIPPSD SVPHW" Solution 4 "HELLO WORLDS"
+
 ⍤⤙≍ "DAHHKWSKNH O" Solution ¯4 "HELLO WORLDS" # negative shifts are okay
-⍤⤙≍ "HELLO WORLDS" Solution 0 "HELLO WORLDS"  # no shift is okay
+
+⍤⤙≍ "HELLO WORLDS" Solution 0 "HELLO WORLDS" # no shift is okay
+
 ⍤⤙≍ "HELLO WORLDS" Solution 27 "HELLO WORLDS"
+
 ⍤⤙≍ "" Solution ¯10 "" # returns an empty vector

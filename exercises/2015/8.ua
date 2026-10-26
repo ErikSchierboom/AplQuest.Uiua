@@ -6,6 +6,9 @@ Solution ← ⍜▽⋅12.99⊸=₁₃
 
 # Tests
 ⍤⤙≍ [12.99] Solution [13]
+
 ⍤⤙≍ [1 2 3 4 5 6 7 8 9 10 11 12 12.99 14 15] Solution +1 ⇡15
+
 ⍤⤙≍ [11 12 12.99 14 15] Solution +6 [5 6 7 8 9]
+
 ⍤⤙≍ [12.99 130 13.13 1300] Solution [13 130 13.13 1300] # we only care about the number 13

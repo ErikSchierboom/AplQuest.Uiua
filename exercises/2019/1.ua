@@ -7,5 +7,7 @@ Solution ← ▽⊸≡(>0◇⧻) ⊂⊃(⧈□ [¤∘]|□↘⊸(-⊸◿⊙⧻))
 
 # Tests
 ⍤⤙≍ {[1 2 3] [4 5 6] [7 8 9]} Solution 3 +1⇡9
+
 ⍤⤙≍ {[1 2 3] [4 5 6] [7 8 9] [10 11]} Solution 3 +1⇡11
+
 ⍤⤙≍ {{"The" "cat"} {"in" "the"} {"hat" "sat"} {"pat"}} Solution 2 {"The" "cat" "in" "the" "hat" "sat" "pat"}

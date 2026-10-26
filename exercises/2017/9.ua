@@ -6,6 +6,9 @@ Solution ← ↘₁⬚@\0⧈₂/=
 
 # Tests
 ⍤⤙≍ [0 1 0 1 0 1 0 0 0 0] Solution "bookkeeper"
+
 ⍤⤙≍ [] Solution "" # should return an empty vector
+
 ⍤⤙≍ [1 1 1 1 1 0] Solution "aaaaaa"
+
 ⍤⤙≍ [0] Solution "d"

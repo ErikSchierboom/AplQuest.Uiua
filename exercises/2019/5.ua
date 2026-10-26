@@ -7,6 +7,9 @@ Solution ← ≡◇(±/↥⧆)
 
 # Tests
 ⍤⤙≍ [0 1 0 1] Solution {"I" "feed" "the" "bookkeeper"}
+
 ⍤⤙≍ [0] Solution {"I"}
+
 ⍤⤙≍ [1] Solution {"feed"}
+
 ⍤⤙≍ [0 1 0 1 1] Solution {"MY" "LLAMAS" "HAVE" "BEEN" "GOOD"}

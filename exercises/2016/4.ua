@@ -8,7 +8,11 @@ Solution ← ⊏⊙◌˜⍏°⊏⊃(⊂⊙⋅∘|⊂⋅⊙⋅∘)∩°⊏
 
 # Tests
 ⍤⤙≍ "MEEKNESS" Solution "MENS" "EKES"
+
 ⍤⤙≍ "DAyPaLlog" Solution "Dyalog" "APL"
+
 ⍤⤙≍ "ADPyLalog" Solution "APL" "Dyalog"
+
 ⍤⤙≍ [1 2 3 4 5 6 7 8] Solution [1 3 5 7] [2 4 6 8] # should work with numeric vectors 
-⍤⤙≍ "Hello" Solution "" "Hello"                    # either or both arguments could be empty
+
+⍤⤙≍ "Hello" Solution "" "Hello" # either or both arguments could be empty

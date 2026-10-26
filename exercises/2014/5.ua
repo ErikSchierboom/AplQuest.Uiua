@@ -6,6 +6,9 @@ Solution ← ≍⊸⇌▽⊸(⌵±)
 
 # Tests
 ⍤⤙≍ 1 Solution "a man, a plan, a canal, panama!"
+
 ⍤⤙≍ 1 Solution ""
+
 ⍤⤙≍ 1 Solution "a"
+
 ⍤⤙≍ 0 Solution "APL"

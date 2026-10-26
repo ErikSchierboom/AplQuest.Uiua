@@ -15,7 +15,11 @@ Solution ← ⬚0↻¯
 
 # Tests
 ⍤⤙≍ [0 0 0 1 0 1 1 1] Solution 3 [1 0 1 1 1 0 1 1]
+
 ⍤⤙≍ [1 1 0 1 1 0 0 0] Solution ¯3 [1 0 1 1 1 0 1 1]
+
 ⍤⤙≍ [] Solution 5 [] # result is an empty vector      
+
 ⍤⤙≍ [1 0 1 1 1 0 1 1] Solution 0 [1 0 1 1 1 0 1 1]
+
 ⍤⤙≍ [0] Solution 3 [1]

@@ -10,7 +10,11 @@ Solution ← ≍∩(⍆▽⊸±⌵)
 
 # Tests
 ⍤⤙≍ 1 Solution "ALBERT EINSTEIN" "TEN ELITE BRAINS"
+
 ⍤⤙≍ 1 Solution "" ""
+
 ⍤⤙≍ 1 Solution "d" "d"
+
 ⍤⤙≍ 0 Solution "mesas" "seam"
+
 ⍤⤙≍ 0 Solution "apple" "lapel"

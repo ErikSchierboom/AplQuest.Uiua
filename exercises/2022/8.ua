@@ -11,8 +11,13 @@ Solution ← {⊃↙↘}⊸(⊢⍆˜⊗)
 
 # Tests
 ⍤⤙≍ {"Hell" "o World"} Solution "do" "Hello World"
+
 ⍤⤙≍ {"ABCD" "EFGHIJKLMNOPQRSTUVWXYZ"} Solution "KEI" +@A⇡26
+
 ⍤⤙≍ {"" "ABCDEFGHIJKLMNOPQRSTUVWXYZ"} Solution "A" +@A⇡26
+
 ⍤⤙≍ {"ABCDEFGHIJKLMNOPQRSTUVWXYZ" ""} Solution +@0⇡10 +@A⇡26
+
 ⍤⤙≍ {"Q" ""} Solution +@0⇡10 "Q"
+
 ⍤⤙≍ {"" "Q"} Solution +@A⇡126 "Q"

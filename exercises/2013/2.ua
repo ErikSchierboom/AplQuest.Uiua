@@ -6,6 +6,9 @@ Solution ← ↧100 ×100 ÷⊃(⧻|/+≥65)
 
 # Tests
 ⍤⤙≍ 60 Solution [25 90 100 64 65]
+
 ⍤⤙≍ 0 Solution [50]
+
 ⍤⤙≍ 100 Solution [80 90 100]
+
 ⍤⤙≍ 100 Solution [] # all grades in an empty array are passing

@@ -6,5 +6,7 @@ Solution ← ×⊸(=₀⧆)
 
 # Tests
 ⍤⤙≍ [0 1 0 0 0 0 0] Solution [0 1 0 1 0 0 1]
-⍤⤙≍ [] Solution []               # should return an empty vector      
+
+⍤⤙≍ [] Solution [] # should return an empty vector      
+
 ⍤⤙≍ [0 0 0 0] Solution [0 0 0 0] # no 1's?  no problem!

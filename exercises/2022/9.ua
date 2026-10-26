@@ -14,8 +14,12 @@ Solution ← (
 )
 
 # Tests
-⍤⤙≍ [1 2 3 4 5 6] Solution [1 2 3 4 5 6] 0                        # 0 neighbors on each side
+⍤⤙≍ [1 2 3 4 5 6] Solution [1 2 3 4 5 6] 0 # 0 neighbors on each side
+
 ⍤⤙≍ [1.333333333 2 3 4 5 5.666666667] ⁅₉ Solution [1 2 3 4 5 6] 1 # 1 neighbors on each side
-⍤⤙≍ [1.6 2.2 3 4 4.8 5.4] Solution [1 2 3 4 5 6] 2                # 2 neighbors on each side
+
+⍤⤙≍ [1.6 2.2 3 4 4.8 5.4] Solution [1 2 3 4 5 6] 2 # 2 neighbors on each side
+
 ⍤⤙≍ [2.538461538 2.923076923 3.307692308 3.692307692 4.076923077 4.461538462] ⁅₉ Solution [1 2 3 4 5 6] 6
+
 ⍤⤙≍ [42] Solution [42] 10

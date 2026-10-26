@@ -10,5 +10,7 @@ Solution ← ×100÷⟜(⧻|/+∊"CG")
 
 # Tests
 ⍤⤙≍ 100 Solution "GCGCGCGCCCGGGGCCG"
+
 ⍤⤙≍ 50 Solution "ACGTACGTACGTACGT"
+
 ⍤⤙≍ 58.33333333 ⁅₈ Solution ▽ [10 12 16 10] "ACGT"

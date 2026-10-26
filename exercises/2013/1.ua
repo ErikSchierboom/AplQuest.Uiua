@@ -6,5 +6,7 @@ Solution ← ▽⊸◿₂ +1 ⇡×2
 
 # Tests
 ⍤⤙≍ [1 3 5 7 9 11 13 15 17 19] Solution 10
+
 ⍤⤙≍ [1] Solution 1
+
 ⍤⤙≍ [] Solution 0 # this should return an empty array

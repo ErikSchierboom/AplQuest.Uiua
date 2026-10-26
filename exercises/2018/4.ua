@@ -17,5 +17,7 @@ Solution ← °□ ⊡⟜{"Monkey" "Rooster" "Dog" "Pig" "Rat" "Ox" "Tiger" "Rab
 
 # Tests
 ⍤⤙≍ "Dog" Solution 2018 # Newborns in 2018 will be Dogs
+
 ⍤⤙≍ "Rat" Solution 1564 # William Shakespeare b. 1564
+
 ⍤⤙≍ "Dog" Solution ¯551 # Confucius b. 551 BC

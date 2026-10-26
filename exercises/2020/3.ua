@@ -8,4 +8,5 @@ Solution ← /+×˜ⁿ26⇌⇡⊸⧻+1-@A
 
 # Tests
 ⍤⤙≍ 1 Solution "A"
+
 ⍤⤙≍ 1104 Solution "APL"

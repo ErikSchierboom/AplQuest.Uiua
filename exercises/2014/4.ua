@@ -6,6 +6,9 @@ Solution ← ▽⊸(↧↧⊃(\↥|⍜⇌\↥|⊂1⧈₂/↥)≠@ )
 
 # Tests
 ⍤⤙≍ "this is a test" Solution "  this  is a   test  "
+
 ⍤⤙≍ "" Solution "" # should return an empty array
+
 ⍤⤙≍ "hello world!" Solution "hello world!"
+
 ⍤⤙≍ "" Solution "  " # array of only spaces should return empty array

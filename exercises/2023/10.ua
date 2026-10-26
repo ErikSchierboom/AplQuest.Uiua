@@ -22,8 +22,13 @@ Solution ← (
 
 # Tests
 ⍤⤙≍ {"this is a sample"} Solution 1 "this is a sample"
+
 ⍤⤙≍ {"this" "is a sample"} Solution 2 "this is a sample"
+
 ⍤⤙≍ {"this" "is" "a" "sample"} Solution 4 "this is a sample"
+
 ⍤⤙≍ {"" "" "this" "" "is" "" "a" "sample" "" "" "" "" ""} Solution 13 "  this  is  a sample  " # note the leading, trailing, and multiple interior spaces 
-⍤⤙≍ {} Solution 0 "this is a sample"                                                           # returns an empty vector
+
+⍤⤙≍ {} Solution 0 "this is a sample" # returns an empty vector
+
 ⍤⤙≍ {"" "" "" ""} Solution 4 ""

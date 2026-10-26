@@ -6,4 +6,5 @@ Solution ← ⧈∘
 
 # Tests
 ⍤⤙≍ ["ATCG" "TCGA" "CGAA" "GAAG" "AAGG" "AGGT" "GGTC" "GTCG" "TCGT"] Solution 4 "ATCGAAGGTCGT"
+
 ⍤⤙≍ 0_4△ Solution 4 "AC" #  k>string length? Return an empty vector

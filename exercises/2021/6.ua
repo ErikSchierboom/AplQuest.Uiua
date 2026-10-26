@@ -19,6 +19,9 @@ Solution ← ×⊃(×⊃(≥⊙⋅∘|≤⋅∘)⊃(°⊟⊚∊@R|˜⊗@K)|=1/+�
 
 # Tests
 ⍤⤙≍ 1 Solution "RNBQKBNR" # standard chess layout
+
 ⍤⤙≍ 1 Solution "BBNRKNRQ" # layout in diagram above
+
 ⍤⤙≍ 0 Solution "RBBNQNRK" # K not between Rs
+
 ⍤⤙≍ 0 Solution "BRBKRNQN" # Bs both in odd positions

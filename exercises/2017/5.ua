@@ -7,6 +7,9 @@ Solution ← /×∊"ATGC"
 
 # Tests
 ⍤⤙≍ 1 Solution "ATGCTTCAGAAAGGTCTTACG"
+
 ⍤⤙≍ 0 Solution "Dyalog"
+
 ⍤⤙≍ 1 Solution "" # an empty string is valid
+
 ⍤⤙≍ 1 Solution "T"

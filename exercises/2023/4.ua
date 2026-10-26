@@ -17,5 +17,7 @@ Solution ← /+ ×[4 2 1] ≡±˜-
 
 # Tests
 ⍤⤙≍ 0 Solution [1 2 3] [1 2 3]
+
 ⍤⤙≍ 1 Solution [1 2 3] [1 0 9]
+
 ⍤⤙≍ ¯1 Solution [14 2 11] [14 2 12]

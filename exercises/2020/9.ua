@@ -8,7 +8,11 @@ Solution ← ×∩/× ⊃(⧈≥↙|⧈≤↘) ⊸˜⊗⊸/↥
 
 # Tests
 ⍤⤙≍ 1 Solution [1 3 3 4 5 2 1]
+
 ⍤⤙≍ 1 Solution [42]
+
 ⍤⤙≍ 0 Solution [1 3 2 4]
+
 ⍤⤙≍ 1 Solution [23 23 23]
+
 ⍤⤙≍ 1 Solution []

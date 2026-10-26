@@ -7,7 +7,10 @@
 Solution ← /+⧈₂(√+∩ⁿ₂⌵⊃(-∩⊢|-∩⊣)°⊟)⊂⟜⊢
 
 # Tests
-⍤⤙≍ 8 Solution [[1 ¯1] [1 3]]             # from A to B and back to A
-⍤⤙≍ 4 Solution [[1 1] [1 2] [2 2] [2 1]]  # ⍝ from A to B to C to D to A
-⍤⤙≍ 0 Solution [[5 5]]                    # staying where we are
+⍤⤙≍ 8 Solution [[1 ¯1] [1 3]] # from A to B and back to A
+
+⍤⤙≍ 4 Solution [[1 1] [1 2] [2 2] [2 1]] # ⍝ from A to B to C to D to A
+
+⍤⤙≍ 0 Solution [[5 5]] # staying where we are
+
 ⍤⤙≍ 5.656854249 ⁅₉ Solution [[1 1] [3 3]] # there and back again

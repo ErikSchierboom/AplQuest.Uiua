@@ -8,6 +8,7 @@ Solution ← ≡₀(/≠ =₀ ◿4_100_400)
 
 # Tests
 ⍤⤙≍ 1 Solution 2020
+
 ⍤⤙≍ [] Solution [] # returns an empty vector
 
 Expected ← [[0 0 0 1 0 0 0 1 0 0]

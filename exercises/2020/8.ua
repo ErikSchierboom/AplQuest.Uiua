@@ -8,6 +8,9 @@ Solution ← /× ⧈(=2⌵-) ⧈(±-) ⊥₁₀
 
 # Tests
 ⍤⤙≍ 0 Solution 123
+
 ⍤⤙≍ 1 Solution 132
+
 ⍤⤙≍ 0 Solution 31115
+
 ⍤⤙≍ 1 Solution 3141514131415

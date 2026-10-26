@@ -7,5 +7,7 @@ Solution ← ⧻⊜□⌵⊸±
 
 # Tests
 ⍤⤙≍ 4 Solution "Testing one, two, three"
+
 ⍤⤙≍ 0 Solution ""
+
 ⍤⤙≍ 5 Solution " this array has extra blanks " # just counting the blanks won't work

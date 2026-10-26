@@ -14,7 +14,9 @@ Solution ← ≡₀(˜⊡ "FDCBA" ˜⊗1 ≤ [64 69 79 89 100])
 
 # Tests
 ⍤⤙≍ "FFDDCCBBAA" Solution [0 64 65 69 70 79 80 89 90 100]
+
 ⍤⤙≍ △ 0 Solution [] # returns an empty vector
+
 Expected ← ["CBB"
             "BBF"]
 ⍤⤙≍ Expected Solution ↯2_3 [71 82 81 82 84 59]

@@ -16,4 +16,5 @@ Expected ← [[1 2 3]
 ⍤⤙≍ Expected Solution [1 2 3 4 5]
 
 ⍤⤙≍ [[100]] Solution [100] # should return a 1×1 matrix 
-⍤⤙≍ 0_0△ Solution []       # should return a 0×0 matrix
+
+⍤⤙≍ 0_0△ Solution [] # should return a 0×0 matrix

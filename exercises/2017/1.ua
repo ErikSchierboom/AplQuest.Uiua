@@ -6,5 +6,7 @@ Solution ← ▽⊸◿₂ +1 ⇡×2
 
 # Tests
 ⍤⤙≍ [1 3 5 7 9] Solution 5
+
 ⍤⤙≍ [1] Solution 1
+
 ⍤⤙≍ [] Solution 0 # should return an empty vector

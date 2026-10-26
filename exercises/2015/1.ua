@@ -6,6 +6,9 @@ Solution ← ≍∩(⍆▽⊸±⌵)
 
 # Tests
 ⍤⤙≍ 1 Solution "anagram" "Nag A Ram"
+
 ⍤⤙≍ 1 Solution "Dyalog APL" "Dog Pay All"
+
 ⍤⤙≍ 1 Solution "" "  !#!"
+
 ⍤⤙≍ 0 Solution "abcde" "zyxwvu"

@@ -9,7 +9,10 @@
 Solution ← /×⬚0▽∩⋯₈
 
 # Tests
-⍤⤙≍ 1 Solution 2 7  # is 2 in 7 (1+2+4)?
+⍤⤙≍ 1 Solution 2 7 # is 2 in 7 (1+2+4)?
+
 ⍤⤙≍ 0 Solution 4 11 # is 4 in 11 (1+2+8)?
+
 ⍤⤙≍ 1 Solution 3 11 # is 3 (1+2) in 11 (1+2+8)?
-⍤⤙≍ 0 Solution 4 0  # is 4 in 0?
+
+⍤⤙≍ 0 Solution 4 0 # is 4 in 0?

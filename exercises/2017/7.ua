@@ -6,6 +6,9 @@ Solution ← map ⟜(⬚0↯[4] ⊕⧻ ⊸⊗) "ACGT"
 
 # Tests
 ⍤⤙≍ map "ACGT" [14 8 10 17] Solution "AGCTTTTCATTCTGACTGCTGTCTTTAAAAAAAGAGTGTCTGATAGCAG"
+
 ⍤⤙≍ map "ACGT" [3 2 4 1] Solution "CCAAATGGGG"
+
 ⍤⤙≍ map "ACGT" [0 0 0 0] Solution ""
+
 ⍤⤙≍ map "ACGT" [0 0 1 0] Solution "G"

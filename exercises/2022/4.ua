@@ -8,7 +8,11 @@ Solution ← ⬚0/↥⊜⧻⊸∘
 
 # Tests
 ⍤⤙≍ 4 Solution [1 1 1 0 1 1 0 0 1 1 1 1 0]
+
 ⍤⤙≍ 0 Solution []
+
 ⍤⤙≍ 1 Solution [1]
+
 ⍤⤙≍ 0 Solution [0]
+
 ⍤⤙≍ 12 Solution ▽ 12 [0 1 0 1]

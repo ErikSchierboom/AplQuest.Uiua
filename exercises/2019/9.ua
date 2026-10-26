@@ -42,5 +42,7 @@ Solution ← (
 
 # Tests
 ⍤⤙≍ 7 Solution [[2 4] [3 ¯8] [1 2]]
-⍤⤙≍ 0 Solution [[1 1]]       # a point has no area
+
+⍤⤙≍ 0 Solution [[1 1]] # a point has no area
+
 ⍤⤙≍ 0 Solution [[1 1] [2 2]] # neither does a line segment
