@@ -98,10 +98,12 @@ in the browser, then check it against the exercise's own tests.</p>\n\
 
 /// Render a single exercise page.
 /// Whether a description line is part of a diagram or table (as opposed to
-/// prose): it uses box-drawing characters or tabs, or is indented.
+/// prose): it uses box-drawing characters or tabs, is indented, or is a
+/// table row (starts with `|`).
 fn is_preformatted(line: &str) -> bool {
     line.contains('\t')
         || line.starts_with("  ")
+        || line.starts_with('|')
         || line.chars().any(|c| ('\u{2500}'..='\u{257f}').contains(&c))
 }
 

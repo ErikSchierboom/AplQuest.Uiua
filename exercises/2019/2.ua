@@ -1,7 +1,7 @@
 # 2019-2: Making the Grade
 # Write code that, given an array of integer test scores in the inclusive range 0–100, returns an identically-shaped array of the corresponding letter grades according to the below table.
 #
-# | Score Range |	Letter Grade |
+# | Score Range | Letter Grade |
 # | ----------- | ------------ |
 # | 0–64        | F            |
 # | 65–69       | D            |
