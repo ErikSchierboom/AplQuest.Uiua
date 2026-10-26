@@ -1,6 +1,6 @@
 # 2014-5: Mirror Mirror
 # A palindrome is a word or phrase whose letters read the same forwards and backwards.
-# The letters are the 26 letters in the latin Alphabet (a-zA-Z), ignoring spaces, punctuation, and case.
+# The letters are the 26 letters of the latin Alphabet (a-zA-Z), ignoring spaces, punctuation, and case.
 # Write code which returns a 1 if its character array argument is a palindrome, 0 otherwise. 
 # For simplicity"s sake, you may assume that the array is all one case.
 
