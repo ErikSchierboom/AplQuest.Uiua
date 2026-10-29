@@ -1,6 +1,6 @@
 # AplQuest.Uiua
 
-An implementation of the [APL quest](https://github.com/Dyalog/apl.quest) exercises in [Uiua](https://www.uiua.org/).
+A translation of the [APL quest](https://github.com/Dyalog/apl.quest) exercises to [Uiua](https://www.uiua.org/).
 
 ## Website
 
