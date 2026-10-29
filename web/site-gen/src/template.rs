@@ -42,7 +42,7 @@ fn page_shell(
 {menu}<main class="content">
 {body}
 <footer class="attribution">
-<p>Problem statements and reference tests are adapted from
+<p>The problems and tests are adapted from
 <a href="https://apl.quest">APL Quest</a>
 (<a href="https://github.com/Dyalog/apl.quest">Dyalog/apl.quest</a>), licensed under
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
