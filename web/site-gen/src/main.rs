@@ -102,9 +102,10 @@ fn write_site(
     fs::write(dist_dir.join("assets/style.css"), &style).expect("write style.css");
 
     let app_src = assets_src_dir.join("app.js");
+    let runner_hash = runner_hash(&dist_dir.join("assets"));
     let app = fs::read_to_string(&app_src)
         .unwrap_or_else(|e| panic!("reading {}: {e}", app_src.display()))
-        .replace("RUNNER_HASH", &runner_hash(&dist_dir.join("assets")));
+        .replace("RUNNER_HASH", &runner_hash);
     fs::write(dist_dir.join("assets/app.js"), &app).expect("write app.js");
 
     // Version the asset URLs in the pages too, so a changed asset is
@@ -113,6 +114,18 @@ fn write_site(
         page.replace(
             "/assets/style.css\"",
             &format!("/assets/style.css?v={}\"", hash_bytes(style.as_bytes())),
+        )
+        .replace(
+            "/assets/fonts/Uiua386.ttf\"",
+            &format!("/assets/fonts/Uiua386.ttf?v={font_hash}\""),
+        )
+        .replace(
+            "/assets/runner.js\"",
+            &format!("/assets/runner.js?v={runner_hash}\""),
+        )
+        .replace(
+            "/assets/runner_bg.wasm\"",
+            &format!("/assets/runner_bg.wasm?v={runner_hash}\""),
         )
         .replace(
             "/assets/app.js\"",

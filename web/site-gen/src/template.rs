@@ -19,12 +19,21 @@ type Categories = [(String, Vec<(String, Exercise)>)];
 /// the top-level index, `".."` for exercise pages one directory deep), so the
 /// generated site works from any static host or `file://` root without
 /// hardcoded absolute paths. `current` is the `(category, number)` of the page
-/// being rendered, if any; its category starts expanded.
+/// being rendered, if any; its category starts expanded. The font is preloaded
+/// so it isn't only discovered once the stylesheet has been fetched.
+/// Hints for the runner that app.js imports at startup, so the large WASM
+/// download starts with the page instead of after app.js has been parsed.
+const RUNNER_PRELOAD: &str = r#"<link rel="modulepreload" href="../assets/runner.js">
+<link rel="preload" href="../assets/runner_bg.wasm" as="fetch" type="application/wasm" crossorigin>
+"#;
+
 fn page_shell(
     title: &str,
+    description: &str,
     asset_prefix: &str,
     categories: &Categories,
     current: Option<(&str, &str)>,
+    head_extra: &str,
     body: &str,
 ) -> String {
     let menu = render_menu(categories, asset_prefix, current);
@@ -35,8 +44,10 @@ fn page_shell(
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
+<meta name="description" content="{description}">
+<link rel="preload" href="{asset_prefix}/assets/fonts/Uiua386.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="{asset_prefix}/assets/style.css">
-</head>
+{head_extra}</head>
 <body>
 <div class="layout">
 {menu}<main class="content">
@@ -93,7 +104,8 @@ in the browser, then check it against the exercise's own tests.</p>\n\
 <p>Pick a year from the menu to see its exercises.</p>\n\
 </header>\n";
 
-    page_shell("APL Quest in Uiua", ".", categories, None, body)
+    let description = "Solve the APL Quest exercises in Uiua: write code in the browser and check it against each exercise's own tests.";
+    page_shell("APL Quest in Uiua", description, ".", categories, None, "", body)
 }
 
 /// Render a single exercise page.
@@ -184,7 +196,19 @@ pub fn render_exercise(
         title = html_escape(&exercise.title)
     );
 
-    page_shell(&exercise.title, "..", categories, Some((category, num)), &body)
+    let description = format!(
+        "Solve the APL Quest exercise \"{}\" in Uiua, in the browser.",
+        exercise.title
+    );
+    page_shell(
+        &exercise.title,
+        &html_escape(&description),
+        "..",
+        categories,
+        Some((category, num)),
+        RUNNER_PRELOAD,
+        &body,
+    )
 }
 
 fn html_escape(s: &str) -> String {
