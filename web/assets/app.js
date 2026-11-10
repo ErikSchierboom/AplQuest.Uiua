@@ -50,6 +50,10 @@ if (saved !== null) {
   codeEl.value = saved;
 }
 
+// Start with the cursor in the editor, after any restored code.
+codeEl.focus();
+codeEl.setSelectionRange(codeEl.value.length, codeEl.value.length);
+
 let highlight;
 let docsUrlAt;
 
