@@ -27,6 +27,21 @@ const RUNNER_PRELOAD: &str = r#"<link rel="modulepreload" href="../assets/runner
 <link rel="preload" href="../assets/runner_bg.wasm" as="fetch" type="application/wasm" crossorigin>
 "#;
 
+/// Applied in the <head> so a collapsed sidebar doesn't flash open on load.
+const SIDEBAR_INIT: &str = r#"try{if(localStorage.getItem("uiua-quest:sidebar")==="collapsed")document.documentElement.classList.add("sidebar-collapsed")}catch(e){}"#;
+
+/// Toggles the sidebar between expanded and (almost) hidden, and remembers it.
+const SIDEBAR_TOGGLE: &str = r#"<script>
+var toggle = document.querySelector(".sidebar-toggle");
+toggle.setAttribute("aria-expanded", String(!document.documentElement.classList.contains("sidebar-collapsed")));
+toggle.addEventListener("click", function () {
+  var collapsed = document.documentElement.classList.toggle("sidebar-collapsed");
+  this.setAttribute("aria-expanded", String(!collapsed));
+  try { localStorage.setItem("uiua-quest:sidebar", collapsed ? "collapsed" : "expanded"); } catch (e) {}
+});
+</script>
+"#;
+
 fn page_shell(
     title: &str,
     description: &str,
@@ -47,6 +62,7 @@ fn page_shell(
 <meta name="description" content="{description}">
 <link rel="preload" href="{asset_prefix}/assets/fonts/Uiua386.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="{asset_prefix}/assets/style.css">
+<script>{SIDEBAR_INIT}</script>
 {head_extra}</head>
 <body>
 <div class="layout">
@@ -60,7 +76,7 @@ fn page_shell(
 </footer>
 </main>
 </div>
-</body>
+{SIDEBAR_TOGGLE}</body>
 </html>
 "#
     )
@@ -70,7 +86,7 @@ fn page_shell(
 /// `name`, so browsers keep at most one open at a time.
 fn render_menu(categories: &Categories, prefix: &str, current: Option<(&str, &str)>) -> String {
     let mut menu = format!(
-        "<nav class=\"sidebar\" aria-label=\"Exercises\">\n<a class=\"site-title\" href=\"{prefix}/index.html\">APL Quest in Uiua</a>\n"
+        "<nav class=\"sidebar\" id=\"sidebar\" aria-label=\"Exercises\">\n<div class=\"sidebar-head\">\n<a class=\"site-title\" href=\"{prefix}/index.html\">APL Quest in Uiua</a>\n<button class=\"sidebar-toggle\" type=\"button\" aria-controls=\"sidebar\" aria-expanded=\"true\" aria-label=\"Toggle menu\" title=\"Toggle menu\"></button>\n</div>\n"
     );
     for (category, exercises) in categories {
         let is_current = current.is_some_and(|(c, _)| c == category);

@@ -10,7 +10,11 @@ const resultsEl = document.getElementById("results");
 const testsDataEl = document.getElementById("tests-data");
 
 const tests = JSON.parse(testsDataEl.textContent);
-const storageKey = `uiua-quest:${location.pathname}`;
+// The key ignores ".html", so /2015/2 and /2015/2.html (both served by
+// GitHub Pages) share one saved attempt. Attempts saved under the exact
+// pathname by earlier versions are still picked up and migrated.
+const legacyStorageKey = `uiua-quest:${location.pathname}`;
+const storageKey = `uiua-quest:${location.pathname.replace(/\.html$/, "")}`;
 
 // Turn the visitor's body into a full definition. Multi-line bodies are
 // wrapped in parentheses so every line belongs to The code.
@@ -40,7 +44,8 @@ function markSolution(html) {
 }
 
 // Restore the visitor's previous attempt, if any.
-const saved = localStorage.getItem(storageKey);
+const saved =
+  localStorage.getItem(storageKey) ?? localStorage.getItem(legacyStorageKey);
 if (saved !== null) {
   codeEl.value = saved;
 }
@@ -101,12 +106,12 @@ statusEl.textContent = "Loading Uiua...";
 let runTest;
 let formatCode;
 try {
-  // 109525ad26364491 is substituted by site-gen so a rebuilt runner is never
+  // 256418328f04a4ea is substituted by site-gen so a rebuilt runner is never
   // served from the browser cache.
-  const mod = await import("../assets/runner.js?v=109525ad26364491");
+  const mod = await import("../assets/runner.js?v=256418328f04a4ea");
   await mod.default({
     module_or_path: new URL(
-      "../assets/runner_bg.wasm?v=109525ad26364491",
+      "../assets/runner_bg.wasm?v=256418328f04a4ea",
       import.meta.url,
     ),
   });

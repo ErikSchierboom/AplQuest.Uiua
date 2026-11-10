@@ -80,6 +80,13 @@ a {
   font-size: 0.9rem;
 }
 
+.sidebar-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-right: 0.75rem;
+}
+
 .sidebar .site-title {
   display: block;
   padding: 0.25rem 1rem 0.75rem;
@@ -146,7 +153,51 @@ a {
   box-shadow: inset 3px 0 0 var(--accent);
 }
 
+/* Collapsed state: the menu shrinks to a thin strip holding only the toggle. */
+.sidebar-toggle {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex: none;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+}
+
+.sidebar-toggle::before {
+  content: "\00ab";
+}
+
+.sidebar-toggle:hover {
+  background: var(--code-bg);
+}
+
+.sidebar-collapsed .sidebar {
+  flex-basis: 2.75rem;
+  overflow: hidden;
+}
+
+.sidebar-collapsed .sidebar > :not(.sidebar-head),
+.sidebar-collapsed .site-title {
+  display: none;
+}
+
+.sidebar-collapsed .sidebar-head {
+  justify-content: center;
+  padding-right: 0;
+}
+
+.sidebar-collapsed .sidebar-toggle::before {
+  content: "\00bb";
+}
+
 @media (max-width: 800px) {
+  .sidebar-collapsed .sidebar {
+    max-height: none;
+  }
+
   .layout {
     flex-direction: column;
     align-items: stretch;
