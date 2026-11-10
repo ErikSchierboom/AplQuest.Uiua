@@ -43,12 +43,30 @@ function markSolution(html) {
   return html.replace(namePattern, `&lt;Solution&gt;`);
 }
 
+// Progress for the sidebar (read by the inline script in every page): an
+// exercise is "attempted" once tests have been run, and "passed" once all
+// of them have passed. A pass is never downgraded.
+const statusKey = `uiua-quest:status:${location.pathname
+  .replace(/\.html$/, "")
+  .split("/")
+  .slice(-2)
+  .join("/")}`;
+function recordStatus(allPassed) {
+  if (!allPassed && localStorage.getItem(statusKey) === "passed") return;
+  localStorage.setItem(statusKey, allPassed ? "passed" : "attempted");
+  window.refreshSidebarStatus?.();
+}
+
 // Restore the visitor's previous attempt, if any.
 const saved =
   localStorage.getItem(storageKey) ?? localStorage.getItem(legacyStorageKey);
 if (saved !== null) {
   codeEl.value = saved;
 }
+
+// Start with the cursor in the editor, after any restored code.
+codeEl.focus();
+codeEl.setSelectionRange(codeEl.value.length, codeEl.value.length);
 
 let highlight;
 let docsUrlAt;
@@ -106,12 +124,12 @@ statusEl.textContent = "Loading Uiua...";
 let runTest;
 let formatCode;
 try {
-  // 256418328f04a4ea is substituted by site-gen so a rebuilt runner is never
+  // 109525ad26364491 is substituted by site-gen so a rebuilt runner is never
   // served from the browser cache.
-  const mod = await import("../assets/runner.js?v=256418328f04a4ea");
+  const mod = await import("../assets/runner.js?v=109525ad26364491");
   await mod.default({
     module_or_path: new URL(
-      "../assets/runner_bg.wasm?v=256418328f04a4ea",
+      "../assets/runner_bg.wasm?v=109525ad26364491",
       import.meta.url,
     ),
   });
@@ -174,6 +192,53 @@ function formatEditor() {
   }
 }
 
+// Comment out the lines touched by the selection, or uncomment them if
+// they are all already commented. Blank lines are left alone.
+function toggleComment() {
+  const value = codeEl.value;
+  const { selectionStart, selectionEnd } = codeEl;
+  const start = value.lastIndexOf("\n", selectionStart - 1) + 1;
+  // A selection ending at the very start of a line doesn't include it.
+  const lastChar =
+    selectionEnd > selectionStart ? selectionEnd - 1 : selectionEnd;
+  const nextBreak = value.indexOf("\n", lastChar);
+  const end = nextBreak === -1 ? value.length : nextBreak;
+
+  const lines = value.slice(start, end).split("\n");
+  const indentOf = (line) => line.length - line.trimStart().length;
+  const code = lines.filter((line) => line.trim() !== "");
+  if (code.length === 0) return;
+
+  const uncomment = code.every((line) => line.trimStart().startsWith("#"));
+  const margin = Math.min(...code.map(indentOf));
+  const edited = lines.map((line) => {
+    if (line.trim() === "") return line;
+    if (!uncomment) return `${line.slice(0, margin)}# ${line.slice(margin)}`;
+    const indent = indentOf(line);
+    const rest = line.slice(indent + 1);
+    return (
+      line.slice(0, indent) + (rest.startsWith(" ") ? rest.slice(1) : rest)
+    );
+  });
+  const replacement = edited.join("\n");
+
+  // Prefer execCommand so the change lands in the textarea's undo history.
+  codeEl.setSelectionRange(start, end);
+  if (!document.execCommand("insertText", false, replacement)) {
+    codeEl.setRangeText(replacement, start, end, "preserve");
+  }
+  codeEl.setSelectionRange(start, start + replacement.length);
+  localStorage.setItem(storageKey, codeEl.value);
+  renderHighlight();
+}
+
+codeEl.addEventListener("keydown", (event) => {
+  if (event.key === "/" && (event.metaKey || event.ctrlKey)) {
+    event.preventDefault();
+    toggleComment();
+  }
+});
+
 // Cmd/Ctrl/Shift-Enter formats the code and runs the tests.
 codeEl.addEventListener("keydown", (event) => {
   if (
@@ -207,5 +272,6 @@ runButton.addEventListener("click", () => {
       : outcome.replace(/^FAIL: /, "").split(/\n\s+at /)[0];
   });
 
+  recordStatus(passed === tests.length);
   summaryEl.textContent = `${passed} / ${tests.length} tests passed`;
 });
