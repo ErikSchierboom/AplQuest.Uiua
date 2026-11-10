@@ -36,14 +36,27 @@ const SIDEBAR_TOGGLE: &str = r#"<script>
 var toggle = document.querySelector(".sidebar-toggle");
 toggle.setAttribute("aria-expanded", String(!document.documentElement.classList.contains("sidebar-collapsed")));
 var STATUS = { passed: ["\u2705", "Passed all tests"], attempted: ["\uD83D\uDEA7", "Attempted, not yet passing"] };
-document.querySelectorAll(".sidebar a[data-exercise]").forEach(function (link) {
-  var status;
-  try { status = localStorage.getItem("uiua-quest:status:" + link.dataset.exercise); } catch (e) {}
-  if (!STATUS[status]) return;
-  var icon = link.querySelector(".status");
-  icon.textContent = STATUS[status][0];
-  link.title = STATUS[status][1];
-});
+function mark(el, status) {
+  el.querySelector(".status").textContent = STATUS[status] ? STATUS[status][0] : "";
+  if (STATUS[status]) el.title = STATUS[status][1]; else el.removeAttribute("title");
+}
+// Shows each exercise's status, and each year's: passed once every exercise
+// is, in progress once any has been started. Also called by app.js.
+window.refreshSidebarStatus = function () {
+  document.querySelectorAll(".sidebar details").forEach(function (year) {
+    var links = year.querySelectorAll("a[data-exercise]");
+    var passed = 0, started = 0;
+    links.forEach(function (link) {
+      var status;
+      try { status = localStorage.getItem("uiua-quest:status:" + link.dataset.exercise); } catch (e) {}
+      mark(link, status);
+      if (STATUS[status]) started++;
+      if (status === "passed") passed++;
+    });
+    mark(year.querySelector("summary"), passed === links.length ? "passed" : started ? "attempted" : null);
+  });
+};
+window.refreshSidebarStatus();
 toggle.addEventListener("click", function () {
   var collapsed = document.documentElement.classList.toggle("sidebar-collapsed");
   this.setAttribute("aria-expanded", String(!collapsed));
@@ -102,7 +115,7 @@ fn render_menu(categories: &Categories, prefix: &str, current: Option<(&str, &st
         let is_current = current.is_some_and(|(c, _)| c == category);
         let open = if is_current { " open" } else { "" };
         menu.push_str(&format!(
-            "<details class=\"accordion\" name=\"years\"{open}>\n<summary>{category}</summary>\n<ul>\n"
+            "<details class=\"accordion\" name=\"years\"{open}>\n<summary>{category}<span class=\"status\" aria-hidden=\"true\"></span></summary>\n<ul>\n"
         ));
         for (num, exercise) in exercises {
             let aria = if current == Some((category.as_str(), num.as_str())) {

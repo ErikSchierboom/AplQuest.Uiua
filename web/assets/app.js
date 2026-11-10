@@ -54,12 +54,7 @@ const statusKey = `uiua-quest:status:${location.pathname
 function recordStatus(allPassed) {
   if (!allPassed && localStorage.getItem(statusKey) === "passed") return;
   localStorage.setItem(statusKey, allPassed ? "passed" : "attempted");
-  const link = document.querySelector(
-    `.sidebar a[aria-current="page"] .status`,
-  );
-  if (link) {
-    link.textContent = allPassed ? "\u2705" : "\u{1F6A7}";
-  }
+  window.refreshSidebarStatus?.();
 }
 
 // Restore the visitor's previous attempt, if any.

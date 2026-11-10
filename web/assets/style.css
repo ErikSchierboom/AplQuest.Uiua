@@ -147,6 +147,10 @@ a {
   font-size: 0.8rem;
 }
 
+.accordion summary .status {
+  font-size: 0.8rem;
+}
+
 .accordion li a:hover {
   background: var(--code-bg);
 }
