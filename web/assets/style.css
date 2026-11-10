@@ -136,9 +136,15 @@ a {
 
 .accordion li a {
   display: block;
-  padding: 0.25rem 1rem 0.25rem 2.25rem;
+  padding: 0.25rem 1rem 0.25rem 1rem;
   color: var(--fg);
   text-decoration: none;
+}
+
+.accordion li a .status {
+  display: inline-block;
+  width: 1.5rem;
+  font-size: 0.8rem;
 }
 
 .accordion li a:hover {

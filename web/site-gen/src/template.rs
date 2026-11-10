@@ -30,10 +30,20 @@ const RUNNER_PRELOAD: &str = r#"<link rel="modulepreload" href="../assets/runner
 /// Applied in the <head> so a collapsed sidebar doesn't flash open on load.
 const SIDEBAR_INIT: &str = r#"try{if(localStorage.getItem("uiua-quest:sidebar")==="collapsed")document.documentElement.classList.add("sidebar-collapsed")}catch(e){}"#;
 
-/// Toggles the sidebar between expanded and (almost) hidden, and remembers it.
+/// Toggles the sidebar between expanded and (almost) hidden, and remembers it;
+/// also marks exercises the visitor has attempted or passed (recorded by app.js).
 const SIDEBAR_TOGGLE: &str = r#"<script>
 var toggle = document.querySelector(".sidebar-toggle");
 toggle.setAttribute("aria-expanded", String(!document.documentElement.classList.contains("sidebar-collapsed")));
+var STATUS = { passed: ["\u2705", "Passed all tests"], attempted: ["\uD83D\uDEA7", "Attempted, not yet passing"] };
+document.querySelectorAll(".sidebar a[data-exercise]").forEach(function (link) {
+  var status;
+  try { status = localStorage.getItem("uiua-quest:status:" + link.dataset.exercise); } catch (e) {}
+  if (!STATUS[status]) return;
+  var icon = link.querySelector(".status");
+  icon.textContent = STATUS[status][0];
+  link.title = STATUS[status][1];
+});
 toggle.addEventListener("click", function () {
   var collapsed = document.documentElement.classList.toggle("sidebar-collapsed");
   this.setAttribute("aria-expanded", String(!collapsed));
@@ -101,7 +111,7 @@ fn render_menu(categories: &Categories, prefix: &str, current: Option<(&str, &st
                 ""
             };
             menu.push_str(&format!(
-                "<li><a href=\"{prefix}/{category}/{num}.html\"{aria}>{}</a></li>\n",
+                "<li><a href=\"{prefix}/{category}/{num}.html\" data-exercise=\"{category}/{num}\"{aria}><span class=\"status\" aria-hidden=\"true\"></span>{}</a></li>\n",
                 html_escape(&exercise.title)
             ));
         }

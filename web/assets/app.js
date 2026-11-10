@@ -43,6 +43,25 @@ function markSolution(html) {
   return html.replace(namePattern, `&lt;Solution&gt;`);
 }
 
+// Progress for the sidebar (read by the inline script in every page): an
+// exercise is "attempted" once tests have been run, and "passed" once all
+// of them have passed. A pass is never downgraded.
+const statusKey = `uiua-quest:status:${location.pathname
+  .replace(/\.html$/, "")
+  .split("/")
+  .slice(-2)
+  .join("/")}`;
+function recordStatus(allPassed) {
+  if (!allPassed && localStorage.getItem(statusKey) === "passed") return;
+  localStorage.setItem(statusKey, allPassed ? "passed" : "attempted");
+  const link = document.querySelector(
+    `.sidebar a[aria-current="page"] .status`,
+  );
+  if (link) {
+    link.textContent = allPassed ? "\u2705" : "\u{1F6A7}";
+  }
+}
+
 // Restore the visitor's previous attempt, if any.
 const saved =
   localStorage.getItem(storageKey) ?? localStorage.getItem(legacyStorageKey);
@@ -211,5 +230,6 @@ runButton.addEventListener("click", () => {
       : outcome.replace(/^FAIL: /, "").split(/\n\s+at /)[0];
   });
 
+  recordStatus(passed === tests.length);
   summaryEl.textContent = `${passed} / ${tests.length} tests passed`;
 });
