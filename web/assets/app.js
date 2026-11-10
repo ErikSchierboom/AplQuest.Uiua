@@ -192,6 +192,51 @@ function formatEditor() {
   }
 }
 
+// Comment out the lines touched by the selection, or uncomment them if
+// they are all already commented. Blank lines are left alone.
+function toggleComment() {
+  const value = codeEl.value;
+  const { selectionStart, selectionEnd } = codeEl;
+  const start = value.lastIndexOf("\n", selectionStart - 1) + 1;
+  // A selection ending at the very start of a line doesn't include it.
+  const lastChar =
+    selectionEnd > selectionStart ? selectionEnd - 1 : selectionEnd;
+  const nextBreak = value.indexOf("\n", lastChar);
+  const end = nextBreak === -1 ? value.length : nextBreak;
+
+  const lines = value.slice(start, end).split("\n");
+  const indentOf = (line) => line.length - line.trimStart().length;
+  const code = lines.filter((line) => line.trim() !== "");
+  if (code.length === 0) return;
+
+  const uncomment = code.every((line) => line.trimStart().startsWith("#"));
+  const margin = Math.min(...code.map(indentOf));
+  const edited = lines.map((line) => {
+    if (line.trim() === "") return line;
+    if (!uncomment) return `${line.slice(0, margin)}# ${line.slice(margin)}`;
+    const indent = indentOf(line);
+    const rest = line.slice(indent + 1);
+    return line.slice(0, indent) + (rest.startsWith(" ") ? rest.slice(1) : rest);
+  });
+  const replacement = edited.join("\n");
+
+  // Prefer execCommand so the change lands in the textarea's undo history.
+  codeEl.setSelectionRange(start, end);
+  if (!document.execCommand("insertText", false, replacement)) {
+    codeEl.setRangeText(replacement, start, end, "preserve");
+  }
+  codeEl.setSelectionRange(start, start + replacement.length);
+  localStorage.setItem(storageKey, codeEl.value);
+  renderHighlight();
+}
+
+codeEl.addEventListener("keydown", (event) => {
+  if (event.key === "/" && (event.metaKey || event.ctrlKey)) {
+    event.preventDefault();
+    toggleComment();
+  }
+});
+
 // Cmd/Ctrl/Shift-Enter formats the code and runs the tests.
 codeEl.addEventListener("keydown", (event) => {
   if (
